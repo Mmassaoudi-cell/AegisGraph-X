@@ -1,0 +1,471 @@
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7796 minority_recall=0.6236 pr_auc=0.9157
+  LinearSVM: macro_f1=0.8784 minority_recall=0.7821 pr_auc=0.9718
+  GaussianNB: macro_f1=0.7468 minority_recall=0.8493 pr_auc=0.9042
+  kNN: macro_f1=0.9142 minority_recall=0.8892 pr_auc=0.9872
+  DecisionTree: macro_f1=0.9287 minority_recall=0.9686 pr_auc=0.9853
+  RandomForest: macro_f1=0.9373 minority_recall=0.9536 pr_auc=0.9948
+  ExtraTrees: macro_f1=0.9195 minority_recall=0.9134 pr_auc=0.9910
+  GradientBoosting: macro_f1=0.9308 minority_recall=0.9060 pr_auc=0.9935
+  HistGradientBoosting: macro_f1=0.9376 minority_recall=0.9352 pr_auc=0.9949
+  XGBoost: macro_f1=0.9403 minority_recall=0.9330 pr_auc=0.9951
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9392 minority_recall=0.9636 pr_auc=0.9950
+  CatBoost: macro_f1=0.9378 minority_recall=0.9278 pr_auc=0.9946
+[UNSW-NB15] deep baselines...
+  MLP: macro_f1=0.8998 minority_recall=0.8918 pr_auc=0.9839 n_params=7042
+  1D-CNN: macro_f1=0.8023 minority_recall=0.7806 pr_auc=0.9397 n_params=7234
+  LSTM: macro_f1=0.8995 minority_recall=0.8911 pr_auc=0.9859 n_params=9794
+  GRU: macro_f1=0.8921 minority_recall=0.8969 pr_auc=0.9841 n_params=7362
+  CNN-LSTM: macro_f1=0.8711 minority_recall=0.8660 pr_auc=0.9765 n_params=12578
+  CNN-BiLSTM: macro_f1=0.8749 minority_recall=0.8736 pr_auc=0.9774 n_params=21090
+  TCN: macro_f1=0.6393 minority_recall=0.5396 pr_auc=0.7876 n_params=7234
+  TransformerEncoder: macro_f1=0.8379 minority_recall=0.8545 pr_auc=0.9658 n_params=9986
+  FT-Transformer: macro_f1=0.6487 minority_recall=0.4314 pr_auc=0.8019 n_params=2306
+[UNSW-NB15] graph baselines...
+  GCN: macro_f1=0.8201 minority_recall=0.8382 pr_auc=0.9503
+  GraphSAGE: macro_f1=0.8099 minority_recall=0.9335 pr_auc=0.9565
+  GAT: macro_f1=0.8319 minority_recall=0.9199 pr_auc=0.9607
+  Protocol-role-GAT: macro_f1=0.8300 minority_recall=0.9186 pr_auc=0.9647
+  HypergraphNN: macro_f1=0.8476 minority_recall=0.8006 pr_auc=0.9378
+[UNSW-NB15] RL baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7829 minority_recall=0.6125 pr_auc=0.9145
+  LinearSVM: macro_f1=0.8821 minority_recall=0.7955 pr_auc=0.9746
+  GaussianNB: macro_f1=0.7293 minority_recall=0.8490 pr_auc=0.8885
+  kNN: macro_f1=0.9170 minority_recall=0.8961 pr_auc=0.9875
+  DecisionTree: macro_f1=0.9261 minority_recall=0.9671 pr_auc=0.9833
+  RandomForest: macro_f1=0.9369 minority_recall=0.9573 pr_auc=0.9950
+  ExtraTrees: macro_f1=0.9171 minority_recall=0.9207 pr_auc=0.9908
+  GradientBoosting: macro_f1=0.9311 minority_recall=0.9131 pr_auc=0.9936
+  HistGradientBoosting: macro_f1=0.9401 minority_recall=0.9344 pr_auc=0.9951
+  XGBoost: macro_f1=0.9418 minority_recall=0.9375 pr_auc=0.9952
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9386 minority_recall=0.9697 pr_auc=0.9954
+  CatBoost: macro_f1=0.9369 minority_recall=0.9288 pr_auc=0.9948
+[UNSW-NB15] deep baselines...
+  MLP: macro_f1=0.8733 minority_recall=0.9207 pr_auc=0.9779 n_params=7042
+  1D-CNN: macro_f1=0.8189 minority_recall=0.7086 pr_auc=0.8881 n_params=7234
+  LSTM: macro_f1=0.9017 minority_recall=0.8919 pr_auc=0.9856 n_params=9794
+  GRU: macro_f1=0.8948 minority_recall=0.8921 pr_auc=0.9847 n_params=7362
+  CNN-LSTM: macro_f1=0.8624 minority_recall=0.9013 pr_auc=0.9756 n_params=12578
+  CNN-BiLSTM: macro_f1=0.8790 minority_recall=0.8658 pr_auc=0.9784 n_params=21090
+  TCN: macro_f1=0.6767 minority_recall=0.4546 pr_auc=0.7840 n_params=7234
+  TransformerEncoder: macro_f1=0.8548 minority_recall=0.9049 pr_auc=0.9743 n_params=9986
+  FT-Transformer: macro_f1=0.6518 minority_recall=0.4461 pr_auc=0.8139 n_params=2306
+[UNSW-NB15] graph baselines...
+  GCN: macro_f1=0.8094 minority_recall=0.8632 pr_auc=0.9405
+  GraphSAGE: macro_f1=0.8386 minority_recall=0.9257 pr_auc=0.9688
+  GAT: macro_f1=0.8184 minority_recall=0.8138 pr_auc=0.8805
+  Protocol-role-GAT: macro_f1=0.8362 minority_recall=0.8523 pr_auc=0.9501
+  HypergraphNN: macro_f1=0.8412 minority_recall=0.8153 pr_auc=0.9569
+[UNSW-NB15] RL baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7738 minority_recall=0.7045 pr_auc=0.9191
+  LinearSVM: macro_f1=0.8786 minority_recall=0.7848 pr_auc=0.9740
+  GaussianNB: macro_f1=0.7380 minority_recall=0.8487 pr_auc=0.8992
+  kNN: macro_f1=0.9133 minority_recall=0.8936 pr_auc=0.9871
+  DecisionTree: macro_f1=0.9289 minority_recall=0.9676 pr_auc=0.9854
+  RandomForest: macro_f1=0.9332 minority_recall=0.9469 pr_auc=0.9947
+  ExtraTrees: macro_f1=0.9165 minority_recall=0.9071 pr_auc=0.9905
+  GradientBoosting: macro_f1=0.9299 minority_recall=0.9123 pr_auc=0.9933
+  HistGradientBoosting: macro_f1=0.9390 minority_recall=0.9334 pr_auc=0.9949
+  XGBoost: macro_f1=0.9389 minority_recall=0.9340 pr_auc=0.9949
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9401 minority_recall=0.9650 pr_auc=0.9951
+  CatBoost: macro_f1=0.9361 minority_recall=0.9251 pr_auc=0.9945
+[UNSW-NB15] deep baselines...
+  MLP: macro_f1=0.8833 minority_recall=0.8881 pr_auc=0.9795 n_params=7042
+  1D-CNN: macro_f1=0.7779 minority_recall=0.8281 pr_auc=0.9289 n_params=7234
+  LSTM: macro_f1=0.9083 minority_recall=0.9019 pr_auc=0.9878 n_params=9794
+  GRU: macro_f1=0.8967 minority_recall=0.8931 pr_auc=0.9850 n_params=7362
+  CNN-LSTM: macro_f1=0.8761 minority_recall=0.8400 pr_auc=0.9771 n_params=12578
+  CNN-BiLSTM: macro_f1=0.8808 minority_recall=0.8552 pr_auc=0.9791 n_params=21090
+  TCN: macro_f1=0.6626 minority_recall=0.5520 pr_auc=0.7947 n_params=7234
+  TransformerEncoder: macro_f1=0.8435 minority_recall=0.8630 pr_auc=0.9687 n_params=9986
+  FT-Transformer: macro_f1=0.6458 minority_recall=0.4028 pr_auc=0.7989 n_params=2306
+[UNSW-NB15] graph baselines...
+  GCN: macro_f1=0.8013 minority_recall=0.6392 pr_auc=0.8121
+  GraphSAGE: macro_f1=0.8510 minority_recall=0.9055 pr_auc=0.9739
+  GAT: macro_f1=0.8618 minority_recall=0.8342 pr_auc=0.9716
+  Protocol-role-GAT: macro_f1=0.8475 minority_recall=0.8472 pr_auc=0.9631
+  HypergraphNN: macro_f1=0.8370 minority_recall=0.8566 pr_auc=0.9606
+[UNSW-NB15] RL baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.8501 minority_recall=0.7790 pr_auc=0.9432
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.5214 minority_recall=0.1002 pr_auc=0.9312
+  GaussianNB: macro_f1=0.4505 minority_recall=0.0036 pr_auc=0.8958
+  kNN: macro_f1=0.9822 minority_recall=0.9623 pr_auc=0.9975
+  DecisionTree: macro_f1=0.9955 minority_recall=0.9925 pr_auc=0.9978
+  RandomForest: macro_f1=0.9978 minority_recall=0.9947 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9909 minority_recall=0.9851 pr_auc=0.9997
+  GradientBoosting: macro_f1=0.9924 minority_recall=0.9900 pr_auc=0.9998
+  HistGradientBoosting: macro_f1=0.9982 minority_recall=0.9950 pr_auc=0.9999
+  XGBoost: macro_f1=0.9979 minority_recall=0.9954 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9981 minority_recall=0.9964 pr_auc=0.9999
+  CatBoost: macro_f1=0.9968 minority_recall=0.9932 pr_auc=1.0000
+[ToN-IoT-Network] deep baselines...
+  MLP: macro_f1=0.9189 minority_recall=0.9414 pr_auc=0.9786 n_params=6914
+  1D-CNN: macro_f1=0.6579 minority_recall=0.5069 pr_auc=0.8884 n_params=7042
+  LSTM: macro_f1=0.9695 minority_recall=0.9708 pr_auc=0.9980 n_params=9538
+  GRU: macro_f1=0.9745 minority_recall=0.9673 pr_auc=0.9969 n_params=7170
+  CNN-LSTM: macro_f1=0.9206 minority_recall=0.9577 pr_auc=0.9969 n_params=12386
+  CNN-BiLSTM: macro_f1=0.9400 minority_recall=0.9612 pr_auc=0.9965 n_params=20898
+  TCN: macro_f1=0.4627 minority_recall=0.0196 pr_auc=0.8267 n_params=7042
+  TransformerEncoder: macro_f1=0.9483 minority_recall=0.9602 pr_auc=0.9975 n_params=9922
+  FT-Transformer: macro_f1=0.8015 minority_recall=0.8184 pr_auc=0.9579 n_params=2306
+[ToN-IoT-Network] graph baselines...
+  GCN: macro_f1=0.8758 minority_recall=0.8984 pr_auc=0.9745
+  GraphSAGE: macro_f1=0.9595 minority_recall=0.9712 pr_auc=0.9908
+  GAT: macro_f1=0.8959 minority_recall=0.9076 pr_auc=0.9807
+  Protocol-role-GAT: macro_f1=0.8803 minority_recall=0.9495 pr_auc=0.9877
+  HypergraphNN: macro_f1=0.8843 minority_recall=0.8866 pr_auc=0.9591
+[ToN-IoT-Network] RL baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7802 minority_recall=0.6168 pr_auc=0.8934
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.5566 minority_recall=0.1292 pr_auc=0.9008
+  GaussianNB: macro_f1=0.5427 minority_recall=0.1362 pr_auc=0.8733
+  kNN: macro_f1=0.9883 minority_recall=0.9764 pr_auc=0.9985
+  DecisionTree: macro_f1=0.9971 minority_recall=0.9948 pr_auc=0.9978
+  RandomForest: macro_f1=0.9983 minority_recall=0.9956 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9952 minority_recall=0.9895 pr_auc=0.9997
+  GradientBoosting: macro_f1=0.9954 minority_recall=0.9918 pr_auc=0.9998
+  HistGradientBoosting: macro_f1=0.9975 minority_recall=0.9950 pr_auc=1.0000
+  XGBoost: macro_f1=0.9977 minority_recall=0.9953 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9985 minority_recall=0.9977 pr_auc=1.0000
+  CatBoost: macro_f1=0.9969 minority_recall=0.9948 pr_auc=1.0000
+[ToN-IoT-Network] deep baselines...
+  MLP: macro_f1=0.9464 minority_recall=0.9598 pr_auc=0.9868 n_params=6914
+  1D-CNN: macro_f1=0.4313 minority_recall=0.8564 pr_auc=0.8495 n_params=7042
+  LSTM: macro_f1=0.9706 minority_recall=0.9772 pr_auc=0.9982 n_params=9538
+  GRU: macro_f1=0.9553 minority_recall=0.9793 pr_auc=0.9976 n_params=7170
+  CNN-LSTM: macro_f1=0.9405 minority_recall=0.9597 pr_auc=0.9973 n_params=12386
+  CNN-BiLSTM: macro_f1=0.9483 minority_recall=0.9749 pr_auc=0.9982 n_params=20898
+  TCN: macro_f1=0.3550 minority_recall=0.8666 pr_auc=0.8225 n_params=7042
+  TransformerEncoder: macro_f1=0.9276 minority_recall=0.8754 pr_auc=0.9965 n_params=9922
+  FT-Transformer: macro_f1=0.8061 minority_recall=0.7947 pr_auc=0.9554 n_params=2306
+[ToN-IoT-Network] graph baselines...
+  GCN: macro_f1=0.9224 minority_recall=0.9396 pr_auc=0.9698
+  GraphSAGE: macro_f1=0.9680 minority_recall=0.9557 pr_auc=0.9791
+  GAT: macro_f1=0.9156 minority_recall=0.9181 pr_auc=0.9666
+  Protocol-role-GAT: macro_f1=0.9172 minority_recall=0.9248 pr_auc=0.9803
+  HypergraphNN: macro_f1=0.8662 minority_recall=0.8236 pr_auc=0.9530
+[ToN-IoT-Network] RL baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7875 minority_recall=0.5865 pr_auc=0.9397
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.5615 minority_recall=0.1339 pr_auc=0.8936
+  GaussianNB: macro_f1=0.1838 minority_recall=0.9991 pr_auc=0.8602
+  kNN: macro_f1=0.9855 minority_recall=0.9655 pr_auc=0.9975
+  DecisionTree: macro_f1=0.9976 minority_recall=0.9964 pr_auc=0.9983
+  RandomForest: macro_f1=0.9985 minority_recall=0.9967 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9949 minority_recall=0.9898 pr_auc=0.9997
+  GradientBoosting: macro_f1=0.9953 minority_recall=0.9922 pr_auc=0.9994
+  HistGradientBoosting: macro_f1=0.9978 minority_recall=0.9949 pr_auc=1.0000
+  XGBoost: macro_f1=0.9982 minority_recall=0.9961 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9984 minority_recall=0.9964 pr_auc=1.0000
+  CatBoost: macro_f1=0.9977 minority_recall=0.9955 pr_auc=0.9998
+[ToN-IoT-Network] deep baselines...
+  MLP: macro_f1=0.9299 minority_recall=0.9574 pr_auc=0.9853 n_params=6914
+  1D-CNN: macro_f1=0.1966 minority_recall=0.9928 pr_auc=0.8432 n_params=7042
+  LSTM: macro_f1=0.9753 minority_recall=0.9732 pr_auc=0.9981 n_params=9538
+  GRU: macro_f1=0.9712 minority_recall=0.9705 pr_auc=0.9982 n_params=7170
+  CNN-LSTM: macro_f1=0.9275 minority_recall=0.9567 pr_auc=0.9964 n_params=12386
+  CNN-BiLSTM: macro_f1=0.9339 minority_recall=0.9513 pr_auc=0.9966 n_params=20898
+  TCN: macro_f1=0.5542 minority_recall=0.2192 pr_auc=0.8073 n_params=7042
+  TransformerEncoder: macro_f1=0.9684 minority_recall=0.9624 pr_auc=0.9976 n_params=9922
+  FT-Transformer: macro_f1=0.8288 minority_recall=0.8619 pr_auc=0.9507 n_params=2306
+[ToN-IoT-Network] graph baselines...
+  GCN: macro_f1=0.8715 minority_recall=0.8532 pr_auc=0.9578
+  GraphSAGE: macro_f1=0.9599 minority_recall=0.9520 pr_auc=0.9816
+  GAT: macro_f1=0.9300 minority_recall=0.9228 pr_auc=0.9729
+  Protocol-role-GAT: macro_f1=0.9228 minority_recall=0.9264 pr_auc=0.9767
+  HypergraphNN: macro_f1=0.8319 minority_recall=0.6898 pr_auc=0.9387
+[ToN-IoT-Network] RL baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.5183 minority_recall=0.9670 pr_auc=0.9982
+  LinearSVM: macro_f1=0.8293 minority_recall=0.5847 pr_auc=0.9995
+  GaussianNB: macro_f1=0.7434 minority_recall=0.9962 pr_auc=0.9995
+  kNN: macro_f1=0.8674 minority_recall=0.7838 pr_auc=0.9995
+  DecisionTree: macro_f1=0.9204 minority_recall=0.9871 pr_auc=0.9995
+  RandomForest: macro_f1=0.9360 minority_recall=0.9758 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9039 minority_recall=0.9958 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9581 minority_recall=0.9320 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9514 minority_recall=0.9228 pr_auc=1.0000
+  XGBoost: macro_f1=0.9562 minority_recall=0.9253 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9564 minority_recall=0.9704 pr_auc=1.0000
+  CatBoost: macro_f1=0.9573 minority_recall=0.9357 pr_auc=1.0000
+[CICIoT2023] deep baselines...
+C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 2\code\experiments\..\experiments\..\baselines\..\methods\..\baselines\deep_baselines.py:32: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  self.X = torch.as_tensor(X, dtype=torch.float32)
+  MLP: macro_f1=0.8554 minority_recall=0.7876 pr_auc=0.9907 n_params=7298
+  1D-CNN: macro_f1=0.6059 minority_recall=0.8798 pr_auc=0.9978 n_params=7618
+  LSTM: macro_f1=0.7766 minority_recall=0.8493 pr_auc=0.9997 n_params=10306
+  GRU: macro_f1=0.7381 minority_recall=0.8785 pr_auc=0.9996 n_params=7746
+  CNN-LSTM: macro_f1=0.8125 minority_recall=0.8410 pr_auc=0.9997 n_params=12962
+  CNN-BiLSTM: macro_f1=0.8545 minority_recall=0.8694 pr_auc=0.9997 n_params=21474
+  TCN: macro_f1=0.7701 minority_recall=0.6544 pr_auc=0.9924 n_params=7618
+  TransformerEncoder: macro_f1=0.8593 minority_recall=0.9424 pr_auc=0.9998 n_params=10114
+  FT-Transformer: macro_f1=0.8280 minority_recall=0.9812 pr_auc=0.9998 n_params=2306
+[CICIoT2023] graph baselines...
+  GCN: macro_f1=0.8366 minority_recall=0.8564 pr_auc=0.9953
+  GraphSAGE: macro_f1=0.8243 minority_recall=0.8239 pr_auc=0.9943
+  GAT: macro_f1=0.7681 minority_recall=0.9553 pr_auc=0.9980
+  Protocol-role-GAT: macro_f1=0.8404 minority_recall=0.8581 pr_auc=0.9950
+  HypergraphNN: macro_f1=0.8112 minority_recall=0.6352 pr_auc=0.9851
+[CICIoT2023] RL baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.5111 minority_recall=0.9666 pr_auc=0.9983
+  LinearSVM: macro_f1=0.8259 minority_recall=0.5892 pr_auc=0.9996
+  GaussianNB: macro_f1=0.7395 minority_recall=0.9967 pr_auc=0.9994
+  kNN: macro_f1=0.8644 minority_recall=0.7885 pr_auc=0.9992
+  DecisionTree: macro_f1=0.9264 minority_recall=0.9837 pr_auc=0.9995
+  RandomForest: macro_f1=0.9350 minority_recall=0.9762 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9033 minority_recall=0.9916 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9625 minority_recall=0.9457 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9578 minority_recall=0.9202 pr_auc=1.0000
+  XGBoost: macro_f1=0.9551 minority_recall=0.9181 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9551 minority_recall=0.9716 pr_auc=1.0000
+  CatBoost: macro_f1=0.9608 minority_recall=0.9361 pr_auc=1.0000
+[CICIoT2023] deep baselines...
+  MLP: macro_f1=0.7776 minority_recall=0.5813 pr_auc=0.9882 n_params=7298
+  1D-CNN: macro_f1=0.7562 minority_recall=0.7829 pr_auc=0.9954 n_params=7618
+  LSTM: macro_f1=0.8141 minority_recall=0.6830 pr_auc=0.9996 n_params=10306
+  GRU: macro_f1=0.7802 minority_recall=0.6441 pr_auc=0.9996 n_params=7746
+  CNN-LSTM: macro_f1=0.8323 minority_recall=0.7528 pr_auc=0.9997 n_params=12962
+  CNN-BiLSTM: macro_f1=0.8350 minority_recall=0.8954 pr_auc=0.9996 n_params=21474
+  TCN: macro_f1=0.7274 minority_recall=0.6052 pr_auc=0.9929 n_params=7618
+  TransformerEncoder: macro_f1=0.8531 minority_recall=0.9118 pr_auc=0.9998 n_params=10114
+  FT-Transformer: macro_f1=0.8378 minority_recall=0.9603 pr_auc=0.9998 n_params=2306
+[CICIoT2023] graph baselines...
+  GCN: macro_f1=0.8385 minority_recall=0.8968 pr_auc=0.9972
+  GraphSAGE: macro_f1=0.8308 minority_recall=0.7656 pr_auc=0.9913
+  GAT: macro_f1=0.8453 minority_recall=0.9056 pr_auc=0.9964
+  Protocol-role-GAT: macro_f1=0.8041 minority_recall=0.8124 pr_auc=0.9938
+  HypergraphNN: macro_f1=0.7192 minority_recall=0.9545 pr_auc=0.9981
+[CICIoT2023] RL baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.4783 minority_recall=0.9725 pr_auc=0.9986
+  LinearSVM: macro_f1=0.8354 minority_recall=0.6032 pr_auc=0.9996
+  GaussianNB: macro_f1=0.7444 minority_recall=0.9926 pr_auc=0.9994
+  kNN: macro_f1=0.8692 minority_recall=0.7808 pr_auc=0.9995
+  DecisionTree: macro_f1=0.9023 minority_recall=0.9897 pr_auc=0.9996
+  RandomForest: macro_f1=0.9473 minority_recall=0.9823 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9061 minority_recall=0.9955 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9590 minority_recall=0.9350 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9516 minority_recall=0.9186 pr_auc=1.0000
+  XGBoost: macro_f1=0.9577 minority_recall=0.9387 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9528 minority_recall=0.9679 pr_auc=0.9998
+  CatBoost: macro_f1=0.9536 minority_recall=0.9334 pr_auc=1.0000
+[CICIoT2023] deep baselines...
+  MLP: macro_f1=0.8212 minority_recall=0.6205 pr_auc=0.9860 n_params=7298
+  1D-CNN: macro_f1=0.7338 minority_recall=0.6160 pr_auc=0.9906 n_params=7618
+  LSTM: macro_f1=0.8110 minority_recall=0.8039 pr_auc=0.9997 n_params=10306
+  GRU: macro_f1=0.8283 minority_recall=0.7590 pr_auc=0.9996 n_params=7746
+  CNN-LSTM: macro_f1=0.8449 minority_recall=0.7919 pr_auc=0.9996 n_params=12962
+  CNN-BiLSTM: macro_f1=0.7323 minority_recall=0.9428 pr_auc=0.9996 n_params=21474
+  TCN: macro_f1=0.7822 minority_recall=0.5415 pr_auc=0.9883 n_params=7618
+  TransformerEncoder: macro_f1=0.8613 minority_recall=0.9169 pr_auc=0.9998 n_params=10114
+  FT-Transformer: macro_f1=0.8327 minority_recall=0.9753 pr_auc=0.9998 n_params=2306
+[CICIoT2023] graph baselines...
+  GCN: macro_f1=0.8471 minority_recall=0.8655 pr_auc=0.9964
+  GraphSAGE: macro_f1=0.7626 minority_recall=0.4260 pr_auc=0.9818
+  GAT: macro_f1=0.8317 minority_recall=0.7389 pr_auc=0.9904
+  Protocol-role-GAT: macro_f1=0.8462 minority_recall=0.9317 pr_auc=0.9976
+  HypergraphNN: macro_f1=0.8517 minority_recall=0.9001 pr_auc=0.9974
+[CICIoT2023] RL baselines...
+Saved 333 rows -> C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 2\results\csv\baselines.csv

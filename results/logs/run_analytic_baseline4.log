@@ -1,0 +1,193 @@
+=== driver: UNSW-NB15 seed=0 ===
+Resuming: 26 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 6), ('UNSW-NB15', 9)]
+=== analytic baseline UNSW-NB15 seed=0 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: UNSW-NB15 seed=1 ===
+Resuming: 26 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 6), ('UNSW-NB15', 9)]
+=== analytic baseline UNSW-NB15 seed=1 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: UNSW-NB15 seed=2 ===
+Resuming: 26 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 6), ('UNSW-NB15', 9)]
+=== analytic baseline UNSW-NB15 seed=2 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: UNSW-NB15 seed=3 ===
+Resuming: 26 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 6), ('UNSW-NB15', 9)]
+=== analytic baseline UNSW-NB15 seed=3 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: UNSW-NB15 seed=4 ===
+Resuming: 26 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 6), ('UNSW-NB15', 9)]
+=== analytic baseline UNSW-NB15 seed=4 ===
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  test macro_f1=0.9657 isolation_rate=0.000 commit_rate=0.895
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: UNSW-NB15 seed=5 ===
+Resuming: 27 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 6), ('UNSW-NB15', 9)]
+=== analytic baseline UNSW-NB15 seed=5 ===
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  test macro_f1=0.9621 isolation_rate=0.000 commit_rate=0.905
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: UNSW-NB15 seed=6 ===
+Resuming: 28 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 9)]
+=== analytic baseline UNSW-NB15 seed=6 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: UNSW-NB15 seed=7 ===
+Resuming: 28 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 9)]
+=== analytic baseline UNSW-NB15 seed=7 ===
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  test macro_f1=0.9604 isolation_rate=0.000 commit_rate=0.905
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: UNSW-NB15 seed=8 ===
+Resuming: 29 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 9)]
+=== analytic baseline UNSW-NB15 seed=8 ===
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  test macro_f1=0.9560 isolation_rate=0.000 commit_rate=0.907
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: UNSW-NB15 seed=9 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline UNSW-NB15 seed=9 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: ToN-IoT-Network seed=0 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline ToN-IoT-Network seed=0 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: ToN-IoT-Network seed=1 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline ToN-IoT-Network seed=1 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: ToN-IoT-Network seed=2 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline ToN-IoT-Network seed=2 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: ToN-IoT-Network seed=3 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline ToN-IoT-Network seed=3 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: ToN-IoT-Network seed=4 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline ToN-IoT-Network seed=4 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: ToN-IoT-Network seed=5 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline ToN-IoT-Network seed=5 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: ToN-IoT-Network seed=6 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline ToN-IoT-Network seed=6 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: ToN-IoT-Network seed=7 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline ToN-IoT-Network seed=7 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: ToN-IoT-Network seed=8 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline ToN-IoT-Network seed=8 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: ToN-IoT-Network seed=9 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline ToN-IoT-Network seed=9 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: CICIoT2023 seed=0 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline CICIoT2023 seed=0 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: CICIoT2023 seed=1 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline CICIoT2023 seed=1 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: CICIoT2023 seed=2 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline CICIoT2023 seed=2 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: CICIoT2023 seed=3 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline CICIoT2023 seed=3 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: CICIoT2023 seed=4 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline CICIoT2023 seed=4 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: CICIoT2023 seed=5 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline CICIoT2023 seed=5 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: CICIoT2023 seed=6 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline CICIoT2023 seed=6 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: CICIoT2023 seed=7 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline CICIoT2023 seed=7 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: CICIoT2023 seed=8 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline CICIoT2023 seed=8 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+=== driver: CICIoT2023 seed=9 ===
+Resuming: 30 (dataset, seed) pairs already complete: [('CICIoT2023', 0), ('CICIoT2023', 1), ('CICIoT2023', 2), ('CICIoT2023', 3), ('CICIoT2023', 4), ('CICIoT2023', 5), ('CICIoT2023', 6), ('CICIoT2023', 7), ('CICIoT2023', 8), ('CICIoT2023', 9), ('ToN-IoT-Network', 0), ('ToN-IoT-Network', 1), ('ToN-IoT-Network', 2), ('ToN-IoT-Network', 3), ('ToN-IoT-Network', 4), ('ToN-IoT-Network', 5), ('ToN-IoT-Network', 6), ('ToN-IoT-Network', 7), ('ToN-IoT-Network', 8), ('ToN-IoT-Network', 9), ('UNSW-NB15', 0), ('UNSW-NB15', 1), ('UNSW-NB15', 2), ('UNSW-NB15', 3), ('UNSW-NB15', 4), ('UNSW-NB15', 5), ('UNSW-NB15', 6), ('UNSW-NB15', 7), ('UNSW-NB15', 8), ('UNSW-NB15', 9)]
+=== analytic baseline CICIoT2023 seed=9 (skip, already done) ===
+Saved results/csv/aegis_analytic_baseline.csv
+DRIVER DONE

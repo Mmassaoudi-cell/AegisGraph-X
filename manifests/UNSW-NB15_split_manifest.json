@@ -1,0 +1,33 @@
+{
+  "dataset": "UNSW-NB15",
+  "split_strategy": "stratified_random",
+  "n_rows_total": 100000,
+  "n_train": 69999,
+  "n_val": 15001,
+  "n_test": 15000,
+  "dedup_report": {
+    "val": {
+      "before": 15001,
+      "dropped_exact_dupe_of_train": 0
+    },
+    "test": {
+      "before": 15000,
+      "dropped_exact_dupe_of_train": 0
+    }
+  },
+  "class_balance": {
+    "train": {
+      "1": 44677,
+      "0": 25322
+    },
+    "val": {
+      "1": 9574,
+      "0": 5427
+    },
+    "test": {
+      "1": 9574,
+      "0": 5426
+    }
+  },
+  "random_state": 8
+}

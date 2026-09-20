@@ -1,0 +1,4 @@
+dataset,n_baselines_compared,n_nominal_wins,n_statistically_superior,n_statistically_tied,n_mean_superior_only,n_inferior
+UNSW-NB15,41,34,11,29,23,1
+ToN-IoT-Network,41,33,4,37,29,0
+CICIoT2023,41,33,13,28,20,0

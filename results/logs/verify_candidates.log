@@ -1,0 +1,12 @@
+=== Edge-IIoTset full label scan ===
+total rows scanned: 2219201 counts: {'0': 1615643, '1': 603558}
+
+=== CICIoT2023 cross-split hash overlap (sampled) ===
+Traceback (most recent call last):
+  File "C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 2\code\inventory\verify_candidates.py", line 39, in <module>
+    print("train\u2229val (of sampled 200k each):", len(h_train & h_val))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2229' in position 5: character maps to <undefined>

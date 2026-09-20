@@ -1,0 +1,36 @@
+=== Edge-IIoTset full label scan ===
+total rows scanned: 2219201 counts: {'0': 1615643, '1': 603558}
+
+=== CICIoT2023 cross-split hash overlap (sampled) ===
+train-val overlap (of sampled 200k each): 375
+train-test overlap (of sampled 200k each): 364
+val-test overlap (of sampled 200k each): 392
+
+=== ToN-IoT-Network label vs type ===
+type   backdoor   ddos    dos  injection  ...  password  ransomware  scanning    xss
+label                                     ...                                       
+0             0      0      0          0  ...         0           0         0      0
+1         20000  20000  20000      20000  ...     20000       20000     20000  20000
+
+[2 rows x 10 columns]
+
+=== CIC-IDS-2017 label encoding check (Wednesday file, web-attack rows) ===
+utf-8 -> ['BENIGN']
+cp1252 -> ['BENIGN']
+latin1 -> ['BENIGN']
+
+=== RT-IoT2022 class balance ===
+Attack_type
+DOS_SYN_Hping                 94659
+Thing_Speak                    8108
+ARP_poisioning                 7750
+MQTT_Publish                   4146
+NMAP_UDP_SCAN                  2590
+NMAP_XMAS_TREE_SCAN            2010
+NMAP_OS_DETECTION              2000
+NMAP_TCP_scan                  1002
+DDOS_Slowloris                  534
+Wipro_bulb                      253
+Metasploit_Brute_Force_SSH       37
+NMAP_FIN_SCAN                    28
+Name: count, dtype: int64

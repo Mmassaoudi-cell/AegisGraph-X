@@ -1,0 +1,49 @@
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] feature_noise_low: tree_macro_f1=0.8194 mlp_macro_f1=0.3229
+[UNSW-NB15] feature_noise_high: tree_macro_f1=0.7083 mlp_macro_f1=0.3017
+[UNSW-NB15] missing_features_20pct: tree_macro_f1=0.8422 mlp_macro_f1=0.8138
+[UNSW-NB15] missing_features_50pct: tree_macro_f1=0.6861 mlp_macro_f1=0.7175
+[UNSW-NB15] label_noise_5pct: tree_macro_f1=0.8905 mlp_macro_f1=0.8649
+[UNSW-NB15] class_imbalance_stress: tree_macro_f1=0.8999 mlp_macro_f1=0.8324
+[UNSW-NB15] clean_baseline: tree_macro_f1=0.9377 mlp_macro_f1=0.9114
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] feature_noise_low: tree_macro_f1=0.5692 mlp_macro_f1=0.4234
+[ToN-IoT-Network] feature_noise_high: tree_macro_f1=0.5070 mlp_macro_f1=0.4251
+[ToN-IoT-Network] missing_features_20pct: tree_macro_f1=0.8716 mlp_macro_f1=0.7298
+[ToN-IoT-Network] missing_features_50pct: tree_macro_f1=0.6921 mlp_macro_f1=0.6284
+[ToN-IoT-Network] label_noise_5pct: tree_macro_f1=0.9409 mlp_macro_f1=0.8081
+[ToN-IoT-Network] class_imbalance_stress: tree_macro_f1=0.9979 mlp_macro_f1=0.8740
+[ToN-IoT-Network] clean_baseline: tree_macro_f1=0.9985 mlp_macro_f1=0.8615
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] feature_noise_low: tree_macro_f1=0.6145 mlp_macro_f1=0.4762
+[CICIoT2023] feature_noise_high: tree_macro_f1=0.5409 mlp_macro_f1=0.4874
+[CICIoT2023] missing_features_20pct: tree_macro_f1=0.8098 mlp_macro_f1=0.7934
+[CICIoT2023] missing_features_50pct: tree_macro_f1=0.5904 mlp_macro_f1=0.7049
+[CICIoT2023] label_noise_5pct: tree_macro_f1=0.7093 mlp_macro_f1=0.6469
+[CICIoT2023] class_imbalance_stress: tree_macro_f1=0.9167 mlp_macro_f1=0.5970
+[CICIoT2023] clean_baseline: tree_macro_f1=0.9592 mlp_macro_f1=0.7220
+Saved 42 rows -> C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 2\results\csv\robustness.csv

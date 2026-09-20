@@ -1,0 +1,33 @@
+{
+  "dataset": "RT-IoT2022",
+  "split_strategy": "group_disjoint",
+  "n_rows_total": 100000,
+  "n_train": 70024,
+  "n_val": 14968,
+  "n_test": 15008,
+  "dedup_report": {
+    "val": {
+      "before": 14968,
+      "dropped_exact_dupe_of_train": 0
+    },
+    "test": {
+      "before": 15008,
+      "dropped_exact_dupe_of_train": 0
+    }
+  },
+  "class_balance": {
+    "train": {
+      "1": 58543,
+      "0": 11481
+    },
+    "val": {
+      "1": 12601,
+      "0": 2367
+    },
+    "test": {
+      "1": 12516,
+      "0": 2492
+    }
+  },
+  "random_state": 42
+}

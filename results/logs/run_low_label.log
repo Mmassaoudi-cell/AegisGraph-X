@@ -1,0 +1,46 @@
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] frac=0.01: tree_macro_f1=0.9092 mlp_macro_f1=0.7529 n=699
+[UNSW-NB15] frac=0.05: tree_macro_f1=0.9205 mlp_macro_f1=0.7540 n=3499
+[UNSW-NB15] frac=0.1: tree_macro_f1=0.9266 mlp_macro_f1=0.7989 n=6999
+[UNSW-NB15] frac=0.25: tree_macro_f1=0.9313 mlp_macro_f1=0.8466 n=17499
+[UNSW-NB15] frac=0.5: tree_macro_f1=0.9348 mlp_macro_f1=0.8855 n=34999
+[UNSW-NB15] frac=1.0: tree_macro_f1=0.9377 mlp_macro_f1=0.8949 n=69999
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] frac=0.01: tree_macro_f1=0.8551 mlp_macro_f1=0.6696 n=690
+[ToN-IoT-Network] frac=0.05: tree_macro_f1=0.9934 mlp_macro_f1=0.7097 n=3450
+[ToN-IoT-Network] frac=0.1: tree_macro_f1=0.9946 mlp_macro_f1=0.7376 n=6900
+[ToN-IoT-Network] frac=0.25: tree_macro_f1=0.9976 mlp_macro_f1=0.8099 n=17252
+[ToN-IoT-Network] frac=0.5: tree_macro_f1=0.9974 mlp_macro_f1=0.8094 n=34504
+[ToN-IoT-Network] frac=1.0: tree_macro_f1=0.9985 mlp_macro_f1=0.8281 n=69009
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] frac=0.01: tree_macro_f1=0.8770 mlp_macro_f1=0.5524 n=1000
+[CICIoT2023] frac=0.05: tree_macro_f1=0.9296 mlp_macro_f1=0.6338 n=5000
+[CICIoT2023] frac=0.1: tree_macro_f1=0.9408 mlp_macro_f1=0.7316 n=10000
+[CICIoT2023] frac=0.25: tree_macro_f1=0.9538 mlp_macro_f1=0.6802 n=25000
+[CICIoT2023] frac=0.5: tree_macro_f1=0.9534 mlp_macro_f1=0.7498 n=50000
+[CICIoT2023] frac=1.0: tree_macro_f1=0.9592 mlp_macro_f1=0.8748 n=100000
+Saved 36 rows -> C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 2\results\csv\low_label.csv

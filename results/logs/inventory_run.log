@@ -1,0 +1,126 @@
+[APA-DDoS] 1 file(s)
+   - APA-DDoS-Dataset.csv: 151200 rows, 21.7 MB
+[APA-DDoS] DONE total_rows~151200 classes~3
+[Bot-IoT] 74 file(s)
+   - data_1.csv: 1000000 rows, 218.3 MB
+   - data_2.csv: 1000000 rows, 218.3 MB
+   - data_3.csv: 1000000 rows, 204.1 MB
+   - data_4.csv: 1000000 rows, 204.4 MB
+   - data_5.csv: 1000000 rows, 204.3 MB
+   - data_6.csv: 1000000 rows, 201.3 MB
+   - data_7.csv: 1000000 rows, 203.7 MB
+   - data_8.csv: 1000000 rows, 204.3 MB
+   - data_9.csv: 1000000 rows, 198.3 MB
+   - data_10.csv: 1000000 rows, 203.2 MB
+   - data_11.csv: 1000000 rows, 204.7 MB
+   - data_12.csv: 1000000 rows, 201.3 MB
+   - data_13.csv: 1000000 rows, 205.2 MB
+   - data_14.csv: 1000000 rows, 205.9 MB
+   - data_15.csv: 1000000 rows, 204.6 MB
+   - data_16.csv: 1000000 rows, 206.0 MB
+   - data_17.csv: 1000000 rows, 202.0 MB
+   - data_18.csv: 1000000 rows, 204.8 MB
+   - data_19.csv: 1000000 rows, 204.6 MB
+   - data_20.csv: 1000000 rows, 197.8 MB
+   - data_21.csv: 1000000 rows, 206.7 MB
+   - data_22.csv: 1000000 rows, 205.7 MB
+   - data_23.csv: 1000000 rows, 205.6 MB
+   - data_24.csv: 1000000 rows, 206.0 MB
+   - data_25.csv: 1000000 rows, 205.1 MB
+   - data_26.csv: 1000000 rows, 196.8 MB
+   - data_27.csv: 1000000 rows, 207.1 MB
+   - data_28.csv: 1000000 rows, 203.3 MB
+   - data_29.csv: 1000000 rows, 206.8 MB
+   - data_30.csv: 1000000 rows, 205.2 MB
+   - data_31.csv: 1000000 rows, 198.9 MB
+   - data_32.csv: 1000000 rows, 206.8 MB
+   - data_33.csv: 1000000 rows, 197.9 MB
+   - data_34.csv: 1000000 rows, 206.0 MB
+   - data_35.csv: 1000000 rows, 202.5 MB
+   - data_36.csv: 1000000 rows, 208.6 MB
+   - data_37.csv: 1000000 rows, 206.8 MB
+   - data_38.csv: 1000000 rows, 207.5 MB
+   - data_39.csv: 1000000 rows, 207.4 MB
+   - data_40.csv: 1000000 rows, 202.4 MB
+   - data_41.csv: 1000000 rows, 208.5 MB
+   - data_42.csv: 1000000 rows, 202.1 MB
+   - data_43.csv: 1000000 rows, 203.1 MB
+   - data_44.csv: 1000000 rows, 204.9 MB
+   - data_45.csv: 1000000 rows, 207.8 MB
+   - data_46.csv: 1000000 rows, 207.3 MB
+   - data_47.csv: 1000000 rows, 199.2 MB
+   - data_48.csv: 1000000 rows, 197.3 MB
+   - data_49.csv: 1000000 rows, 203.7 MB
+   - data_50.csv: 1000000 rows, 203.7 MB
+   - data_51.csv: 1000000 rows, 192.8 MB
+   - data_52.csv: 1000000 rows, 203.8 MB
+   - data_53.csv: 1000000 rows, 207.1 MB
+   - data_54.csv: 1000000 rows, 207.0 MB
+   - data_55.csv: 1000000 rows, 204.1 MB
+   - data_56.csv: 1000000 rows, 210.1 MB
+   - data_57.csv: 1000000 rows, 208.7 MB
+   - data_58.csv: 1000000 rows, 208.2 MB
+   - data_59.csv: 1000000 rows, 207.9 MB
+   - data_60.csv: 1000000 rows, 209.5 MB
+   - data_61.csv: 1000000 rows, 210.4 MB
+   - data_62.csv: 1000000 rows, 210.5 MB
+   - data_63.csv: 1000000 rows, 208.6 MB
+   - data_64.csv: 1000000 rows, 205.6 MB
+   - data_65.csv: 1000000 rows, 203.7 MB
+   - data_66.csv: 1000000 rows, 203.6 MB
+   - data_67.csv: 1000000 rows, 200.2 MB
+   - data_68.csv: 1000000 rows, 199.7 MB
+   - data_69.csv: 1000000 rows, 200.8 MB
+   - data_70.csv: 1000000 rows, 187.9 MB
+   - data_71.csv: 1000000 rows, 201.4 MB
+   - data_72.csv: 1000000 rows, 202.9 MB
+   - data_73.csv: 1000000 rows, 202.4 MB
+   - data_74.csv: 370443 rows, 73.5 MB
+[Bot-IoT] DONE total_rows~73370443 classes~2
+[CIC-IDS-2017] 8 file(s)
+   - Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv: 225745 rows, 77.1 MB
+   - Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv: 286467 rows, 76.9 MB
+   - Friday-WorkingHours-Morning.pcap_ISCX.csv: 191033 rows, 58.3 MB
+   - Monday-WorkingHours.pcap_ISCX.csv: 529918 rows, 176.9 MB
+   - Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv: 288602 rows, 83.1 MB
+   - Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv: 170366 rows, 52.0 MB
+   - Tuesday-WorkingHours.pcap_ISCX.csv: 445909 rows, 135.1 MB
+   - Wednesday-workingHours.pcap_ISCX.csv: 692703 rows, 225.2 MB
+[CIC-IDS-2017] DONE total_rows~2830743 classes~14
+[CICIoT2023] 3 file(s)
+   - train.csv: 5491971 rows, 1623.4 MB
+   - validation.csv: 1176851 rows, 347.9 MB
+   - test.csv: 1176851 rows, 348.0 MB
+[CICIoT2023] DONE total_rows~7845673 classes~34
+[CIC-VPN2016-flow] 1 file(s)
+   - consolidated_traffic_data.csv: 59706 rows, 13.1 MB
+[CIC-VPN2016-flow] DONE total_rows~59706 classes~14
+[ISCX-VPN2016-CS240] 4 file(s)
+   - Hangouts.csv: 54543 rows, 25.9 MB
+   - Skype.csv: 27702 rows, 13.3 MB
+   - data.csv: 135514 rows, 64.4 MB
+   - facebook.csv: 53269 rows, 25.2 MB
+[ISCX-VPN2016-CS240] DONE total_rows~271028 classes~10
+[Edge-IIoTset] 1 file(s)
+   - DNN-EdgeIIoT-dataset.csv: 2219201 rows, 1217.4 MB
+[Edge-IIoTset] DONE total_rows~2219201 classes~1
+[ISCX-IDS-2012] 2 file(s)
+   - dataset_attack.csv: 2990062 rows, 411.2 MB
+   - dataset_normal.csv: 2668936 rows, 372.4 MB
+[ISCX-IDS-2012] DONE total_rows~5658998 classes~2
+[NSL-KDD] 2 file(s)
+   - kdd_train.csv: 125973 rows, 14.4 MB
+   - kdd_test.csv: 22544 rows, 3.1 MB
+[NSL-KDD] DONE total_rows~148517 classes~37
+[RT-IoT2022] 1 file(s)
+   - RT_IOT2022.csv: 123117 rows, 54.8 MB
+[RT-IoT2022] DONE total_rows~123117 classes~12
+[ToN-IoT-Network] 1 file(s)
+   - train_test_network.csv: 211043 rows, 29.9 MB
+[ToN-IoT-Network] DONE total_rows~211043 classes~2
+[UNSW-NB15] 2 file(s)
+   - UNSW_NB15_training-set.csv: 82332 rows, 15.4 MB
+   - UNSW_NB15_testing-set.csv: 175341 rows, 32.3 MB
+[UNSW-NB15] DONE total_rows~257673 classes~2
+
+Saved inventory to c:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 2\manifests

@@ -1,0 +1,445 @@
+{
+  "candidate": "C3_OfflineSafeGraphRL",
+  "dataset": "UNSW-NB15",
+  "best_value": 0.7730670202608411,
+  "best_params": {
+    "n_updates": 15,
+    "episodes_per_update": 10,
+    "telemetry_budget": 12,
+    "window_size": 32,
+    "w_tp": 0.6110085516679683,
+    "w_fn": 1.0531112920205954,
+    "w_fp": 1.4199116896425026,
+    "cql_alpha": 2.7231871035339568,
+    "n_episodes_offline": 369,
+    "epochs": 25,
+    "behavior_epsilon": 0.15237296964590732
+  },
+  "all_trials": [
+    {
+      "number": 0,
+      "value": 0.031142290016376386,
+      "params": {
+        "n_updates": 32,
+        "episodes_per_update": 13,
+        "telemetry_budget": 9,
+        "window_size": 128,
+        "w_tp": 1.1563808168940388,
+        "w_fn": 3.621205502737279,
+        "w_fp": 2.9091569012525733,
+        "cql_alpha": 1.2119804045947553,
+        "n_episodes_offline": 338,
+        "epochs": 17,
+        "behavior_epsilon": 0.3488155963828763
+      }
+    },
+    {
+      "number": 1,
+      "value": 0.0,
+      "params": {
+        "n_updates": 43,
+        "episodes_per_update": 4,
+        "telemetry_budget": 4,
+        "window_size": 64,
+        "w_tp": 1.8050182223702287,
+        "w_fn": 3.925164197814674,
+        "w_fp": 2.497896410541809,
+        "cql_alpha": 1.4382901505335024,
+        "n_episodes_offline": 334,
+        "epochs": 10,
+        "behavior_epsilon": 0.3739723574646333
+      }
+    },
+    {
+      "number": 2,
+      "value": 0.0,
+      "params": {
+        "n_updates": 19,
+        "episodes_per_update": 16,
+        "telemetry_budget": 8,
+        "window_size": 128,
+        "w_tp": 1.1842254983248228,
+        "w_fn": 2.48951882104027,
+        "w_fp": 0.5469745010908879,
+        "cql_alpha": 1.8911429415200436,
+        "n_episodes_offline": 284,
+        "epochs": 19,
+        "behavior_epsilon": 0.48031182748011847
+      }
+    },
+    {
+      "number": 3,
+      "value": 0.0,
+      "params": {
+        "n_updates": 36,
+        "episodes_per_update": 8,
+        "telemetry_budget": 7,
+        "window_size": 32,
+        "w_tp": 1.5059568044272391,
+        "w_fn": 1.2363389637584432,
+        "w_fp": 0.8223157441371333,
+        "cql_alpha": 1.0147422176801333,
+        "n_episodes_offline": 209,
+        "epochs": 18,
+        "behavior_epsilon": 0.30351052971181214
+      }
+    },
+    {
+      "number": 4,
+      "value": 0.0,
+      "params": {
+        "n_updates": 45,
+        "episodes_per_update": 5,
+        "telemetry_budget": 5,
+        "window_size": 64,
+        "w_tp": 1.1994661592844595,
+        "w_fn": 1.3554895720056095,
+        "w_fp": 0.8974239591137994,
+        "cql_alpha": 0.4200879093764849,
+        "n_episodes_offline": 297,
+        "epochs": 10,
+        "behavior_epsilon": 0.21880382658801872
+      }
+    },
+    {
+      "number": 5,
+      "value": 0.0,
+      "params": {
+        "n_updates": 26,
+        "episodes_per_update": 14,
+        "telemetry_budget": 4,
+        "window_size": 128,
+        "w_tp": 1.2029768024715524,
+        "w_fn": 3.91866380866618,
+        "w_fp": 2.012113799362615,
+        "cql_alpha": 2.243864380255075,
+        "n_episodes_offline": 111,
+        "epochs": 13,
+        "behavior_epsilon": 0.1920687964246091
+      }
+    },
+    {
+      "number": 6,
+      "value": 0.0,
+      "params": {
+        "n_updates": 24,
+        "episodes_per_update": 5,
+        "telemetry_budget": 6,
+        "window_size": 128,
+        "w_tp": 1.3499021813098628,
+        "w_fn": 1.428863218288059,
+        "w_fp": 1.8081201336667492,
+        "cql_alpha": 0.3724274811994809,
+        "n_episodes_offline": 273,
+        "epochs": 24,
+        "behavior_epsilon": 0.26149913335796326
+      }
+    },
+    {
+      "number": 7,
+      "value": 0.0,
+      "params": {
+        "n_updates": 35,
+        "episodes_per_update": 5,
+        "telemetry_budget": 10,
+        "window_size": 128,
+        "w_tp": 0.5301613192812403,
+        "w_fn": 3.401290102260771,
+        "w_fp": 0.5117386904813677,
+        "cql_alpha": 2.0656679567090674,
+        "n_episodes_offline": 181,
+        "epochs": 21,
+        "behavior_epsilon": 0.4867659907911034
+      }
+    },
+    {
+      "number": 8,
+      "value": 0.0,
+      "params": {
+        "n_updates": 22,
+        "episodes_per_update": 11,
+        "telemetry_budget": 9,
+        "window_size": 128,
+        "w_tp": 1.170688067926441,
+        "w_fn": 3.4624303536489474,
+        "w_fp": 2.2486981882937607,
+        "cql_alpha": 0.9625671574798875,
+        "n_episodes_offline": 344,
+        "epochs": 15,
+        "behavior_epsilon": 0.4583861189889066
+      }
+    },
+    {
+      "number": 9,
+      "value": 0.06582698243936526,
+      "params": {
+        "n_updates": 33,
+        "episodes_per_update": 15,
+        "telemetry_budget": 10,
+        "window_size": 128,
+        "w_tp": 1.4659852988444562,
+        "w_fn": 1.9834926699536288,
+        "w_fp": 2.015983035319811,
+        "cql_alpha": 0.15566027509706723,
+        "n_episodes_offline": 190,
+        "epochs": 19,
+        "behavior_epsilon": 0.2515271625236554
+      }
+    },
+    {
+      "number": 10,
+      "value": 0.7081814595410514,
+      "params": {
+        "n_updates": 15,
+        "episodes_per_update": 10,
+        "telemetry_budget": 12,
+        "window_size": 32,
+        "w_tp": 0.5415840398719531,
+        "w_fn": 0.5530202837658476,
+        "w_fp": 1.5537991033843712,
+        "cql_alpha": 2.8725720029163764,
+        "n_episodes_offline": 396,
+        "epochs": 25,
+        "behavior_epsilon": 0.15266281971331921
+      }
+    },
+    {
+      "number": 11,
+      "value": 0.7396090985796892,
+      "params": {
+        "n_updates": 16,
+        "episodes_per_update": 10,
+        "telemetry_budget": 12,
+        "window_size": 32,
+        "w_tp": 0.5031498982321023,
+        "w_fn": 0.5726882399851339,
+        "w_fp": 1.5419392351778476,
+        "cql_alpha": 2.691888768951605,
+        "n_episodes_offline": 389,
+        "epochs": 25,
+        "behavior_epsilon": 0.154661828711414
+      }
+    },
+    {
+      "number": 12,
+      "value": 0.733181377895782,
+      "params": {
+        "n_updates": 15,
+        "episodes_per_update": 10,
+        "telemetry_budget": 12,
+        "window_size": 32,
+        "w_tp": 0.5117193168806055,
+        "w_fn": 0.542714457056885,
+        "w_fp": 1.3390757443787007,
+        "cql_alpha": 2.9973890539968453,
+        "n_episodes_offline": 396,
+        "epochs": 25,
+        "behavior_epsilon": 0.15745689541976912
+      }
+    },
+    {
+      "number": 13,
+      "value": 0.004212705645880133,
+      "params": {
+        "n_updates": 15,
+        "episodes_per_update": 8,
+        "telemetry_budget": 12,
+        "window_size": 32,
+        "w_tp": 0.7860866907294257,
+        "w_fn": 0.59238513127718,
+        "w_fp": 1.4031706553430419,
+        "cql_alpha": 2.994321924839178,
+        "n_episodes_offline": 381,
+        "epochs": 23,
+        "behavior_epsilon": 0.1665075330774522
+      }
+    },
+    {
+      "number": 14,
+      "value": 0.589952738007913,
+      "params": {
+        "n_updates": 19,
+        "episodes_per_update": 11,
+        "telemetry_budget": 11,
+        "window_size": 32,
+        "w_tp": 0.8325130986328351,
+        "w_fn": 0.9551395206922768,
+        "w_fp": 1.2579348681080307,
+        "cql_alpha": 2.569507975141275,
+        "n_episodes_offline": 398,
+        "epochs": 22,
+        "behavior_epsilon": 0.21760566709498289
+      }
+    },
+    {
+      "number": 15,
+      "value": 0.7389892391509522,
+      "params": {
+        "n_updates": 19,
+        "episodes_per_update": 8,
+        "telemetry_budget": 12,
+        "window_size": 32,
+        "w_tp": 0.8029594552732516,
+        "w_fn": 1.8082317474918648,
+        "w_fp": 1.1144229083816286,
+        "cql_alpha": 2.520653107232262,
+        "n_episodes_offline": 358,
+        "epochs": 25,
+        "behavior_epsilon": 0.16064592198751274
+      }
+    },
+    {
+      "number": 16,
+      "value": 0.0,
+      "params": {
+        "n_updates": 27,
+        "episodes_per_update": 8,
+        "telemetry_budget": 11,
+        "window_size": 32,
+        "w_tp": 0.8692192184899064,
+        "w_fn": 2.118556897648287,
+        "w_fp": 1.0275914008678102,
+        "cql_alpha": 2.4898569302701685,
+        "n_episodes_offline": 353,
+        "epochs": 21,
+        "behavior_epsilon": 0.2089789233410581
+      }
+    },
+    {
+      "number": 17,
+      "value": 0.0,
+      "params": {
+        "n_updates": 20,
+        "episodes_per_update": 7,
+        "telemetry_budget": 11,
+        "window_size": 32,
+        "w_tp": 0.7193181462406343,
+        "w_fn": 2.821489719583625,
+        "w_fp": 1.6605909751027932,
+        "cql_alpha": 1.718533703992473,
+        "n_episodes_offline": 307,
+        "epochs": 23,
+        "behavior_epsilon": 0.26740881202711164
+      }
+    },
+    {
+      "number": 18,
+      "value": 0.0,
+      "params": {
+        "n_updates": 27,
+        "episodes_per_update": 12,
+        "telemetry_budget": 10,
+        "window_size": 32,
+        "w_tp": 0.9706131551251228,
+        "w_fn": 1.8219359046432222,
+        "w_fp": 1.1834731682428694,
+        "cql_alpha": 2.5325136104897017,
+        "n_episodes_offline": 248,
+        "epochs": 25,
+        "behavior_epsilon": 0.18358110474968664
+      }
+    },
+    {
+      "number": 19,
+      "value": 0.7231233750272699,
+      "params": {
+        "n_updates": 18,
+        "episodes_per_update": 7,
+        "telemetry_budget": 12,
+        "window_size": 64,
+        "w_tp": 0.6924399121795093,
+        "w_fn": 2.9907452422749476,
+        "w_fp": 1.7863766616740802,
+        "cql_alpha": 2.3126361175629193,
+        "n_episodes_offline": 366,
+        "epochs": 21,
+        "behavior_epsilon": 0.29787903823261097
+      }
+    },
+    {
+      "number": 20,
+      "value": 0.0,
+      "params": {
+        "n_updates": 23,
+        "episodes_per_update": 9,
+        "telemetry_budget": 11,
+        "window_size": 32,
+        "w_tp": 0.9770804860160058,
+        "w_fn": 1.7013507373789374,
+        "w_fp": 1.0383525874586348,
+        "cql_alpha": 2.750470500223284,
+        "n_episodes_offline": 319,
+        "epochs": 23,
+        "behavior_epsilon": 0.2396949207061016
+      }
+    },
+    {
+      "number": 21,
+      "value": 0.7730670202608411,
+      "params": {
+        "n_updates": 15,
+        "episodes_per_update": 10,
+        "telemetry_budget": 12,
+        "window_size": 32,
+        "w_tp": 0.6110085516679683,
+        "w_fn": 1.0531112920205954,
+        "w_fp": 1.4199116896425026,
+        "cql_alpha": 2.7231871035339568,
+        "n_episodes_offline": 369,
+        "epochs": 25,
+        "behavior_epsilon": 0.15237296964590732
+      }
+    },
+    {
+      "number": 22,
+      "value": 0.0,
+      "params": {
+        "n_updates": 17,
+        "episodes_per_update": 10,
+        "telemetry_budget": 12,
+        "window_size": 32,
+        "w_tp": 0.660588134050162,
+        "w_fn": 0.995705053248253,
+        "w_fp": 1.5205106130660273,
+        "cql_alpha": 2.663351629728745,
+        "n_episodes_offline": 367,
+        "epochs": 25,
+        "behavior_epsilon": 0.15056723212625983
+      }
+    },
+    {
+      "number": 23,
+      "value": 0.0,
+      "params": {
+        "n_updates": 21,
+        "episodes_per_update": 12,
+        "telemetry_budget": 11,
+        "window_size": 32,
+        "w_tp": 0.6336470155254994,
+        "w_fn": 0.9173831840543722,
+        "w_fp": 0.849586313759562,
+        "cql_alpha": 2.336611821574632,
+        "n_episodes_offline": 363,
+        "epochs": 23,
+        "behavior_epsilon": 0.18988811502153383
+      }
+    },
+    {
+      "number": 24,
+      "value": 0.0,
+      "params": {
+        "n_updates": 17,
+        "episodes_per_update": 9,
+        "telemetry_budget": 12,
+        "window_size": 32,
+        "w_tp": 0.8908213178097809,
+        "w_fn": 2.337511854648473,
+        "w_fp": 1.1378863755075228,
+        "cql_alpha": 2.019158105590956,
+        "n_episodes_offline": 320,
+        "epochs": 24,
+        "behavior_epsilon": 0.18386146600087072
+      }
+    }
+  ]
+}

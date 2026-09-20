@@ -1,0 +1,138 @@
+{
+  "winner": "C_SafetyShieldedRL",
+  "selection_criteria": {
+    "minority_recall_floor": 0.3,
+    "tie_margin": 0.01
+  },
+  "candidates": {
+    "A_TreeGuidedGraphMoE": {
+      "gate": 1.0,
+      "min_minority_recall": 0.9557072149324161,
+      "mean_macro_f1": 0.963273167663452,
+      "mean_fnr": 0.015854005249461935,
+      "gated_score": 0.963273167663452,
+      "per_dataset": [
+        {
+          "dataset": "CICIoT2023",
+          "macro_f1": 0.9544380210223217,
+          "minority_recall": 0.9975562606830785,
+          "fnr": 0.0024437393169214334,
+          "fpr": 0.0760778734449611
+        },
+        {
+          "dataset": "ToN-IoT-Network",
+          "macro_f1": 0.9975565994055113,
+          "minority_recall": 0.9991745086361195,
+          "fnr": 0.0008254913638805333,
+          "fpr": 0.004872468229997766
+        },
+        {
+          "dataset": "UNSW-NB15",
+          "macro_f1": 0.9378248825625225,
+          "minority_recall": 0.9557072149324161,
+          "fnr": 0.044292785067583836,
+          "fpr": 0.08037209318753377
+        }
+      ],
+      "decision_metrics": {
+        "telemetry_cost": NaN,
+        "escalation_rate": NaN,
+        "isolation_rate": NaN,
+        "abstention_rate": NaN,
+        "budget_violation_rate": NaN,
+        "avg_detection_delay": NaN,
+        "cumulative_reward_per_window": NaN,
+        "commit_rate": NaN
+      }
+    },
+    "B_BudgetedRLInvestigation": {
+      "gate": 1.0,
+      "min_minority_recall": 0.9318066422748378,
+      "mean_macro_f1": 0.9617426466260253,
+      "mean_fnr": 0.019233417919176,
+      "gated_score": 0.9617426466260253,
+      "per_dataset": [
+        {
+          "dataset": "CICIoT2023",
+          "macro_f1": 0.9510444873877123,
+          "minority_recall": 0.9594957160379964,
+          "fnr": 0.0038020895394520666,
+          "fpr": 0.04050428396200357
+        },
+        {
+          "dataset": "ToN-IoT-Network",
+          "macro_f1": 0.9970878459353374,
+          "minority_recall": 0.9947309808165975,
+          "fnr": 0.0011207902063090666,
+          "fpr": 0.005269019183402467
+        },
+        {
+          "dataset": "UNSW-NB15",
+          "macro_f1": 0.937095606555026,
+          "minority_recall": 0.9318066422748378,
+          "fnr": 0.05277737401176686,
+          "fpr": 0.06819335772516215
+        }
+      ],
+      "decision_metrics": {
+        "telemetry_cost": 0.0,
+        "escalation_rate": 0.0,
+        "isolation_rate": 0.0,
+        "abstention_rate": 0.002363073861604711,
+        "budget_violation_rate": 0.0,
+        "avg_detection_delay": 0.0,
+        "cumulative_reward_per_window": 104.01763244768541,
+        "commit_rate": 0.997153044076554
+      }
+    },
+    "C_SafetyShieldedRL": {
+      "gate": 1.0,
+      "min_minority_recall": 0.9481859566331452,
+      "mean_macro_f1": 0.9662132478613379,
+      "mean_fnr": 0.015759187256734777,
+      "gated_score": 0.9662132478613379,
+      "per_dataset": [
+        {
+          "dataset": "CICIoT2023",
+          "macro_f1": 0.9510444873877123,
+          "minority_recall": 0.9594957160379964,
+          "fnr": 0.0038020895394520666,
+          "fpr": 0.04050428396200357
+        },
+        {
+          "dataset": "ToN-IoT-Network",
+          "macro_f1": 0.9970878459353374,
+          "minority_recall": 0.9947309808165975,
+          "fnr": 0.0011207902063090666,
+          "fpr": 0.005269019183402467
+        },
+        {
+          "dataset": "UNSW-NB15",
+          "macro_f1": 0.9505074102609637,
+          "minority_recall": 0.9481859566331452,
+          "fnr": 0.0423546820244432,
+          "fpr": 0.05181404336685467
+        }
+      ],
+      "decision_metrics": {
+        "telemetry_cost": 0.0,
+        "escalation_rate": 0.00986535128649512,
+        "isolation_rate": 0.0,
+        "abstention_rate": 0.002363073861604711,
+        "budget_violation_rate": 0.0,
+        "avg_detection_delay": 0.0,
+        "cumulative_reward_per_window": 104.17177557386246,
+        "commit_rate": 0.9872876927900589
+      }
+    }
+  },
+  "ranking": [
+    "C_SafetyShieldedRL",
+    "A_TreeGuidedGraphMoE",
+    "B_BudgetedRLInvestigation"
+  ],
+  "notes": [
+    "C_SafetyShieldedRL and A_TreeGuidedGraphMoE are within 0.01 macro-F1 (0.9662 vs 0.9633); selection tie-broken on decision-utility metrics, not classification quality.",
+    "C_SafetyShieldedRL was selected but does not exceed Candidate A's classification quality (macro-F1 0.9662 vs 0.9633) by more than the tie margin -- any reported advantage of C_SafetyShieldedRL over A is a decision-utility/operational-cost advantage, not a classification-accuracy improvement. Report this explicitly, per the task's Part 16 wording policy."
+  ]
+}

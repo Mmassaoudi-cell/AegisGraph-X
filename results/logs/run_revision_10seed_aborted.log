@@ -1,0 +1,51 @@
+PLAN row_cap=100000 seeds=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] datasets=['UNSW-NB15', 'ToN-IoT-Network', 'CICIoT2023'] -> *_v2_10seed.csv
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7796 minority_recall=0.6236 pr_auc=0.9157
+  LinearSVM: macro_f1=0.8784 minority_recall=0.7821 pr_auc=0.9718
+  GaussianNB: macro_f1=0.7468 minority_recall=0.8493 pr_auc=0.9042
+  kNN: macro_f1=0.9142 minority_recall=0.8892 pr_auc=0.9872
+  DecisionTree: macro_f1=0.9287 minority_recall=0.9686 pr_auc=0.9853
+  RandomForest: macro_f1=0.9373 minority_recall=0.9536 pr_auc=0.9948
+  ExtraTrees: macro_f1=0.9195 minority_recall=0.9134 pr_auc=0.9910
+  GradientBoosting: macro_f1=0.9308 minority_recall=0.9060 pr_auc=0.9935
+  HistGradientBoosting: macro_f1=0.9376 minority_recall=0.9352 pr_auc=0.9949
+  XGBoost: macro_f1=0.9403 minority_recall=0.9330 pr_auc=0.9951
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9392 minority_recall=0.9636 pr_auc=0.9950
+  CatBoost: macro_f1=0.9378 minority_recall=0.9278 pr_auc=0.9946
+[UNSW-NB15] deep baselines...
+  MLP: macro_f1=0.8891 minority_recall=0.8855 pr_auc=0.9825 n_params=7042
+  1D-CNN: macro_f1=0.8072 minority_recall=0.7815 pr_auc=0.9313 n_params=7234
+  LSTM: macro_f1=0.8963 minority_recall=0.8919 pr_auc=0.9856 n_params=9794
+  GRU: macro_f1=0.8908 minority_recall=0.9024 pr_auc=0.9844 n_params=7362
+  CNN-LSTM: macro_f1=0.8729 minority_recall=0.8667 pr_auc=0.9763 n_params=12578
+  CNN-BiLSTM: macro_f1=0.8698 minority_recall=0.9052 pr_auc=0.9785 n_params=21090
+  TCN: macro_f1=0.6487 minority_recall=0.5534 pr_auc=0.7988 n_params=7234
+  TransformerEncoder: macro_f1=0.8745 minority_recall=0.8651 pr_auc=0.9765 n_params=9986
+  FT-Transformer: macro_f1=0.8193 minority_recall=0.8004 pr_auc=0.9436 n_params=2306
+[UNSW-NB15] graph baselines...
+  GCN: macro_f1=0.8201 minority_recall=0.8382 pr_auc=0.9503
+  GraphSAGE: macro_f1=0.8099 minority_recall=0.9335 pr_auc=0.9565
+  GAT: macro_f1=0.8319 minority_recall=0.9199 pr_auc=0.9607
+  Protocol-role-GAT: macro_f1=0.8300 minority_recall=0.9186 pr_auc=0.9647
+  HypergraphNN: macro_f1=0.8476 minority_recall=0.8006 pr_auc=0.9378
+[UNSW-NB15] RL baselines...

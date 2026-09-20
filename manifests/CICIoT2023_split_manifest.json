@@ -1,0 +1,33 @@
+{
+  "dataset": "CICIoT2023",
+  "split_strategy": "native_curator_split_by_file",
+  "n_rows_total": 300000,
+  "n_train": 100000,
+  "n_val": 99919,
+  "n_test": 99902,
+  "dedup_report": {
+    "val": {
+      "before": 100000,
+      "dropped_exact_dupe_of_train": 81
+    },
+    "test": {
+      "before": 100000,
+      "dropped_exact_dupe_of_train": 98
+    }
+  },
+  "class_balance": {
+    "train": {
+      "1": 97686,
+      "0": 2314
+    },
+    "val": {
+      "1": 97568,
+      "0": 2351
+    },
+    "test": {
+      "1": 97533,
+      "0": 2369
+    }
+  },
+  "random_state": 9
+}

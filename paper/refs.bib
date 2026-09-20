@@ -1,0 +1,454 @@
+% refs.bib -- AegisGraph-X
+%
+% Created during the Round-1 revision. The submitted manuscript had no
+% bibliography file and no \cite commands; every entry below was verified
+% against arXiv's API, Crossref, or the publisher record before inclusion.
+% Nothing here is included on recall alone.
+%
+% Verification key in each entry's `note`-free form: entries carry either a
+% DOI confirmed via Crossref or an eprint id confirmed via the arXiv API.
+
+% ---------------------------------------------------------------- datasets
+
+@inproceedings{moustafa2015unswnb15,
+  author    = {Nour Moustafa and Jill Slay},
+  title     = {{UNSW-NB15}: A Comprehensive Data Set for Network Intrusion
+               Detection Systems ({UNSW-NB15} Network Data Set)},
+  booktitle = {2015 Military Communications and Information Systems
+               Conference (MilCIS)},
+  pages     = {1--6},
+  year      = {2015},
+  doi       = {10.1109/MilCIS.2015.7348942}
+}
+
+@article{alsaedi2020toniot,
+  author  = {Abdullah Alsaedi and Nour Moustafa and Zahir Tari and
+             Abdun Mahmood and Adnan Anwar},
+  title   = {{TON\_IoT} Telemetry Dataset: A New Generation Dataset of
+             {IoT} and {IIoT} for Data-Driven Intrusion Detection Systems},
+  journal = {IEEE Access},
+  volume  = {8},
+  pages   = {165130--165150},
+  year    = {2020},
+  doi     = {10.1109/ACCESS.2020.3022862}
+}
+
+@article{neto2023ciciot2023,
+  author  = {Euclides Carlos Pinto Neto and Sajjad Dadkhah and
+             Raphael Ferreira and Alireza Zohourian and Rongxing Lu and
+             Ali A. Ghorbani},
+  title   = {{CICIoT2023}: A Real-Time Dataset and Benchmark for
+             Large-Scale Attacks in {IoT} Environment},
+  journal = {Sensors},
+  volume  = {23},
+  number  = {13},
+  pages   = {5941},
+  year    = {2023},
+  doi     = {10.3390/s23135941}
+}
+
+% ------------------------------------------------------- tree / boosting
+
+@inproceedings{chen2016xgboost,
+  author    = {Tianqi Chen and Carlos Guestrin},
+  title     = {{XGBoost}: A Scalable Tree Boosting System},
+  booktitle = {Proceedings of the 22nd ACM SIGKDD International Conference
+               on Knowledge Discovery and Data Mining},
+  pages     = {785--794},
+  year      = {2016},
+  doi       = {10.1145/2939672.2939785}
+}
+
+@article{breiman2001randomforests,
+  author  = {Leo Breiman},
+  title   = {Random Forests},
+  journal = {Machine Learning},
+  volume  = {45},
+  number  = {1},
+  pages   = {5--32},
+  year    = {2001},
+  doi     = {10.1023/A:1010933404324}
+}
+
+@article{prokhorenkova2018catboost,
+  author        = {Liudmila Prokhorenkova and Gleb Gusev and
+                   Aleksandr Vorobev and Anna Veronika Dorogush and
+                   Andrey Gulin},
+  title         = {{CatBoost}: Unbiased Boosting with Categorical Features},
+  journal       = {arXiv preprint arXiv:1706.09516},
+  year          = {2017},
+  eprint        = {1706.09516},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{grinsztajn2022trees,
+  author    = {L{\'e}o Grinsztajn and Edouard Oyallon and
+               Ga{\"e}l Varoquaux},
+  title     = {Why Do Tree-Based Models Still Outperform Deep Learning on
+               Typical Tabular Data?},
+  booktitle = {Advances in Neural Information Processing Systems 35
+               (NeurIPS 2022) Datasets and Benchmarks Track},
+  year      = {2022},
+  eprint    = {2207.08815},
+  archivePrefix = {arXiv}
+}
+
+@article{shwartzziv2022tabular,
+  author        = {Ravid Shwartz-Ziv and Amitai Armon},
+  title         = {Tabular Data: Deep Learning Is Not All You Need},
+  journal       = {arXiv preprint arXiv:2106.03253},
+  year          = {2021},
+  eprint        = {2106.03253},
+  archivePrefix = {arXiv}
+}
+
+% --------------------------------------------------------- deep tabular
+
+@inproceedings{gorishniy2021revisiting,
+  author    = {Yury Gorishniy and Ivan Rubachev and Valentin Khrulkov and
+               Artem Babenko},
+  title     = {Revisiting Deep Learning Models for Tabular Data},
+  booktitle = {Advances in Neural Information Processing Systems 34
+               (NeurIPS 2021)},
+  year      = {2021},
+  eprint    = {2106.11959},
+  archivePrefix = {arXiv}
+}
+
+@article{huang2020tabtransformer,
+  author        = {Xin Huang and Ashish Khetan and Milan Cvitkovic and
+                   Zohar Karnin},
+  title         = {{TabTransformer}: Tabular Data Modeling Using Contextual
+                   Embeddings},
+  journal       = {arXiv preprint arXiv:2012.06678},
+  year          = {2020},
+  eprint        = {2012.06678},
+  archivePrefix = {arXiv}
+}
+
+@article{somepalli2021saint,
+  author        = {Gowthami Somepalli and Micah Goldblum and
+                   Avi Schwarzschild and C. Bayan Bruss and Tom Goldstein},
+  title         = {{SAINT}: Improved Neural Networks for Tabular Data via
+                   Row Attention and Contrastive Pre-Training},
+  journal       = {arXiv preprint arXiv:2106.01342},
+  year          = {2021},
+  eprint        = {2106.01342},
+  archivePrefix = {arXiv}
+}
+
+@article{bai2018tcn,
+  author        = {Shaojie Bai and J. Zico Kolter and Vladlen Koltun},
+  title         = {An Empirical Evaluation of Generic Convolutional and
+                   Recurrent Networks for Sequence Modeling},
+  journal       = {arXiv preprint arXiv:1803.01271},
+  year          = {2018},
+  eprint        = {1803.01271},
+  archivePrefix = {arXiv}
+}
+
+% --------------------------------------------------------------- graph
+
+@inproceedings{kipf2017gcn,
+  author    = {Thomas N. Kipf and Max Welling},
+  title     = {Semi-Supervised Classification with Graph Convolutional
+               Networks},
+  booktitle = {International Conference on Learning Representations
+               (ICLR)},
+  year      = {2017},
+  eprint    = {1609.02907},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{hamilton2017graphsage,
+  author    = {William L. Hamilton and Rex Ying and Jure Leskovec},
+  title     = {Inductive Representation Learning on Large Graphs},
+  booktitle = {Advances in Neural Information Processing Systems 30
+               (NeurIPS 2017)},
+  year      = {2017},
+  eprint    = {1706.02216},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{velickovic2018gat,
+  author    = {Petar Veli{\v{c}}kovi{\'c} and Guillem Cucurull and
+               Arantxa Casanova and Adriana Romero and Pietro Li{\`o} and
+               Yoshua Bengio},
+  title     = {Graph Attention Networks},
+  booktitle = {International Conference on Learning Representations
+               (ICLR)},
+  year      = {2018},
+  eprint    = {1710.10903},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{lo2022egraphsage,
+  author    = {Wai Weng Lo and Siamak Layeghy and Mohanad Sarhan and
+               Marcus Gallagher and Marius Portmann},
+  title     = {{E-GraphSAGE}: A Graph Neural Network Based Intrusion
+               Detection System for {IoT}},
+  booktitle = {NOMS 2022 IEEE/IFIP Network Operations and Management
+               Symposium},
+  pages     = {1--9},
+  year      = {2022},
+  doi       = {10.1109/NOMS54207.2022.9789878}
+}
+
+% ------------------------------------------------- mixture of experts
+
+@article{jacobs1991moe,
+  author  = {Robert A. Jacobs and Michael I. Jordan and
+             Steven J. Nowlan and Geoffrey E. Hinton},
+  title   = {Adaptive Mixtures of Local Experts},
+  journal = {Neural Computation},
+  volume  = {3},
+  number  = {1},
+  pages   = {79--87},
+  year    = {1991},
+  doi     = {10.1162/neco.1991.3.1.79}
+}
+
+@inproceedings{shazeer2017moe,
+  author    = {Noam Shazeer and Azalia Mirhoseini and Krzysztof Maziarz and
+               Andy Davis and Quoc Le and Geoffrey Hinton and Jeff Dean},
+  title     = {Outrageously Large Neural Networks: The Sparsely-Gated
+               Mixture-of-Experts Layer},
+  booktitle = {International Conference on Learning Representations
+               (ICLR)},
+  year      = {2017},
+  eprint    = {1701.06538},
+  archivePrefix = {arXiv}
+}
+
+@article{fedus2022switch,
+  author        = {William Fedus and Barret Zoph and Noam Shazeer},
+  title         = {Switch Transformers: Scaling to Trillion Parameter Models
+                   with Simple and Efficient Sparsity},
+  journal       = {arXiv preprint arXiv:2101.03961},
+  year          = {2021},
+  eprint        = {2101.03961},
+  archivePrefix = {arXiv}
+}
+
+% ------------------------------------------------------------ stacking
+
+@article{wolpert1992stacked,
+  author  = {David H. Wolpert},
+  title   = {Stacked Generalization},
+  journal = {Neural Networks},
+  volume  = {5},
+  number  = {2},
+  pages   = {241--259},
+  year    = {1992},
+  doi     = {10.1016/S0893-6080(05)80023-1}
+}
+
+% ------------------------------------- calibration / conformal / safety
+
+@inproceedings{guo2017calibration,
+  author    = {Chuan Guo and Geoff Pleiss and Yu Sun and
+               Kilian Q. Weinberger},
+  title     = {On Calibration of Modern Neural Networks},
+  booktitle = {Proceedings of the 34th International Conference on Machine
+               Learning (ICML)},
+  series    = {PMLR},
+  volume    = {70},
+  pages     = {1321--1330},
+  year      = {2017},
+  eprint    = {1706.04599},
+  archivePrefix = {arXiv}
+}
+
+@article{angelopoulos2021conformal,
+  author        = {Anastasios N. Angelopoulos and Stephen Bates},
+  title         = {A Gentle Introduction to Conformal Prediction and
+                   Distribution-Free Uncertainty Quantification},
+  journal       = {arXiv preprint arXiv:2107.07511},
+  year          = {2021},
+  eprint        = {2107.07511},
+  archivePrefix = {arXiv}
+}
+
+% ------------------------------------------------- distillation / loss
+
+@article{hinton2015distilling,
+  author        = {Geoffrey Hinton and Oriol Vinyals and Jeff Dean},
+  title         = {Distilling the Knowledge in a Neural Network},
+  journal       = {arXiv preprint arXiv:1503.02531},
+  year          = {2015},
+  eprint        = {1503.02531},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{lin2017focal,
+  author    = {Tsung-Yi Lin and Priya Goyal and Ross Girshick and
+               Kaiming He and Piotr Doll{\'a}r},
+  title     = {Focal Loss for Dense Object Detection},
+  booktitle = {Proceedings of the IEEE International Conference on
+               Computer Vision (ICCV)},
+  year      = {2017},
+  eprint    = {1708.02002},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{khosla2020supcon,
+  author    = {Prannay Khosla and Piotr Teterwak and Chen Wang and
+               Aaron Sarna and Yonglong Tian and Phillip Isola and
+               Aaron Maschinot and Ce Liu and Dilip Krishnan},
+  title     = {Supervised Contrastive Learning},
+  booktitle = {Advances in Neural Information Processing Systems 33
+               (NeurIPS 2020)},
+  year      = {2020},
+  eprint    = {2004.11362},
+  archivePrefix = {arXiv}
+}
+
+% ---------------------------------------------------------------- RL
+
+@article{schulman2017ppo,
+  author        = {John Schulman and Filip Wolski and Prafulla Dhariwal and
+                   Alec Radford and Oleg Klimov},
+  title         = {Proximal Policy Optimization Algorithms},
+  journal       = {arXiv preprint arXiv:1707.06347},
+  year          = {2017},
+  eprint        = {1707.06347},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{kumar2020cql,
+  author    = {Aviral Kumar and Aurick Zhou and George Tucker and
+               Sergey Levine},
+  title     = {Conservative {Q}-Learning for Offline Reinforcement
+               Learning},
+  booktitle = {Advances in Neural Information Processing Systems 33
+               (NeurIPS 2020)},
+  year      = {2020},
+  eprint    = {2006.04779},
+  archivePrefix = {arXiv}
+}
+
+@inproceedings{fujimoto2019bcq,
+  author    = {Scott Fujimoto and David Meger and Doina Precup},
+  title     = {Off-Policy Deep Reinforcement Learning without Exploration},
+  booktitle = {Proceedings of the 36th International Conference on Machine
+               Learning (ICML)},
+  year      = {2019},
+  eprint    = {1812.02900},
+  archivePrefix = {arXiv}
+}
+
+@article{nguyen2019drlcyber,
+  author        = {Thanh Thi Nguyen and Vijay Janapa Reddi},
+  title         = {Deep Reinforcement Learning for Cyber Security},
+  journal       = {arXiv preprint arXiv:1906.05799},
+  year          = {2019},
+  eprint        = {1906.05799},
+  archivePrefix = {arXiv}
+}
+
+% ---------------------------------------------------------- statistics
+
+@article{schuirmann1987tost,
+  author  = {Donald J. Schuirmann},
+  title   = {A Comparison of the Two One-Sided Tests Procedure and the
+             Power Approach for Assessing the Equivalence of Average
+             Bioavailability},
+  journal = {Journal of Pharmacokinetics and Biopharmaceutics},
+  volume  = {15},
+  number  = {6},
+  pages   = {657--680},
+  year    = {1987},
+  doi     = {10.1007/BF01068419}
+}
+
+@article{lakens2017equivalence,
+  author  = {Dani{\"e}l Lakens},
+  title   = {Equivalence Tests: A Practical Primer for $t$-Tests,
+             Correlations, and Meta-Analyses},
+  journal = {Social Psychological and Personality Science},
+  volume  = {8},
+  number  = {4},
+  pages   = {355--362},
+  year    = {2017},
+  doi     = {10.1177/1948550617697177}
+}
+
+@article{holm1979,
+  author  = {Sture Holm},
+  title   = {A Simple Sequentially Rejective Multiple Test Procedure},
+  journal = {Scandinavian Journal of Statistics},
+  volume  = {6},
+  number  = {2},
+  pages   = {65--70},
+  year    = {1979}
+}
+
+@article{wald1945sequential,
+  author  = {Abraham Wald},
+  title   = {Sequential Tests of Statistical Hypotheses},
+  journal = {The Annals of Mathematical Statistics},
+  volume  = {16},
+  number  = {2},
+  pages   = {117--186},
+  year    = {1945},
+  doi     = {10.1214/aoms/1177731118}
+}
+
+@article{howard1966voi,
+  author  = {Ronald A. Howard},
+  title   = {Information Value Theory},
+  journal = {IEEE Transactions on Systems Science and Cybernetics},
+  volume  = {2},
+  number  = {1},
+  pages   = {22--26},
+  year    = {1966},
+  doi     = {10.1109/TSSC.1966.300074}
+}
+
+% ------------------------------------------ additional datasets / methods
+
+@inproceedings{sharafaldin2018cicids,
+  author    = {Iman Sharafaldin and Arash Habibi Lashkari and
+               Ali A. Ghorbani},
+  title     = {Toward Generating a New Intrusion Detection Dataset and
+               Intrusion Traffic Characterization},
+  booktitle = {Proceedings of the 4th International Conference on
+               Information Systems Security and Privacy (ICISSP)},
+  pages     = {108--116},
+  year      = {2018},
+  doi       = {10.5220/0006639801080116}
+}
+
+@article{sharmila2023rtiot2022,
+  author  = {B. S. Sharmila and Rohini Nagapadma},
+  title   = {Quantized Autoencoder ({QAE}) Intrusion Detection System for
+             Anomaly Detection in Resource-Constrained {IoT} Devices Using
+             {RT-IoT2022} Dataset},
+  journal = {Cybersecurity},
+  volume  = {6},
+  number  = {41},
+  year    = {2023},
+  doi     = {10.1186/s42400-023-00178-5}
+}
+
+@inproceedings{ke2017lightgbm,
+  author    = {Guolin Ke and Qi Meng and Thomas Finley and Taifeng Wang and
+               Wei Chen and Weidong Ma and Qiwei Ye and Tie-Yan Liu},
+  title     = {{LightGBM}: A Highly Efficient Gradient Boosting Decision
+               Tree},
+  booktitle = {Advances in Neural Information Processing Systems 30
+               (NIPS 2017)},
+  pages     = {3146--3154},
+  year      = {2017}
+}
+
+@inproceedings{zadrozny2002isotonic,
+  author    = {Bianca Zadrozny and Charles Elkan},
+  title     = {Transforming Classifier Scores into Accurate Multiclass
+               Probability Estimates},
+  booktitle = {Proceedings of the Eighth ACM SIGKDD International
+               Conference on Knowledge Discovery and Data Mining},
+  pages     = {694--699},
+  year      = {2002},
+  doi       = {10.1145/775047.775151}
+}

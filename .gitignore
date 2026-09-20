@@ -1,0 +1,38 @@
+# Figures and rendered tables -- excluded from this repo by request.
+# The method/code is pushed for reproducibility; visual paper assets are not.
+/figures/
+/tables/
+paper/*.pdf
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.bak-*
+
+# Unrelated large local files (not part of this project's source code)
+/Trans1.pdf
+/Trans2.pdf
+/New Microsoft Word Document.docx
+/AegisGraph-X_overleaf.zip
+
+# Stale/superseded snapshots kept locally for provenance, not for the repo
+/backups/
+/results/csv/archive_superseded/
+
+# Stray debug-run manifests written to the wrong relative path by smaller
+# smoke-test invocations during development -- not the canonical manifests/
+# directory at the project root, and misleading if included alongside it.
+code/env/manifests/
+code/experiments/manifests/
+
+# Tool-generated noise (catboost_info/ can be created wherever a script runs)
+catboost_info/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db

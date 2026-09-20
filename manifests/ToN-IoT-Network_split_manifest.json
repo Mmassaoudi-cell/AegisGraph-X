@@ -1,0 +1,33 @@
+{
+  "dataset": "ToN-IoT-Network",
+  "split_strategy": "group_disjoint",
+  "n_rows_total": 100000,
+  "n_train": 68935,
+  "n_val": 14849,
+  "n_test": 16216,
+  "dedup_report": {
+    "val": {
+      "before": 14849,
+      "dropped_exact_dupe_of_train": 0
+    },
+    "test": {
+      "before": 16216,
+      "dropped_exact_dupe_of_train": 0
+    }
+  },
+  "class_balance": {
+    "train": {
+      "1": 53027,
+      "0": 15908
+    },
+    "val": {
+      "1": 11922,
+      "0": 2927
+    },
+    "test": {
+      "1": 11308,
+      "0": 4908
+    }
+  },
+  "random_state": 9
+}

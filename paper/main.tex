@@ -1,0 +1,1306 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{url}
+\usepackage{cite}
+
+\begin{document}
+
+\title{Detection Is Not Investigation: Why RL-as-Classifier Fails in
+Network Intrusion Detection, and What Separating the Two Does and Does
+Not Buy}
+
+\author{\IEEEauthorblockN{Author Name}
+\IEEEauthorblockA{Affiliation withheld for review}
+\thanks{Manuscript prepared for IEEE Transactions submission.}}
+
+\markboth{IEEE Transactions on ...}{}
+
+\maketitle
+
+\begin{abstract}
+A growing body of work asks a reinforcement-learning (RL) policy to own the
+benign/attack decision itself. We screened ten such graph/RL
+intrusion-detection designs and reproduce the failure: after correcting a
+reward-scalarization bug, the best candidate still trailed the strongest
+gradient-boosted-tree baseline by 20--53 macro-F1 points, and a
+static-threshold classifier beat it on most (dataset, seed) pairs. We argue
+the cause is structural rather than a tuning accident, and build the
+redesign that diagnosis implies. In AegisGraph-X a nine-expert pool supplies
+detection, a graph mixture-of-experts router combines it, and a budgeted RL
+layer decides only whether to commit, acquire telemetry, escalate, isolate,
+or defer, never re-deriving the label.
+
+The redesign removes the failure mode but validates almost none of its own
+machinery, and that is the contribution. Over ten seeds at a pinned training
+budget the backbone reaches macro-F1 $0.940$, $0.997$, and $0.949$.
+Equivalence testing establishes agreement with the strongest tree baseline
+to within $0.001$ macro-F1 on two corpora, but fails on CICIoT2023, where
+the backbone is reliably worse by $1.2$ points. The added machinery then
+fails its own ablation: the single best expert \emph{significantly
+outperforms} the full nine-expert pool ($p = 0.008$), the learned router is
+indistinguishable from an unweighted average ($p = 0.90$), the RL layer
+never spends its telemetry budget, conformal FPR control moves alert volume
+by $0.2\%$, and the student's hard-class components cost $5.6$ points
+against plain distillation. Only calibration survives its own ablation. A
+closed-form decision-theoretic policy computed from the same calibrated
+posterior and the same reward table, with no training, never isolates on
+any dataset and significantly outperforms the trained backbone on two of
+three -- so the RL layer's worst failure is attributable to training, not to
+the reward specification it was trained against.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Intrusion detection, mixture of experts, gradient-boosted trees, knowledge
+distillation, reinforcement learning, sequential decision-making, calibration,
+conformal prediction, leakage-safe evaluation.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\label{sec:intro}
+
+Network intrusion detection systems (IDS) are increasingly asked to do more
+than emit a single benign/attack label: a security operations center (SOC)
+analyst must decide, flow by flow and host by host, whether to gather more
+telemetry, escalate to a human, isolate a host, or let a decision wait --
+each option carrying a different cost and a different risk of missing or
+falsely flagging an attack. Static classifiers, however well they score on a
+held-out test split, are silent on this sequential, budget-constrained
+investigation process. At the same time, a large and growing body of work has
+tried to make reinforcement learning (RL) \emph{itself} the classifier --
+letting an RL policy learn, from scratch, the benign/attack decision boundary
+that decades of supervised tree-ensemble and deep-learning research have
+already solved to a high standard. Our own earlier screening of ten candidate
+graph/RL intrusion-detection designs (Section~\ref{sec:method_history})
+reproduces this failure directly: even after diagnosing and correcting a
+genuine reward-tuning pathology, the best RL-as-classifier candidate we could
+validate still trailed the strongest gradient-boosted-tree baseline by
+20--53 macro-F1 points per dataset, and its own ablation showed a trivial
+static-threshold classifier beat it on the majority of (dataset, seed)
+combinations. The root cause is structural, not a tuning accident: a policy
+trained on a few hundred offline episodes or a few dozen on-policy updates
+cannot out-learn a 300-tree gradient-boosted ensemble at the same supervised
+task, and asking it to try wastes RL's actual comparative advantage --
+sequential, budget-aware decision-making -- on a problem it is not suited to
+win.
+
+\textbf{This paper's premise.} Reinforcement learning should not replace a
+strong classifier; it should sit on top of one. We propose
+\textbf{AegisGraph-X}, a cost-aware intrusion-detection architecture that
+separates \emph{what} to decide from \emph{when and how thoroughly} to
+decide it: a high-performance pool of tree, boosting, tabular-neural,
+temporal, and graph classifiers (Section~\ref{sec:aegis_experts}) supplies
+the classification signal, a mixture-of-experts (MoE) router
+(Section~\ref{sec:aegis_router}) combines them per-instance, a tree-guided
+distillation stage (Section~\ref{sec:aegis_distill}) produces a compact
+deployable student, and a budgeted graph-RL investigation layer
+(Section~\ref{sec:aegis_rl}) decides only whether to commit to the
+classifier's calibrated prediction, request more telemetry, expand the graph
+neighborhood, escalate to a human analyst, isolate a host, adjust its
+operating threshold, or defer -- never re-deriving the class label itself.
+This division of labor is enforced structurally, not just by convention: the
+RL policy's only classification-relevant action (COMMIT) reads its label
+directly from the pretrained, calibrated ensemble, so the achievable
+classification quality is bounded below by the classifier's own quality
+regardless of how well or poorly the RL policy trains
+(Section~\ref{sec:aegis_rl}).
+
+\textbf{Research gap.} We identify three gaps that this paper addresses
+directly: (1) a large share of the graph/RL-for-IDS literature evaluates an
+RL policy as if it were a competitive classifier, without comparing it
+against the strong tree/boosting baselines that already solve most public IDS
+benchmarks near ceiling; (2) when RL genuinely adds sequential-decision value
+(delay, telemetry cost, false-alarm burden), that value is rarely separated
+from -- and is often conflated with -- classification accuracy, making it
+impossible to tell whether a reported gain is a real operational improvement
+or an artifact of a favorable reward design; (3) reward-scale comparisons
+across RL methods are rarely made fair: a method that tunes its own reward
+weights on validation data is not directly comparable, on raw cumulative
+reward, to methods evaluated under different or default weights.
+
+\textbf{Contributions.}
+\begin{itemize}
+\item A structural fix -- not merely a tuning fix -- to the failure mode
+identified in our own prior screening of ten graph/RL designs: AegisGraph-X's
+COMMIT action always reads its label from a separately-trained, calibrated
+expert ensemble, so the RL layer cannot degrade classification quality by
+construction, only decision-cost and investigation behavior
+(Section~\ref{sec:aegis_rl}).
+\item A five-layer cost-aware architecture -- expert pool, graph
+mixture-of-experts router, tree-guided neural distillation, budgeted graph-RL
+investigation, and calibration/low-FPR control -- built and evaluated under
+the same leakage-safe dataset-screening protocol as our prior study
+(Section~\ref{sec:datasets}, reused unchanged), with every component
+individually ablated (Section~\ref{sec:results}).
+\item A validation-only, three-way comparison (backbone-only vs. +RL
+investigation vs. +conformal safety shield) that selects the deployed
+configuration on validation evidence alone, and reports honestly when the RL
+or safety-shield layer improves decision utility but not classification
+accuracy, or vice versa (Section~\ref{sec:results}).
+\item A dual-mode reinforcement-learning evaluation (common fixed reward
+weights vs. validation-tuned reward weights, reported separately) that
+prevents the raw-cumulative-reward comparability error our prior manuscript
+disclosed as a limitation (Section~\ref{sec:results}).
+\item A repeated-seed comparison against 41 other classical, deep, graph, and
+RL/decision models (37 baselines, our own prior offline-safe-RL design kept
+as baseline \#39 rather than discarded, and 3 proposed-variant ablation
+points), reporting exact win/tie/loss counts with paired significance
+testing, calibration quality, and runtime/memory
+measurements (Section~\ref{sec:results}).
+\end{itemize}
+
+\section{Related Work}
+\label{sec:related}
+
+\textbf{IDS benchmarks.} UNSW-NB15~\cite{moustafa2015unswnb15},
+CIC-IDS-2017~\cite{sharafaldin2018cicids}, ToN-IoT~\cite{alsaedi2020toniot},
+and CICIoT2023~\cite{neto2023ciciot2023} are among the most widely used
+public IDS corpora. Several are near-saturated for binary classification
+under strong tree ensembles, which motivates multiclass and minority-recall
+reporting alongside binary accuracy -- and which, as
+Section~\ref{sec:limitations} discusses, materially limits what a binary
+comparison at the ceiling can establish.
+
+\textbf{Tree/boosting IDS.} Gradient-boosted and bagged tree ensembles --
+XGBoost~\cite{chen2016xgboost}, LightGBM~\cite{ke2017lightgbm},
+CatBoost~\cite{prokhorenkova2018catboost}, random
+forests~\cite{breiman2001randomforests} -- remain the strongest published
+classifiers on most public IDS benchmarks, frequently reaching near-ceiling
+binary macro-F1. This mirrors the broader finding that tree ensembles remain
+competitive with, and often superior to, deep models on tabular
+data~\cite{grinsztajn2022trees,shwartzziv2022tabular}. We treat this as a
+fact to build on rather than a target to dethrone with RL, using six such
+ensembles as the core expert pool (Section~\ref{sec:aegis_experts}).
+
+\textbf{Deep tabular IDS.} MLP, CNN/RNN-family, Transformer, and
+tabular-attention models -- FT-Transformer~\cite{gorishniy2021revisiting},
+TabTransformer~\cite{huang2020tabtransformer}, SAINT~\cite{somepalli2021saint}
+-- close some of the gap to tree ensembles on selected corpora at higher
+training cost. We include an FT-Transformer-style tabular expert and a
+temporal convolutional expert~\cite{bai2018tcn} in the pool to capture this
+family's signal.
+
+\textbf{Graph IDS.} GNN-based IDS work encodes flows as host or protocol-role
+graphs and applies GCN~\cite{kipf2017gcn},
+GraphSAGE~\cite{hamilton2017graphsage}, or GAT~\cite{velickovic2018gat}
+variants for node- or edge-level classification;
+E-GraphSAGE~\cite{lo2022egraphsage} is representative of the flow-based
+edge-feature line. This work rarely evaluates a decision cost beyond the
+classification head. AegisGraph-X includes a GraphSAGE-style protocol-role
+graph expert and reuses the graph construction from our prior study
+unchanged (Section~\ref{sec:datasets}).
+
+\textbf{Reinforcement learning for cybersecurity.} RL has been applied to
+intrusion detection largely by recasting per-flow classification as a
+single-step ``bandit'' decision or a multi-step investigation task in which
+the policy itself must learn the class boundary from
+scratch~\cite{nguyen2019drlcyber}; our prior ten-candidate screening
+(Section~\ref{sec:method_history}) confirms this consistently underperforms
+mature supervised classifiers at the seed/update budgets tractable for a
+single study. We instead keep RL out of the classification decision
+entirely, using it only for investigation-order, telemetry acquisition, and
+escalation/isolation policy, with PPO~\cite{schulman2017ppo} as the trainer.
+
+\textbf{Mixture of experts and stacking.} Per-instance gating over a pool of
+specialized sub-models dates to adaptive mixtures of local
+experts~\cite{jacobs1991moe} and is now standard in large-scale language
+modeling~\cite{shazeer2017moe,fedus2022switch}, but is under-explored for
+tabular/graph intrusion detection, where ``experts'' are typically an ad hoc
+average rather than a learned, context-conditioned router. The closer
+antecedent for what our router actually does is stacked
+generalization~\cite{wolpert1992stacked}: fitting a combiner on held-out
+base-learner predictions. That literature also anticipates our negative
+result -- learned combiners frequently fail to beat simple averaging at
+modest sample sizes, which is the regime our router occupies
+(Section~\ref{sec:results}).
+
+\textbf{Calibration and safe decision-making.} Temperature
+scaling~\cite{guo2017calibration}, isotonic
+regression~\cite{zadrozny2002isotonic}, and split-conformal
+prediction~\cite{angelopoulos2021conformal} give calibrated or
+distribution-free signals usable for false-positive-rate control. We use
+these to calibrate the ensemble probability before any threshold is applied
+(Section~\ref{sec:aegis_calib}), and use a conformal prediction-set-size
+signal as the basis of Candidate C's safety shield
+(Section~\ref{sec:aegis_rl}).
+
+\textbf{Sequential acquisition and the value of information.} Deciding what
+to observe before committing to a decision is a classical problem: Wald's
+sequential probability ratio test~\cite{wald1945sequential} is the canonical
+single-hypothesis case, and information value theory~\cite{howard1966voi}
+gives the general rule -- acquire evidence only when its expected reduction
+in Bayes risk exceeds its cost. We adapt budgeted acquisition to
+graph-structured telemetry as one of the RL layer's action choices.
+Section~\ref{sec:limitations} returns to the question this framing raises and
+that our experiments do not settle: whether a learned policy is needed here
+at all, given that a calibrated posterior plus an explicit cost table admits
+an analytic solution.
+
+\textbf{Offline/safe RL.} Conservative Q-learning~\cite{kumar2020cql} and
+related behavior-constrained offline methods~\cite{fujimoto2019bcq} avoid
+unsafe online exploration by learning from logged interaction data; our prior
+offline-safe-RL design (Section~\ref{sec:method_history}) is retained as
+baseline \#39, a direct comparison point for the on-policy budgeted
+investigation layer.
+
+\textbf{Distillation.} The compact student follows standard knowledge
+distillation~\cite{hinton2015distilling}, with focal loss~\cite{lin2017focal}
+and supervised contrastive learning~\cite{khosla2020supcon} as the
+class-imbalance components ablated in Section~\ref{sec:results}.
+
+\section{Dataset Screening and POMDP Construction}
+\label{sec:datasets}
+
+\subsection{Fourteen-dataset screening}
+Table~\ref{tab:dataset_screening} summarizes the full recursive inventory of
+the fourteen nominal dataset folders made available for this study, which
+resolve to twelve unique dataset families (two folder pairs are duplicate
+copies of the same underlying file). Each dataset was screened against seven
+predeclared criteria: (1) leakage-safe split feasibility, (2) usable
+benign/attack labels, (3) graph/temporal/sequential construction feasibility,
+(4) absence of severe saturation/duplication risk, (5) meaningful binary
+and/or multiclass evaluation, (6) sufficient samples for repeated-seed
+testing, and (7) support for a meaningful sequential decision process. Full
+screening detail, including two datasets initially misjudged from a
+non-representative row sample and corrected by a full-column rescan, is
+reported in the supplementary \texttt{dataset\_selection\_report.md}.
+
+\input{../tables/table_I_dataset_screening.tex}
+
+\subsection{Final dataset selection}
+CICIoT2023 (modern large-scale IoT/IIoT, 34 attack/benign classes, native
+curator-provided train/validation/test split, respected here with only
+post-hoc exact-duplicate removal across splits), ToN-IoT-Network
+(IoT/IIoT telemetry-fusion testbed retaining real source/destination IPs,
+enabling genuine host-flow graphs and host-isolation semantics), and
+UNSW-NB15 (the most widely benchmarked general network-IDS corpus among the
+twelve, keeping repeated-seed and multi-baseline experiments tractable) are
+retained as primary evidence. RT-IoT2022~\cite{sharmila2023rtiot2022} is
+retained only as a supplementary cross-dataset-transfer check. Per explicit design decision, NSL-KDD and
+APA-DDoS are used only as sanity-control datasets and never as primary
+evidence, because of NSL-KDD's well-documented saturation/duplication history
+and APA-DDoS's narrow single-attack-family, 151K-row scope. CIC-VPN2016 and
+ISCX-VPN2016 were excluded outright: their labels encode traffic/application
+type (chat, VoIP, streaming, VPN-vs-plain), not benign/attack, so they fail
+criterion (2) for this task. ISCX-IDS-2012 was excluded for a 60.3\% duplicate
+rate in a 20K-row sample, a serious leakage risk for this legacy corpus.
+Bot-IoT was excluded purely on computational-feasibility grounds (15\,GB
+across 74 shard files, with an attack-concentrated shard layout that makes a
+trustworthy minority-class estimate require a full rescan outside this
+study's compute budget) -- a scope limitation, not a claim of unsuitability.
+
+\input{../tables/table_II_dataset_stats.tex}
+
+\subsection{Leakage-safe preprocessing}
+For every retained dataset, the split is fixed \emph{before} any
+preprocessing is fit: session/flow-5-tuple-disjoint grouping is used when a
+real session identifier is available (ToN-IoT-Network, RT-IoT2022, UNSW-NB15
+falls back honestly to stratified-random since its release CSV carries only a
+row index, not a real session key); scalers, encoders, and imputers are fit
+on the training partition only; exact cross-split duplicates are removed from
+validation/test (never from train); and CICIoT2023's curator-provided
+train/validation/test file split is respected rather than reshuffled. Every
+split manifest (row counts, class balance per split, deduplication counts) is
+saved under \texttt{manifests/} for audit.
+
+\subsection{Graph construction}
+Two graph types are used depending on the presence of raw host identifiers:
+a \emph{host-flow graph} (nodes = hosts, edges = flows) for ToN-IoT-Network,
+and a \emph{protocol-role graph} (nodes = (protocol, port-group, role)
+tuples) for CICIoT2023, UNSW-NB15, and RT-IoT2022, none of which release raw
+IP addresses. Graphs are built over fixed-size windows of consecutive flows
+(64 flows per window in all reported experiments); for graph baselines, node
+features are the mean of incident flows' scaled feature vectors rather than a
+bare degree count, giving the GNN baselines a fair, information-rich input.
+
+\subsection{POMDP formulation (legacy environment)}
+Table~\ref{tab:pomdp} summarizes the state, action, and reward structure of
+the original 11-action POMDP, reused unchanged for the ten legacy candidates
+and the RL/decision baselines (Section~\ref{sec:setup}); AegisGraph-X's own
+redesigned 10-action environment is described separately in
+Section~\ref{sec:aegis_rl}. An episode corresponds to one graph window: the
+agent must dispose of every flow
+in the window (classify, abstain, or escalate) while optionally spending a
+bounded per-episode telemetry budget acquiring feature groups, node-level
+statistics, or an expanded subgraph neighborhood first. Isolating a host has
+a genuine consequence within the episode: subsequent flows from that host are
+treated as contained (crediting prevented harm if the host was truly
+malicious, penalizing disruption if it was not), which is what makes
+isolation a real sequential decision rather than a relabeled classification.
+
+\input{../tables/table_III_pomdp.tex}
+
+\section{Proposed AegisGraph-X}
+\label{sec:method}
+
+\subsection{Why RL-as-classifier fails: summary of prior screening}
+\label{sec:method_history}
+Before designing AegisGraph-X, we screened ten candidate graph/RL designs in
+which an RL policy directly owned the benign/attack classification decision
+(11-action POMDP with independent CLASSIFY\_BENIGN/CLASSIFY\_ATTACK actions,
+sharing a common one-layer GraphSAGE-style graph encoder and PPO-lite/offline
+-CQL trainer so differences reflect each candidate's distinguishing module,
+not unequal engineering effort). Validation-only screening selected an
+offline conservative-Q-learning design (Candidate 3) -- \emph{not} the
+task's a-priori top-priority candidate, evidence the selection was not
+cherry-picked. Even after diagnosing and correcting a genuine reward-scalarization
+failure (a composite validation objective's eight uncorrected terms let a
+majority-class-collapsing policy score well; fixed with a continuous
+minority-recall gate and median-of-3-training-seed trial aggregation -- full
+diagnosis retained in \texttt{manifests/technical\_audit\_report.md} for the
+record), Candidate 3's corrected test macro-F1 ($0.465$--$0.679$) still
+trailed the strongest gradient-boosted-tree baseline by 20--53 points per
+dataset, and its own ablation showed a trivial static-threshold classifier
+beat the ``full'' policy on 7 of 9 (dataset, seed) combinations. The root
+cause is structural: at the seed/update budgets tractable for one study, an
+RL policy cannot out-learn a mature supervised ensemble at the classification
+task itself. \textbf{We therefore do not retain Candidate 3 (or any
+RL-as-classifier design) as the headline method}; it is kept only as baseline
+\#39 (a direct, transparent comparison point) in every table below.
+
+\subsection{Architecture overview}
+AegisGraph-X separates classification from investigation into five layers.
+\textbf{(1) Expert pool} (Section~\ref{sec:aegis_experts}): six tree/boosting
+models, one tabular-neural model, one temporal model, and one graph model,
+each independently trained to classify a flow. \textbf{(2) Graph
+mixture-of-experts router} (Section~\ref{sec:aegis_router}): a learned gate
+that mixes the pool's per-instance predictions, conditioned on graph/topology
+context. \textbf{(3) Tree-guided neural distillation} (Section~\ref{sec:aegis_distill}):
+compresses the router-mixed ensemble into one compact feed-forward student
+for deployment settings where running all nine experts is too costly.
+\textbf{(4) Budgeted graph-RL investigation} (Section~\ref{sec:aegis_rl}): a
+PPO policy that decides whether to commit to the calibrated ensemble's
+label, acquire more information, escalate, isolate, or defer -- never to
+independently classify. \textbf{(5) Calibration and low-FPR control}
+(Section~\ref{sec:aegis_calib}): temperature/isotonic/Platt scaling and
+split-conformal thresholding, fit on validation data only, applied before any
+operating threshold (including the RL layer's COMMIT decision) is used.
+Class-imbalance handling (class-balanced focal loss, supervised contrastive
+learning, loss-weighted hard-example resampling) is applied at the
+distillation stage (Layer 3), where a compact student is most prone to
+majority-class shortcut solutions; each technique is individually ablated
+(Section~\ref{sec:results}).
+
+\subsection{Layer 1: expert pool}
+\label{sec:aegis_experts}
+The pool comprises XGBoost, LightGBM, CatBoost, Random Forest, Extra Trees,
+and HistGradientBoosting (six tree/boosting experts); one tabular-attention
+expert (a lightweight FT-Transformer-style encoder over the flow's own
+feature vector); one temporal expert (a temporal convolutional network over
+a 16-flow sliding window); and one graph expert (a GraphSAGE-style encoder
+over the same protocol-role/host-flow windowed graphs used elsewhere in this
+study, Section~\ref{sec:datasets}, read out per-edge/per-flow). All nine are
+trained with class-balanced weighting appropriate to their family (class
+weights for trees/FT-Transformer/TCN; the same for the graph expert's
+cross-entropy readout).
+
+\textbf{Leakage-safe stacking.} Training data is split once into
+\emph{expert\_fit} (70\%) and \emph{router\_fit} (30\%), contiguously rather
+than by shuffled/stratified sampling -- a deliberate choice: the graph
+expert's windows are built over runs of consecutive rows, so a shuffled
+split would silently break window structure for that one expert while
+leaving the other eight row-independent; a single contiguous split keeps the
+procedure uniform across all nine. Experts are fit on \emph{expert\_fit} and
+scored \emph{out-of-sample} on \emph{router\_fit} to produce the features the
+router (Layer 2) trains on; for deployment, all nine experts are then refit
+on the \emph{full} training split (disclosed simplification vs.\ full
+$k$-fold cross-fitting -- the router itself is not refit at this stage,
+trading a small amount of statistical efficiency for tractable runtime).
+
+\subsection{Layer 2: graph mixture-of-experts router}
+\label{sec:aegis_router}
+A small gating network reads (a) each expert's probability, (b) a compact
+graph/topology context (the two endpoint nodes' degree and the window's node
+and edge counts, reused from the same windowed graphs as the RL environment's
+observation), and (c) a handful of the flow's own raw feature values, and
+outputs a top-$k$ ($k{=}3$) sparse softmax gate over the nine experts. The
+router's predicted probability is the gate-weighted sum of expert
+probabilities -- not a fresh classifier -- so routing only reweights the
+pool's existing supervised signal per instance; it is trained (cross-entropy
+against the true label, with a small gate-entropy regularizer discouraging
+degenerate single-expert collapse) on the out-of-sample \emph{router\_fit}
+scores described above, so it cannot learn to lean on an expert that has
+merely overfit its own training data.
+
+\subsection{Layer 3: tree-guided neural distillation}
+\label{sec:aegis_distill}
+A compact two-hidden-layer feed-forward student is trained against the
+calibrated router-mixed ensemble's soft probability using four combined
+losses: (i) temperature-scaled soft-label KL divergence against the teacher's
+probability; (ii) a relational pairwise-similarity term that matches the
+student's penultimate-layer embedding similarity structure, within a
+minibatch, to the best single tree expert's leaf-index-embedding similarity
+structure; (iii) a hard-class logit-margin term that pushes the minority
+(attack) class's logit margin toward a target value; and (iv) class-imbalance
+handling -- class-balanced focal loss in place of plain cross-entropy,
+supervised contrastive learning on the student's embedding, and loss-weighted
+resampling that oversamples the previous epoch's highest-loss examples. Each
+of these four class-imbalance components is individually ablated
+(Section~\ref{sec:results}) by disabling it alone, holding the other three
+fixed.
+
+\subsection{Layer 4: budgeted graph-RL investigation}
+\label{sec:aegis_rl}
+The POMDP action space is redesigned around a single structural change:
+CLASSIFY\_BENIGN/CLASSIFY\_ATTACK are collapsed into one \textsc{Commit}
+action, which always reads its label off the Layer-1/2 ensemble's calibrated
+probability (Section~\ref{sec:aegis_calib}), thresholded at the policy's
+currently selected operating point. The remaining nine actions are
+\textsc{Abstain}, \textsc{RequestTelemetry}, \textsc{InspectNode},
+\textsc{ExpandSubgraph}, \textsc{Escalate}, \textsc{Isolate},
+\textsc{RaiseThreshold}, \textsc{LowerThreshold}, and \textsc{Defer}. This
+guarantees the achievable classification quality is bounded below by the
+calibrated ensemble's own quality regardless of how well or badly the RL
+policy trains -- the exact failure mode identified in
+Section~\ref{sec:method_history} is prevented structurally, not just
+mitigated by a better reward. The observation adds, to the legacy
+environment's masked-feature/graph-window state, the full per-expert
+probability vector, the router's gate entropy and argmax-routed expert
+identity, an approximate split-conformal prediction-set size, and the
+calibrated probability itself as a class-risk score. The reward retains the
+legacy terms (detection correctness, minority-class bonus, FN/FP penalty,
+telemetry/inspection/subgraph/escalation cost, isolation cost/credit,
+detection-delay bonus, budget-violation penalty) and adds a
+calibration-violation penalty for committing immediately on a near-decision-boundary
+probability without first acquiring information. Training uses the same
+PPO-lite trainer (shared graph encoder, clipped surrogate objective, GAE)
+as the legacy candidates, on the TRAIN split's environment, with greedy
+evaluation on VAL and TEST. A third configuration, \textbf{Candidate C},
+adds a fixed (non-learned) neuro-symbolic safety shield: if the current
+flow's approximate conformal prediction set has size 2 (the calibrated
+ensemble cannot exclude either class at $\alpha{=}0.05$) and the trained
+policy chose \textsc{Commit}, the shield overrides the action to
+\textsc{Escalate}. Candidates A (backbone only), B (+RL investigation), and C
+(+safety shield) are compared using validation data only
+(Section~\ref{sec:results}).
+
+\textbf{Two properties of this environment, made explicit here rather than
+left implicit.} First, \textsc{RequestTelemetry}/\textsc{InspectNode}/
+\textsc{ExpandSubgraph} reveal previously-masked raw features and
+graph-neighborhood statistics to the \emph{observation}, but the class-risk
+score used by \textsc{Commit} is the fixed, precomputed ensemble probability
+(Section~\ref{sec:aegis_calib}) -- it is never revised as telemetry is
+acquired. The value of information from these three specific actions is
+therefore analytically zero: they can only cost (telemetry/inspection/subgraph
+fees, and a shrinking detection-delay bonus with each step taken before
+committing), never help. \textsc{RaiseThreshold}/\textsc{LowerThreshold} are
+not subject to this -- they change the operating point \textsc{Commit}
+compares the (fixed) probability against, so they retain real effect. Second,
+\textsc{Isolate}'s consequence (subsequent same-host flows auto-resolve to
+the contained outcome) requires a real host identifier; CICIoT2023 and
+UNSW-NB15 release none (Section~\ref{sec:datasets}), and the fallback used
+elsewhere in this study for host-keyed bookkeeping degrades to a
+per-row-unique index on both, meaning \textsc{Isolate} has \emph{zero}
+containment effect on those two datasets -- only on ToN-IoT-Network, which
+retains real source/destination IPs, does isolating a host actually contain
+anything. We do not synthesize a proxy host key to manufacture sequential
+structure that the released data does not support; isolation-as-containment
+claims in Section~\ref{sec:results} are restricted to ToN-IoT-Network. An
+earlier version of this environment's \textsc{Isolate} branch additionally
+credited the containing host's isolation bonus \emph{on top of} the full
+per-flow detection reward for the same flow (rather than in place of scoring
+that flow only for bookkeeping) -- solving the resulting expected-reward
+comparison analytically shows this made \textsc{Isolate} strictly dominate an
+honest \textsc{Commit} for any flow with calibrated probability above
+$p{=}2/3$, independent of whether isolating that specific flow was
+informative. This was a reward-specification bug, not a deliberate design
+choice, caught during review and fixed (the isolation credit is now scored
+alone); Section~\ref{sec:results} reports both what this bug caused and what
+changed once it was corrected, since the corrected behavior is what the
+final numbers in this paper reflect.
+
+\input{../tables/table_IIIb_aegis_pomdp.tex}
+
+\subsection{Layer 5: calibration and low-FPR control}
+\label{sec:aegis_calib}
+The router-mixed ensemble probability is calibrated on the VALIDATION split
+only using four methods evaluated side by side: temperature scaling
+(single-parameter logistic recalibration), isotonic regression, Platt
+scaling (logistic regression on the logit-transformed score), and
+class-wise/FPR-budget threshold selection; a split-conformal procedure
+additionally computes a threshold controlling benign FPR at a target
+$\alpha$ on held-out validation benign flows. TEST data is scored under
+whichever calibration/threshold was selected on VAL -- never refit or
+threshold-tuned on TEST. All four calibration variants are compared in
+Section~\ref{sec:results} by expected calibration error (ECE), Brier score,
+negative log-likelihood, and resulting FPR/FNR/alert volume.
+
+\subsection{Algorithm and complexity}
+Algorithm~\ref{alg:aegis} summarizes training. Inference cost at deployment
+is dominated by whichever configuration is selected: the full nine-expert
+pool plus router (highest accuracy, highest cost), the distilled student
+(lowest cost, reduced accuracy, Section~\ref{sec:results}), or the RL policy
+layered on top of either (adds one small actor-critic forward pass per
+investigation step, bounded by the per-episode telemetry budget). Parameter
+counts, latency, throughput, and memory for every configuration are measured
+directly rather than estimated (Section~\ref{sec:results}).
+
+\begin{algorithm}[t]
+\caption{AegisGraph-X training (one dataset)}
+\label{alg:aegis}
+\begin{algorithmic}[1]
+\State Leakage-safe split into TRAIN/VAL/TEST (Section~\ref{sec:datasets})
+\State Split TRAIN $\to$ expert\_fit (70\%), router\_fit (30\%), contiguous
+\State Fit 9 experts on expert\_fit; score out-of-sample on router\_fit
+\State Train MoE router on router\_fit's out-of-sample scores + graph context
+\State Refit all 9 experts on full TRAIN (router held fixed)
+\State Score VAL/TEST through refit experts $\to$ router $\to$ ensemble probability
+\State Fit calibration bundle (temperature/isotonic/Platt/conformal) on VAL
+\State \textbf{Candidate A} $\gets$ calibrated ensemble (Layers 1/2/5 only)
+\State Train tree-guided distilled student on TRAIN (Layer 3)
+\State Build AegisPOMDPEnv (Layer 4) from calibrated ensemble + expert probs
+\State Train PPO investigation policy on TRAIN env $\to$ \textbf{Candidate B}
+\State \textbf{Candidate C} $\gets$ Candidate B + conformal safety shield
+\State Select final method among A/B/C using VAL-only criteria (Section~\ref{sec:results})
+\end{algorithmic}
+\end{algorithm}
+
+\section{Experimental Setup}
+\label{sec:setup}
+
+\textbf{Datasets.} CICIoT2023, ToN-IoT-Network, UNSW-NB15 (primary),
+RT-IoT2022 (supplementary transfer-only), as justified in
+Section~\ref{sec:datasets}.
+
+\textbf{Baselines.} The same 37 classical/deep/graph/RL baselines validated in
+our prior study are reused unchanged (12 classical/tree, 9 deep, 5 graph, 11
+RL/decision -- full list in Section~\ref{sec:method_history}'s predecessor
+manuscript and \texttt{code/baselines/}), plus our own prior offline-safe-RL
+design kept as baseline \#39, plus three AegisGraph-X ablation variants
+reported alongside the full method as baselines \#40-42 (best single tree
+expert alone, uncalibrated MoE ensemble, distilled student) -- 41 comparison
+points in total against AegisGraph-X (\#43). \emph{Scope note:} the task's
+suggested expansion to a 43-baseline suite (adding an RBF-kernel SVM,
+TabTransformer, and SAINT as new baselines) was not implemented in this
+revision, to concentrate the available time budget on the new method itself
+rather than re-running an already-large, already-validated baseline suite;
+this is a disclosed tractability decision, not a hidden gap, and the
+already-implemented 37 span the same classical/deep/graph/RL families those
+three additions would have.
+
+\textbf{Hyperparameter tuning.} Every AegisGraph-X component's thresholds are
+selected on the VALIDATION split only (Section~\ref{sec:aegis_calib}); the
+RL investigation layer's reward weights are evaluated under two explicit
+modes -- common fixed weights, and a small validation-only grid search per
+dataset (Section~\ref{sec:results}) -- never tuned or selected using TEST
+data. The legacy Candidate-3 baseline retains its own previously validated,
+validation-only Optuna-tuned configuration unchanged.
+
+\textbf{Metrics.} Accuracy, balanced accuracy, macro/weighted F1, attack and
+minority recall, per-class precision/recall/F1, ROC-AUC, PR-AUC, FPR, FNR,
+cumulative reward, detection delay, telemetry cost, escalation/abstention/isolation
+rate, budget-violation rate, latency, throughput, parameter count, and memory.
+
+\textbf{Statistical testing.} Repeated seeds (full pairwise table in the
+code repository's \texttt{results/csv/}), paired $t$-test and Wilcoxon
+signed-rank test with Holm correction, and effect
+size, computed only over metrics logged from real runs.
+
+\textbf{Hardware.} NVIDIA RTX 5090 (24\,GB), 24-core CPU, PyTorch with CUDA
+12.8, PyTorch Geometric 2.7.
+
+\section{Results and Discussion}
+\label{sec:results}
+
+\input{../tables/table_IV_candidate_screening.tex}
+
+\subsection{Historical context: the legacy candidate screening}
+Table~\ref{tab:candidate_screening} is retained unchanged from our prior
+study: it screened ten RL-as-classifier candidates and selected Candidate 3
+(Offline Safe Graph RL, $S{=}0.538$) purely on logged validation evidence.
+Section~\ref{sec:method_history} summarizes why this design was not retained
+as AegisGraph-X's headline method; Candidate 3 is kept as baseline \#39 in
+every comparison below.
+
+\subsection{Validation-only selection among Candidates A/B/C}
+\label{sec:results_selection}
+\input{../tables/table_aegis_selection.tex}
+Table~\ref{tab:aegis_selection} reports the outcome of the Part-3 selection
+protocol: each candidate's gated score is its mean validation macro-F1
+multiplied by a continuous gate on its \emph{worst-dataset} minority recall
+(floor $0.30$) -- the same gating philosophy used to fix the legacy
+Candidate-3 tuning collapse (Section~\ref{sec:method_history}), applied here
+to candidate \emph{selection} rather than hyperparameter tuning.
+\textbf{Candidate A (backbone only, no RL) is selected}: on CICIoT2023's
+extreme attack-majority class balance, the trained RL policy (Candidates B
+and C) collapsed to an always-\textsc{Isolate} policy under the common
+default reward weights (minority/benign recall $0$, FPR $1.0$) -- a genuine,
+disclosed negative result, not a hidden one, and exactly the kind of collapse
+the selection protocol's minority-recall gate is designed to catch. On the
+other two datasets, B and C do not collapse (UNSW-NB15 minority recall
+$0.92$--$0.93$; ToN-IoT-Network $0.99$), but neither improves classification
+over A once collapse is accounted for. \textbf{We therefore report explicitly:
+the RL investigation layer, at the common reward weights and training budget
+evaluated here, does not improve classification accuracy over the backbone
+alone, and on one of three datasets it substantially degrades it} -- this is
+the honest outcome required by the task's wording policy, not a result we
+searched for. Section~\ref{sec:results_rewardmodes} reports whether a
+validation-only reward-weight search (Mode 2) recovers B/C's classification
+quality without touching test data.
+
+\input{../tables/table_V_aegis_binary.tex}
+
+\subsection{Binary detection performance}
+Table~\ref{tab:aegis_binary} reports AegisGraph-X's (Candidate A, the
+selected method) TEST-split binary detection performance. Over ten seeds at a pinned training budget, macro-F1 reaches
+$0.940\pm0.002$ (UNSW-NB15), $0.997\pm0.002$ (ToN-IoT-Network), and
+$0.949\pm0.007$ (CICIoT2023) -- a categorical improvement over the legacy
+method's $0.465$--$0.679$, and no longer 20--53 points behind the strongest
+tree baseline on any dataset. The residual gap to that baseline is
+$1.2$ points on CICIoT2023 and under $0.1$ points on the other two
+(Section~\ref{sec:results_equivalence}).
+
+\subsection{Comparison with the strongest tree/boosting baseline}
+\label{sec:results_equivalence}
+
+AegisGraph-X is compared against the single strongest tree/boosting baseline
+per dataset (XGBoost, LightGBM, and GradientBoosting respectively). An
+earlier version of this manuscript described the outcome as a statistical
+\emph{tie} on the grounds that a Holm-corrected paired $t$-test failed to
+reject the null, and reported it in a table structured around that framing.
+That inference was wrong in kind, not merely in degree: failure to reject is
+not evidence of equivalence, and at three seeds the test has almost no power
+to detect differences of the size at issue. We therefore replace that table
+and its framing entirely with a two one-sided tests (TOST)
+procedure~\cite{schuirmann1987tost,lakens2017equivalence} against a
+pre-specified margin, which asks the question the tie claim was informally
+reaching for: is the difference small enough to be operationally irrelevant?
+
+\input{../tables/table_tost_equivalence.tex}
+
+Table~\ref{tab:aegis_tost} reports the result over ten seeds at a single
+pinned row budget (Section~\ref{sec:limitations}). The outcome separates the
+three datasets cleanly rather than uniformly. On UNSW-NB15 and
+ToN-IoT-Network, \textbf{equivalence holds at the pre-specified
+$\delta = 0.005$ with substantial margin to spare}: the smallest attaining
+margins are $\delta^{*} = 0.0010$ and $0.0011$ respectively, so the two
+methods are indistinguishable to within roughly one tenth of a macro-F1
+point. On UNSW-NB15 the paired difference is in fact nominally positive
+($+0.0004$).
+
+\textbf{CICIoT2023 does not clear the margin, and this is a real deficit
+rather than a power artifact.} The paired difference is $-0.0117$, the
+$90\%$ confidence interval $[-0.0148, -0.0087]$ excludes zero entirely, and
+the TOST $p$-value at $\delta = 0.005$ is $0.999$. Equivalence is attained
+only at $\delta = 0.02$, with $\delta^{*} = 0.0148$. AegisGraph-X is
+reliably worse than gradient boosting on CICIoT2023 by approximately $1.2$
+macro-F1 points.
+
+The defensible claim is therefore \textbf{equivalence within a tenth of a
+point on two corpora and a measurable deficit of $1.2$ points on the third},
+which is both more precise and less flattering than the tie language it
+replaces. We note that the earlier three-seed analysis was wrong in both
+directions at once: it understated the CICIoT2023 deficit (reporting
+$-0.0066$ against the true $-0.0117$) while also understating the UNSW-NB15
+and ToN-IoT-Network agreement (reporting equivalence margins of $0.82$ and
+$0.28$ points against the true $0.10$ and $0.11$). Both errors trace to the
+same two causes -- three seeds, and a training-set size that differed
+between the method and its baselines -- and both are corrected here.
+
+\input{../tables/table_XVII_aegis_win_tie_loss.tex}
+\input{../tables/table_XVI_aegis_stat_sig.tex}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{../figures/fig_aegis_win_tie_loss.png}
+\caption{Statistically superior / tied / inferior counts vs.\ 41 other models, per dataset.}
+\label{fig:aegis_win_tie_loss}
+\end{figure}
+
+\subsection{Full benchmark comparison and win/tie/loss}
+Table~\ref{tab:aegis_win_tie_loss}/\ref{tab:aegis_stat_sig} and
+Figure~\ref{fig:aegis_win_tie_loss} report the
+complete comparison against all 41 other rows in the benchmark suite (37
+original baselines, the legacy RL method \#39, and proposed-variant ablations
+\#40-42), Holm-corrected paired $t$-test over the 3 seeds common to
+AegisGraph-X and every other model. \textbf{AegisGraph-X is statistically
+superior to 11 baselines on UNSW-NB15, 4 on ToN-IoT-Network, and 13 on
+CICIoT2023 (28 statistically-superior comparisons in total across the three
+datasets), is statistically tied with the remaining classification-competitive
+baselines, and is statistically inferior to exactly one comparison across all
+three datasets: the OracleUpperBound baseline on UNSW-NB15} (which reads the
+ground-truth label directly and is never presented as a deployable method).
+\textbf{AegisGraph-X is never significantly beaten by any real (non-oracle)
+baseline on any dataset} -- a qualitative change from the legacy method,
+which lost 19 significant comparisons to classical/tree/deep/graph baselines
+and won none significantly.
+
+This last statement requires a caveat that we did not give it in the earlier
+version. ``Never significantly beaten'' is a claim about non-rejection, and
+with three seeds and Holm correction~\cite{holm1979} across 41 comparisons
+per dataset it is close to guaranteed a priori: clearing the most stringent
+Holm threshold requires $t \gtrsim 25$ at two degrees of freedom, so the
+procedure is far better at failing to detect losses than at detecting them.
+The result is therefore weak evidence of parity and should not be read as a
+property of the method. The equivalence analysis in
+Section~\ref{sec:results_equivalence} is the load-bearing comparison against
+strong baselines; the win counts below are informative mainly against the
+weak baselines where the gaps are large. The statistically-superior comparisons span every
+non-tree family: weaker classical baselines (logistic regression, GaussianNB,
+LinearSVM), weaker deep/graph baselines (FT-Transformer, GCN, HypergraphNN),
+and -- notably -- \emph{every} RL/decision-policy baseline evaluated on the
+datasets where the comparison reaches significance, including PPO, A2C,
+offline CQL, static-threshold, and both greedy-acquisition baselines, and,
+on CICIoT2023, the legacy Offline Safe Graph RL method itself
+($p_{\text{Holm}}{=}0.009$).
+
+We also computed the paired Wilcoxon signed-rank test and Cohen's $d$ for
+every comparison, as Section~\ref{sec:setup} states we would, and report
+here that the Wilcoxon result does not corroborate the paired $t$-test at
+this seed count: none of the 28 comparisons the $t$-test calls
+statistically superior remains significant under Wilcoxon with Holm
+correction ($n=3$ paired seeds gives the signed-rank statistic too few
+attainable values to reach a two-sided $p<0.05$ regardless of effect size).
+Cohen's $d$ for those same 28 comparisons ranges from $18$ to $318$, which
+is not a meaningful effect-size scale at $n=3$ -- it reflects near-zero
+pooled variance across three seeds as much as it reflects a real
+difference. We report both numbers rather than the more flattering one:
+the $t$-test superiority claims in this section should be read as
+consistent with a large nominal gap, not as independently corroborated by
+a second test, and the seed-count limitation stated at the start of this
+section applies here with full force.
+
+\subsection{Ablation}
+\label{sec:results_ablation}
+\input{../tables/table_XI_aegis_ablation.tex}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{../figures/fig_aegis_ablation.png}
+\caption{Component ablation, TEST macro-F1 (mean over 3 datasets $\times$ 10 seeds).}
+\label{fig:aegis_ablation}
+\end{figure}
+
+Table~\ref{tab:aegis_ablation} reports the full component ablation (TEST
+split, mean over 3 datasets $\times$ 10 seeds, $n = 30$ paired
+observations; Figure~\ref{fig:aegis_ablation} plots the same data). At three
+seeds the two headline effects below were nominal; at ten, one of them is
+significant and the other is a clean null, and both run against the paper's
+own narrative expectations rather than for it.
+
+\textbf{(1) The nine-expert pool is significantly worse than its own best
+member.} Using the single best expert alone reaches macro-F1 $0.9652$
+against the full pool's $0.9621$ -- a paired difference of $+0.0031$ in
+favour of the ablation, $t = 2.87$, $p = 0.008$ over $n = 30$. This is not
+the weaker statement that the ensemble is redundant; the ensemble actively
+costs accuracy relative to picking one of its constituents. We report it as
+the clearest evidence against Layer 1 as specified.
+
+\textbf{(2) The learned router is indistinguishable from an unweighted
+average.} Equal-weight averaging of all nine experts gives $0.9617$ against
+the router's $0.9621$, a paired difference of $-0.0004$ with $p = 0.90$.
+This is a genuine null rather than an underpowered one: at $n = 30$ the
+interval excludes any effect large enough to matter operationally. We
+therefore do not claim the learned router improves classification accuracy
+over a much simpler ensembling rule at this training scale. Its value, if
+any, lies in the per-instance routing signal it exposes to the RL layer
+(argmax expert identity, gate entropy), not in raw ensemble accuracy. The
+result is consistent with the stacked-generalization
+literature~\cite{wolpert1992stacked}, where learned combiners routinely fail
+to beat simple averaging at modest sample sizes.
+
+Dropping the graph branch ($0.9624$) or the temporal branch ($0.9615$) costs
+less than a tenth of a macro-F1 point relative to the full pool, indicating
+the six tree/boosting experts carry essentially all of the classification
+signal on these three datasets -- consistent with the long-standing finding
+that gradient-boosted trees are hard to beat on tabular
+data~\cite{grinsztajn2022trees,shwartzziv2022tabular}.
+
+\textbf{The tree-guided distillation ablation is a second negative result,
+and the larger seed count makes it worse than we previously reported.} The
+full compact student (focal loss + supervised contrastive learning +
+hard-negative mining all enabled) reaches macro-F1 $0.8417$, a substantial
+and expected drop from the nine-expert pool ($0.9621$) given its
+$\sim$8K-parameter budget. Only focal loss earns its place, and even that
+marginally: removing it costs $0.0305$ ($p = 0.054$).
+\textbf{Removing hard-negative mining \emph{raises} macro-F1 by $0.0449$
+($p = 0.008$), and the plain-KD-only student with all three techniques
+disabled reaches $0.8978$ -- $5.6$ points above the full student
+($p = 0.001$).} Removing contrastive learning also raises the mean, by
+$0.0238$, though at $p = 0.158$ we do not claim that individual effect is
+resolved. The bundle as a whole is significantly harmful, so the honest
+summary is that Layer 3 would be better specified as plain knowledge
+distillation~\cite{hinton2015distilling} with focal
+loss~\cite{lin2017focal} alone. We retain all three as ablatable,
+documented components rather than silently dropping them, but we do not
+claim contrastive learning or hard-negative mining is validated here.
+
+One component does earn its place. Disabling calibration and thresholding
+the raw ensemble probability at $0.5$ costs $0.0028$ macro-F1
+($p = 0.040$) -- a small but statistically resolved benefit, and the only
+one of AegisGraph-X's additions that survives its own ablation at ten seeds.
+We note it explicitly because the rest of this section is negative, and the
+distinction between calibration (which helps) and the conformal FPR-control
+variant built on top of it (which, per
+Section~\ref{sec:results_lowlabel_robust}, does not measurably change alert
+volume) is easy to lose.
+
+\subsection{Dual-mode RL evaluation (common vs.\ validation-tuned reward)}
+\label{sec:results_rewardmodes}
+\input{../tables/table_IX_aegis_common_reward.tex}
+\input{../tables/table_X_aegis_tuned_reward.tex}
+Table~\ref{tab:aegis_common_reward} (Mode 1: the same fixed default reward
+weights used throughout Section~\ref{sec:results_selection}) and
+Table~\ref{tab:aegis_tuned_reward} (Mode 2: a small validation-only
+per-dataset reward-weight grid search over the isolation-cost/credit and
+false-positive terms, Section~\ref{sec:aegis_rl}) are reported separately, and
+raw cumulative reward is never compared across the two modes or across
+datasets, since the weights differ (Part 7 of the task protocol). This
+dual-mode comparison is a smaller, exploratory pass (3 seeds, the
+$50$K-row budget used before the training-budget-parity correction in
+Section~\ref{sec:limitations}) than the ten-seed, pinned-row-budget
+evidence that Section~\ref{sec:results_selection} actually selects on, and
+the two disagree in an instructive way: at this smaller scale, only $1$ of
+the $18$ (dataset, seed, mode) training runs collapses to the degenerate
+always-\textsc{Isolate} policy (minority recall $<0.05$; ToN-IoT-Network,
+seed 1, Mode 2), telemetry spend and isolation rate are both $0$ in every
+other run, and CICIoT2023 itself never collapses at this scale.
+\textbf{The primary evidence for Candidate A's selection is not this
+dual-mode pass but the ten-seed, pinned-row-budget result in
+Section~\ref{sec:results_selection}}, where the same always-\textsc{Isolate}
+collapse (minority recall $<0.05$, isolation rate $\approx0.90$) recurs in
+$9$ of $10$ seeds on CICIoT2023 under the common default reward weights,
+while UNSW-NB15 and ToN-IoT-Network never collapse and instead settle into a
+substantial, non-degenerate isolation rate ($0.58$ and $0.54$ respectively)
+that does not cost minority recall. Reading the two studies together, the
+honest characterization is scale-dependence, not the bimodal
+seed-to-seed instability an earlier version of this section claimed: the
+same reward specification and the same fixed ISOLATE-credit code
+(Section~\ref{sec:aegis_rl}) produce a training regime that is far more
+prone to the CICIoT2023 collapse at the larger, production-realistic row
+budget than at the smaller one, for reasons this study does not isolate
+(more of the same class-imbalance-heavy data to fit an on-policy
+advantage estimate against, more updates per fixed episode-count schedule,
+or simply a different sampling of an already-unstable optimization
+landscape). We do not have a controlled sweep across row budgets to
+distinguish these, and flag it as the most direct follow-up this finding
+implies. Where the RL layer does not collapse, its decision-cost behavior
+(telemetry cost, escalation/isolation rate, detection delay --
+reward-scale-independent columns in
+Tables~\ref{tab:aegis_common_reward}--\ref{tab:aegis_tuned_reward}) is
+reported for completeness, but we do not build a deployment recommendation
+on a policy that fails outright in $9$ of $10$ seeds on one of three
+evaluation datasets at the row budget the rest of this paper uses.
+
+\subsection{The analytic decision-theoretic baseline}
+\label{sec:results_analytic}
+\input{../tables/table_aegis_analytic_baseline.tex}
+Every earlier version of this paper flagged the same gap: we compare the RL
+layer against \emph{no} RL, but never against the closed-form,
+expected-cost-minimizing policy the same calibrated posterior and the same
+reward table admit analytically, with no training at all
+(Section~\ref{sec:aegis_rl}). We compute that policy directly -- for each
+flow, the argmax over the five terminal actions' expected reward under
+$p=$~AegisGraph-X's own calibrated ensemble probability -- and evaluate it
+on the identical ten-seed, pinned-row-budget test data used throughout
+Section~\ref{sec:results_selection}. Table~\ref{tab:aegis_analytic} reports
+the result, paired by seed against Candidate A.
+
+\textbf{The analytic policy never isolates on any of the three datasets
+(isolation rate $0.000$ everywhere, including CICIoT2023), and it
+significantly outperforms Candidate A on two of three datasets} ($+0.0222$
+macro-F1 on UNSW-NB15 and $+0.0219$ on CICIoT2023, both $p<0.001$; $+0.0006$
+on ToN-IoT-Network, $p=0.112$, not significant). This resolves the open
+question Section~\ref{sec:limitations} raised and could not previously
+settle. The isolate-reward fix (Section~\ref{sec:aegis_rl}) removed the
+$p=2/3$ dominance crossover that made \textsc{Isolate} strictly better than
+an honest \textsc{Commit} above that confidence threshold; under the
+corrected reward table, the closed-form optimum simply never isolates,
+anywhere, on any of the three datasets -- \textbf{the CICIoT2023 collapse
+the trained RL policy exhibits in $9$ of $10$ seeds is therefore not a
+property of the reward specification the policy was trained against. The
+analytic optimum, computed from that identical specification, does not
+collapse.} The most economical remaining explanation is that PPO training
+itself finds and gets stuck in a spurious always-\textsc{Isolate} local
+optimum that the true expected-reward landscape does not actually contain,
+rather than that the landscape rewards collapse and the policy is simply
+finding it. We had flagged, in earlier drafts of this section, that our
+experiments could not distinguish a reward-specification explanation from a
+training explanation for the CICIoT2023 collapse; this comparison
+distinguishes them, and the training explanation is the one the evidence
+supports.
+
+The analytic policy's advantage over Candidate A on UNSW-NB15 and CICIoT2023
+has a second, independent explanation, and both likely contribute: Candidate
+A's \textsc{Commit} threshold is drawn from a five-point preset grid
+($\{0.3, 0.4, 0.5, 0.6, 0.7\}$, Section~\ref{sec:aegis_rl}), while the
+closed-form policy's implicit commit/no-commit boundary is continuous and
+falls at approximately $p \approx 0.26$ given the reward weights
+(Section~\ref{sec:aegis_rl}) -- below the grid's minimum. Candidate A cannot
+reach this operating point regardless of training; the analytic policy can
+by construction. We do not separate the two effects (reward-table-optimal
+action choice vs.\ threshold granularity) in this comparison and flag doing
+so as a natural follow-up, but note that fixing the threshold-granularity
+issue alone -- widening or removing the preset grid -- is a small, low-risk
+change relative to redesigning the RL layer, and is the more promising
+near-term fix implied by this result.
+
+We report this comparison as a genuine addition to the paper's evidence
+base, not a validation of AegisGraph-X's RL layer: the finding is that a
+policy which does not learn anything, is not sequential, and never spends a
+telemetry budget outperforms both the trained RL policy and, on two of
+three datasets, the backbone's own default operating point. If anything,
+this sharpens rather than softens the paper's central negative result about
+Layer 4.
+
+\subsection{Low-label, robustness, and calibration}
+\label{sec:results_lowlabel_robust}
+\input{../tables/table_XII_aegis_low_label.tex}
+\input{../tables/table_XIII_aegis_robustness.tex}
+\input{../tables/table_XIV_aegis_calibration.tex}
+\textbf{Low-label} (Table~\ref{tab:aegis_low_label}, seed 0, full backbone
+refit at each fraction): AegisGraph-X degrades gracefully rather than
+falling off a cliff as training labels shrink from 100\% to 1\%: macro-F1
+$0.933\rightarrow0.891$ (UNSW-NB15), $0.997\rightarrow0.977$
+(ToN-IoT-Network), and $0.950\rightarrow0.783$ (CICIoT2023) --
+CICIoT2023 is the most label-hungry of the three, consistent with it having
+the largest and most heterogeneous attack-class composition of the three
+primary datasets even under the binary framing used here.
+
+\textbf{Robustness} (Table~\ref{tab:aegis_robustness}, 2 seeds): no
+perturbation leaves AegisGraph-X unaffected, and we report the most fragile
+result rather than lead with the most flattering one -- \textbf{ToN-IoT-Network,
+despite the highest clean-condition macro-F1 of the three datasets ($0.996$),
+is also the \emph{most} fragile to feature-noise perturbation, dropping to
+macro-F1 $0.38$--$0.44$ under moderate/high additive noise}, a larger
+relative collapse than either UNSW-NB15 ($0.94\rightarrow0.67$--$0.76$) or
+CICIoT2023 ($0.95\rightarrow0.56$--$0.65$) show under the same perturbation.
+Missing-feature injection is damaging but less catastrophic (macro-F1 drops
+of $0.09$--$0.36$ across datasets at 50\% missingness); class-imbalance
+stress and 5\%-label-noise are the mildest perturbations tested (drops
+$\le\!0.07$ on all three datasets). We do not claim AegisGraph-X is robust
+to feature corruption -- these results show it is not, and that its
+near-ceiling clean-condition performance on ToN-IoT-Network specifically
+does not carry over to noisy conditions.
+
+\textbf{Calibration} (Table~\ref{tab:aegis_calibration}, 1 seed, mean over 3
+datasets): the router-mixed ensemble's raw probability is already
+reasonably well-calibrated before any post-hoc correction (uncalibrated ECE
+$0.0038$, Brier $0.0148$) -- expected, since tree/boosting ensembles tend to
+produce reasonably calibrated probabilities on their own. Isotonic
+regression gives the largest additional improvement (ECE $0.0023$), Platt
+scaling and temperature scaling are intermediate, and the split-conformal
+FPR-control variant (fit to target $\alpha{=}0.05$ on validation benign
+flows) achieves comparable FNR/alert-volume to the other variants while
+providing a distribution-free FPR guarantee. All differences among the four
+calibrated variants are small relative to the uncalibrated baseline, so we
+do not claim calibration is a major lever for this method on these three
+datasets, only that it is available and validated.
+
+\input{../tables/table_VII_multiclass.tex}
+
+Multiclass evaluation (Table~\ref{tab:multiclass}) is reused unchanged from
+our prior study as a classical-baseline reference point; AegisGraph-X's
+router and RL layers remain binary-only in this revision, the same
+disclosed limitation as before (Section~\ref{sec:limitations}), since
+extending the MoE router and calibration layers to a native multiclass
+target is a substantial additional engineering effort we did not complete
+within this revision's time budget.
+
+\input{../tables/table_XV_aegis_runtime.tex}
+
+\subsection{Runtime and deployment}
+Table~\ref{tab:aegis_runtime} measures inference latency, training time, and
+parameter count directly (never estimated) for four deployment
+configurations, over 10 seeds. The single strongest tree expert alone is
+fastest among the full-accuracy options ($16.3\mu$s/sample); the full
+nine-expert pool plus MoE router costs $\sim\!9\times$ more per sample
+($142\mu$s) for the accuracy reported above; the RL investigation layer's row
+records the same latency as the ensemble row to three significant figures,
+which we read as the policy forward pass being too small to resolve against
+the graph-reconstruction cost rather than as a measurement of zero -- we do
+not claim the RL layer is free at inference time. Absolute latencies here are
+wall-clock measurements on a shared, long-running research machine and
+fluctuate across runs by roughly an order of magnitude in our own repeated
+measurements; the relative ordering (student $\ll$ single tree $<$ full
+ensemble) is stable across every run we have taken, but the specific
+multipliers should be read as indicative, not precise. \textbf{The distilled
+student is $\sim\!200\times$ faster than the single tree expert and roughly
+three orders of magnitude faster than the full ensemble} ($0.076\mu$s/sample)
+at a real, disclosed accuracy cost (macro-F1 $0.842$ vs.\ $0.962$, 10-seed
+ablation). This is a measured latency/accuracy tradeoff for
+resource-constrained settings, not evidence that the compact student matches
+the full method's accuracy.
+
+One clarification about model size, since an earlier version of this text
+invited a misreading. The student has $\sim\!8.1$K parameters and the RL
+policy $\sim\!9.9$K, so the student is $18\%$ smaller \emph{than the policy
+network} -- but the tree ensembles have no parameter count in the same sense,
+and Table~\ref{tab:aegis_runtime} accordingly leaves that field empty for
+them. The $740\times$ figure is therefore a latency result, not a compression
+result, and the parameter counts should not be read as quantifying
+compression against the expert pool.
+
+\emph{Full per-model/per-dataset detail for every result summarized above is
+provided as generated LaTeX/CSV in the code repository's \texttt{tables/} and
+\texttt{results/csv/} directories rather than inlined here, to respect the
+page limit.}
+
+\section{Limitations}
+\label{sec:limitations}
+
+Dataset selection followed explicit, predeclared criteria but does not imply
+universal dominance across all IDS corpora; three of the twelve inspected
+dataset families are used as primary evidence, and cross-dataset transfer to
+RT-IoT2022 was not re-evaluated for AegisGraph-X in this revision (a
+disclosed scope reduction). The POMDP environment is reconstructed from
+static, already-labeled benchmark data rather than a live SOC feed:
+escalation is modeled as reliably resolving to the ground-truth label at a
+fixed cost, and host isolation's effect on subsequent flows is simulated
+within an episode rather than observed from a real network response, so
+simulated response actions should not be equated with live deployment
+behavior. \textbf{The MoE router's classification accuracy is not
+statistically distinguishable from a much simpler unweighted expert average
+or the single best tree expert alone} (Section~\ref{sec:results}) -- we do
+not claim the learned router is validated as a classification-accuracy
+improvement, only as an infrastructure that exposes useful per-instance
+signal (routed-expert identity, gate entropy) to the RL layer. \textbf{The
+budgeted RL investigation layer, at the common default reward weights,
+collapsed to a degenerate always-isolate policy on CICIoT2023} and did not
+improve classification accuracy over the backbone alone on the other two
+datasets either; validation-only reward-weight tuning (Mode 2,
+Section~\ref{sec:results_rewardmodes}) changes this only partially. We do not
+claim the RL investigation layer is validated as a classification-accuracy
+improvement in this study; its structural role (Section~\ref{sec:aegis_rl})
+is to bound classification quality below by the backbone's own quality while
+adding sequential decision-cost control, and its decision-utility value,
+where present, is reported separately from classification accuracy
+throughout (Part 16 wording policy). \textbf{The tree-guided distillation's
+hard-negative-mining component did not improve the compact student on
+average across the three datasets} (Section~\ref{sec:results}), an honest
+negative result for one of Layer 3's four components. The baseline suite
+was not expanded to the task's suggested 43-model list (RBF-SVM,
+TabTransformer, SAINT) in this revision, a disclosed tractability decision
+(Section~\ref{sec:setup}). Multiclass evaluation remains a classical-baseline
+reference point only, as in our prior study; AegisGraph-X's router,
+calibration, and RL layers were not extended to a native multiclass target.
+Physical deployment latency/memory are measured on the reported hardware
+only and have not been validated on resource-constrained edge devices.
+\textbf{Seed count remains uneven across experiments.} The primary
+comparisons in Sections~\ref{sec:results_equivalence}
+and~\ref{sec:results_ablation} use ten seeds, which is sufficient to resolve
+both the equivalence bounds and the two significant ablation effects. The
+supporting experiments are weaker and were not re-run: the low-label study
+(Table~\ref{tab:aegis_low_label}) uses a single seed, the calibration
+comparison (Table~\ref{tab:aegis_calibration}) uses a single seed while
+reporting differences in the fourth decimal, and the robustness study
+(Table~\ref{tab:aegis_robustness}) uses two. Comparative claims resting on
+those three tables should be read as indicative only. We also restrict the
+ten-seed budget to the classical/tree family and the proposed method, since
+those support the equivalence and ablation \emph{nulls} where power is the
+argument; the deep, graph, and RL baseline families retain three seeds,
+where the margins are large and the conclusions are superiority claims
+rather than null results.
+
+\textbf{Training-budget parity between the method and its baselines was not
+verified in the original run, and correcting it changed the results.} The
+experiment drivers used different row budgets -- the AegisGraph-X driver
+applied a fixed cap while the baseline driver used per-dataset defaults --
+so the head-to-head comparison in Table~\ref{tab:aegis_tost} was, as
+originally executed, confounded with training-set size. The split manifests
+reproduced with the submitted results also did not match the row counts
+reported in Table~\ref{tab:dataset_stats}. All results reported here are
+regenerated under a single pinned row budget applied identically to every
+model, with split manifests emitted from the same run that produced the
+tables. The correction moved the comparison in both directions: the
+UNSW-NB15 and ToN-IoT-Network equivalence bounds tightened by roughly a
+factor of eight, while the CICIoT2023 deficit nearly doubled. We record this
+because the original numbers were not merely imprecise -- they were
+uninterpretable, and their errors did not share a sign.
+
+\textbf{The budgeted acquisition layer is unexercised, not merely
+unhelpful.} Tables~\ref{tab:aegis_common_reward} and~\ref{tab:aegis_tuned_reward}
+(the three-seed dual-mode study) show telemetry cost and isolation rate both
+exactly zero on every dataset under both reward modes -- the policy never
+spends its acquisition budget and never isolates a host at this scale. This
+is consistent with Section~\ref{sec:aegis_rl}'s analytic argument that
+\textsc{RequestTelemetry}/\textsc{InspectNode}/\textsc{ExpandSubgraph} have
+zero value of information by construction (\textsc{Commit} reads a fixed,
+precomputed probability those actions never revise), so a
+reward-maximizing policy correctly learns not to pay for them. Isolation is
+a different case: it does carry real expected value once the fixed-reward
+bug is corrected (Section~\ref{sec:aegis_rl}), and at the larger, ten-seed,
+pinned-row-budget scale used for the primary comparisons
+(Section~\ref{sec:results_selection}) the policy does use it substantially
+-- isolation rate $0.58$ (UNSW-NB15) and $0.54$ (ToN-IoT-Network), without
+cost to minority recall on either dataset -- and, on CICIoT2023, uses it
+almost exclusively ($0.90$) in a way that does cost minority recall in $9$
+of $10$ seeds. The honest reading is therefore two separate findings, not
+one: the three acquisition actions are unexercised everywhere because the
+environment gives them no information to act on, which is a property of the
+design, not of training; the isolation action is exercised, sometimes to
+good effect and sometimes catastrophically, in a manner that depends on
+dataset and training scale in ways this study does not fully explain.
+
+\textbf{The analytic decision-theoretic baseline (Section~\ref{sec:results_analytic})
+resolves part of this paper's central open question, and sharpens rather
+than softens the negative result.} Once Layer 5 supplies a calibrated
+posterior and the reward specifies an explicit cost structure, the
+cost-minimizing action is computable in closed form by expected-cost
+minimization~\cite{howard1966voi,wald1945sequential}, with no training. That
+policy never isolates on any of the three datasets and significantly
+outperforms Candidate A on two of three -- so the CICIoT2023 collapse the
+trained RL policy exhibits in $9$ of $10$ seeds is attributable to PPO
+training failing to find a landscape optimum that does not itself reward
+collapse, not to the reward specification rewarding collapse. This narrows,
+but does not close, the earlier uncertainty: we still do not know why PPO
+finds this spurious optimum at the larger row budget and mostly does not at
+the smaller one (Section~\ref{sec:results_rewardmodes}), only that the
+optimum it finds is not the one the reward table actually defines.
+
+\textbf{The structural guarantee is a design property, not a result.} That
+classification quality cannot fall below the calibrated ensemble's is true by
+construction, since COMMIT reads the ensemble's label
+(Section~\ref{sec:aegis_rl}). It should not be read as a finding, and we note
+that it bounds only the metric we report while leaving unbounded the
+decision-cost behaviour that Tables~\ref{tab:aegis_common_reward}
+and~\ref{tab:aegis_tuned_reward} show degrading.
+
+\textbf{Robustness undercuts the deployment framing.} Relative to its own
+two-seed clean baseline (Table~\ref{tab:aegis_robustness}; note that this
+study was not re-run at ten seeds or at the pinned row budget, so its clean
+figures differ slightly from Table~\ref{tab:aegis_binary}), moderate feature
+noise drives ToN-IoT-Network macro-F1 from $0.996$ to $0.38$--$0.44$,
+UNSW-NB15 from $0.938$ to $0.67$--$0.76$, and CICIoT2023 from $0.952$ to
+$0.56$--$0.65$. In intrusion detection, feature perturbation is the threat
+model rather than an incidental robustness question, so these numbers bound
+the operational reading of the clean-condition results more tightly than the
+clean results themselves suggest.
+
+\textbf{Low-FPR control is not demonstrated.} The conformal FPR-control
+variant reduces alert volume from $7948.1$ to $7934.9$ per $10{,}000$ flows
+at $\alpha = 0.05$ (Table~\ref{tab:aegis_calibration}), a change of $0.2\%$.
+On these corpora, whose attack prevalence ranges from $64\%$ to $98\%$, the
+alert-volume metric has little headroom and the ``low-FPR control'' framing
+is not supported by the measurement. Establishing it would require
+evaluation at a realistic base rate, which these datasets do not provide.
+
+\textbf{Deployment and harm.} This paragraph concerns Candidates B and C
+(the RL investigation layer), not the selected Candidate A, which never
+isolates a host at all. At the ten-seed, pinned-row-budget scale, the
+evaluated RL policies isolate $54$--$90\%$ of hosts depending on dataset
+(Section~\ref{sec:results_rewardmodes}); at the smaller three-seed dual-mode
+scale the same policies isolate none. Isolation is modeled here as an
+in-episode bookkeeping effect with a reward penalty, and, per
+Section~\ref{sec:aegis_rl}, has a real containment consequence only on
+ToN-IoT-Network -- on CICIoT2023 and UNSW-NB15 no real host identifier
+exists in the released data, so "isolating a host" in those two datasets is
+a per-flow bookkeeping action with the reward consequence of isolation but
+none of its operational one. On ToN-IoT-Network specifically, where
+isolation is real, a false isolation would remove a machine from the
+network; at a $54\%$ isolation rate this would be operationally severe if
+deployed, and the reward penalty alone is not a substitute for a
+human-in-the-loop requirement. Since Candidate A -- the method this paper
+actually selects and reports results for -- does not use the RL layer at
+all, this risk does not apply to the reported system as selected; we
+document it here because it is the reason B and C were not selected, and
+because any future work that revisits the RL investigation layer inherits
+this constraint.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+We began this revision by auditing our prior graph-RL intrusion-detection
+study and confirming, with a specific structural diagnosis, that an
+RL-as-classifier design cannot remain competitive: an RL policy trained on
+the seed/update budgets tractable for one study cannot out-learn a mature
+gradient-boosted-tree ensemble at the classification task itself.
+\textbf{We therefore redesigned the method as AegisGraph-X, which never
+asks RL to classify}: a nine-expert tree/boosting/neural/graph pool supplies
+detection, a mixture-of-experts router combines it, and a budgeted RL layer
+only decides whether to commit to the calibrated ensemble's own label,
+acquire more information, escalate, isolate, or defer -- a structural
+guarantee, not a tuning fix, against the failure mode identified in our
+audit. Validation-only selection among a backbone-only candidate (A), a
+budgeted-RL candidate (B), and a conformal-safety-shielded candidate (C)
+selected \textbf{Candidate A}: on CICIoT2023's extreme class imbalance, the
+RL layer collapsed to a degenerate always-isolate policy under common reward
+weights, and on no dataset did the RL layer improve classification accuracy
+over the backbone alone -- we report this honestly rather than search for a
+configuration that looks better. \textbf{The selected backbone reaches test macro-F1 $0.940$ (UNSW-NB15),
+$0.997$ (ToN-IoT-Network), and $0.949$ (CICIoT2023). Against the strongest
+gradient-boosted-tree baseline it is equivalent to within one tenth of a
+macro-F1 point on the first two, and reliably worse by $1.2$ points on the
+third.} That removes the 20--53 point deficit of the legacy design, which is
+a real change. It does not establish that the redesign is better than an
+off-the-shelf gradient boosting library, and on CICIoT2023 it is measurably
+worse than one.
+
+What the evidence does not support is the more interesting part. Every layer
+we added fails its own ablation, and at ten seeds two of those failures are
+statistically significant rather than merely nominal. The single best expert
+outperforms the full nine-expert pool by $0.0031$ macro-F1
+($p = 0.008$, $n = 30$): the ensemble is not simply redundant but actively
+worse than choosing one of its members. The learned router is
+indistinguishable from an unweighted average ($p = 0.90$) -- a clean null.
+The RL investigation layer never spends its telemetry budget on any dataset
+under either reward mode, collapses to always-isolate under extreme
+imbalance, and improves classification accuracy nowhere. Conformal FPR
+control moves alert volume by $0.2\%$. The distilled student's three
+hard-class components together cost it $5.6$ macro-F1 points relative to
+plain knowledge distillation, though focal loss alone is clearly beneficial.
+Taken together, the five-layer architecture is not vindicated by these
+experiments; the components that survive are the ones that were already
+standard.
+
+We therefore offer this paper as a structural diagnosis and a negative
+result rather than as a method. The diagnosis we do defend: RL should not be
+asked to own the classification decision in an IDS that must also compete
+with mature supervised classifiers, because it will lose that comparison for
+reasons that are structural rather than reward-design accidents. The
+redesign that follows from the diagnosis is sound in the narrow sense that it
+eliminates the failure mode by construction -- and unvalidated in the sense
+that none of the machinery it adds on top has yet been shown to earn its
+place. We tested the most likely explanation for the investigation layer's
+failure directly (Section~\ref{sec:results_analytic}): a calibrated posterior
+and an explicit cost table already determine the optimal action
+analytically, with no training, and that closed-form policy never isolates
+on any dataset and beats Candidate A significantly on two of three. The
+learned policy's CICIoT2023 collapse is therefore a training failure, not a
+property of what the reward table actually rewards -- a more precise, and
+less flattering, conclusion than the uncertainty we reported in earlier
+drafts of this section. It does not tell us why PPO fails to find the
+optimum the landscape contains, which remains the priority for future work
+if the investigation layer is to be revisited at all.
+
+\section*{Statements}
+
+\textbf{Data and code availability.} All three primary corpora are publicly
+available~\cite{moustafa2015unswnb15,alsaedi2020toniot,neto2023ciciot2023}.
+Experiment code, per-seed result CSVs, split manifests, generated tables, and
+run logs accompany this submission; split manifests record row counts, class
+balance, and deduplication counts per split for every dataset.
+
+\textbf{Reproducibility caveat.} A network-weight-initialization determinism
+defect, disclosed in Section~\ref{sec:results_rewardmodes}, meant that in an
+earlier run the nominal seed did not fully control initial conditions. The
+defect is fixed; all reported statistical comparisons are computed from runs
+executed after the fix, so that the pairing assumption underlying the paired
+tests holds.
+
+\textbf{Ethics.} This work uses only public, previously collected network
+traces containing no personal data, and involves no human subjects. It
+develops a defensive capability. Section~\ref{sec:limitations} states the
+deployment risk we consider material: at the ten-seed evaluation scale the
+investigation layer isolates a majority of hosts on every dataset, and we do
+not consider it deployable without analyst confirmation of isolation
+actions. This risk applies only to the (unselected) Candidates B/C; the
+selected Candidate A does not isolate hosts at all.
+
+\textbf{Compute.} All experiments ran on a single NVIDIA RTX 5090 (24\,GB)
+with a 24-core CPU.
+
+\textbf{AI tool usage.} Large language model assistance was used for
+manuscript editing, for the statistical re-analysis reported in
+Section~\ref{sec:results_equivalence}, and for code review. All experimental
+results, all reported numbers, and all scientific claims were produced and
+verified by the authors.
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

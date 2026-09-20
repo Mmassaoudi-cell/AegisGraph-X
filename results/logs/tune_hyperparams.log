@@ -1,0 +1,154 @@
+[I 2026-07-28 13:29:20,328] A new study created in memory with name: no-name-a97ae23f-e6b8-464f-9eb8-01cdcc4f81ec
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:29:38,805] Trial 0 finished with value: 0.47952098267778315 and parameters: {'n_updates': 32, 'episodes_per_update': 13, 'telemetry_budget': 9, 'window_size': 128, 'w_tp': 1.1563808168940388, 'w_fn': 3.621205502737279, 'w_fp': 2.9091569012525733, 'cql_alpha': 1.2119804045947553}. Best is trial 0 with value: 0.47952098267778315.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:29:47,278] Trial 1 finished with value: 0.4821779614121761 and parameters: {'n_updates': 39, 'episodes_per_update': 10, 'telemetry_budget': 9, 'window_size': 32, 'w_tp': 0.5303275961604885, 'w_fn': 3.414169459417783, 'w_fp': 2.445391877374626, 'cql_alpha': 2.6230352299157755}. Best is trial 1 with value: 0.4821779614121761.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:29:55,465] Trial 2 finished with value: 0.48799614099085314 and parameters: {'n_updates': 45, 'episodes_per_update': 14, 'telemetry_budget': 8, 'window_size': 32, 'w_tp': 0.7150299311135696, 'w_fn': 3.8063412096735436, 'w_fp': 1.8046208043751792, 'cql_alpha': 1.3025196259725185}. Best is trial 2 with value: 0.48799614099085314.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:30:12,540] Trial 3 finished with value: 0.4917429222187955 and parameters: {'n_updates': 23, 'episodes_per_update': 14, 'telemetry_budget': 8, 'window_size': 128, 'w_tp': 1.418143584083632, 'w_fn': 2.6592689890616494, 'w_fp': 2.8593701962865605, 'cql_alpha': 2.0772788674001017}. Best is trial 3 with value: 0.4917429222187955.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:30:28,405] Trial 4 finished with value: 0.5038395716003912 and parameters: {'n_updates': 26, 'episodes_per_update': 9, 'telemetry_budget': 10, 'window_size': 128, 'w_tp': 0.8155738416107614, 'w_fn': 0.9512420417919866, 'w_fp': 1.2885708773104596, 'cql_alpha': 1.1547612357336057}. Best is trial 4 with value: 0.5038395716003912.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:30:38,650] Trial 5 finished with value: 0.5056543841078351 and parameters: {'n_updates': 32, 'episodes_per_update': 9, 'telemetry_budget': 12, 'window_size': 64, 'w_tp': 1.4796624881980978, 'w_fn': 1.3865206088892374, 'w_fp': 1.6657769321407656, 'cql_alpha': 0.808834216804648}. Best is trial 5 with value: 0.5056543841078351.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:31:05,957] Trial 6 finished with value: 0.5112646094996678 and parameters: {'n_updates': 19, 'episodes_per_update': 5, 'telemetry_budget': 9, 'window_size': 128, 'w_tp': 1.7314898447719027, 'w_fn': 0.8398544652757145, 'w_fp': 2.5948622687470095, 'cql_alpha': 0.37868538289249287}. Best is trial 6 with value: 0.5112646094996678.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:31:15,860] Trial 7 finished with value: 0.49897852042433627 and parameters: {'n_updates': 45, 'episodes_per_update': 10, 'telemetry_budget': 12, 'window_size': 64, 'w_tp': 0.9242104438646144, 'w_fn': 0.9206879642460912, 'w_fp': 1.2403504938053622, 'cql_alpha': 0.4443103849673078}. Best is trial 6 with value: 0.5112646094996678.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:31:23,477] Trial 8 finished with value: 0.4932307456464719 and parameters: {'n_updates': 24, 'episodes_per_update': 9, 'telemetry_budget': 4, 'window_size': 32, 'w_tp': 1.2848720802000495, 'w_fn': 0.8287917876545459, 'w_fp': 1.9398662388904482, 'cql_alpha': 2.794958972971021}. Best is trial 6 with value: 0.5112646094996678.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:31:31,285] Trial 9 finished with value: 0.49043667357193893 and parameters: {'n_updates': 24, 'episodes_per_update': 12, 'telemetry_budget': 5, 'window_size': 32, 'w_tp': 1.3797694022151248, 'w_fn': 0.5703764116562274, 'w_fp': 2.572350073043408, 'cql_alpha': 0.1136168809583865}. Best is trial 6 with value: 0.5112646094996678.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:31:48,439] Trial 10 finished with value: 0.566062570186968 and parameters: {'n_updates': 15, 'episodes_per_update': 4, 'telemetry_budget': 6, 'window_size': 128, 'w_tp': 1.9292588091392533, 'w_fn': 2.004288199400413, 'w_fp': 0.6484340168607265, 'cql_alpha': 1.9298180505988847}. Best is trial 10 with value: 0.566062570186968.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:32:05,133] Trial 11 finished with value: 0.5663610089600801 and parameters: {'n_updates': 15, 'episodes_per_update': 4, 'telemetry_budget': 6, 'window_size': 128, 'w_tp': 1.9733390292479984, 'w_fn': 1.9263332361837548, 'w_fp': 0.5720766998424103, 'cql_alpha': 1.864789171899831}. Best is trial 11 with value: 0.5663610089600801.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:32:21,946] Trial 12 finished with value: 0.5663610089600801 and parameters: {'n_updates': 15, 'episodes_per_update': 4, 'telemetry_budget': 6, 'window_size': 128, 'w_tp': 1.9693934345444903, 'w_fn': 2.02650316848459, 'w_fp': 0.5162757034301384, 'cql_alpha': 1.882144184354129}. Best is trial 11 with value: 0.5663610089600801.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:32:38,842] Trial 13 finished with value: 0.5663610089600801 and parameters: {'n_updates': 15, 'episodes_per_update': 6, 'telemetry_budget': 6, 'window_size': 128, 'w_tp': 1.9719530062178223, 'w_fn': 1.9767682368937298, 'w_fp': 0.5440015910418043, 'cql_alpha': 1.913201376203754}. Best is trial 11 with value: 0.5663610089600801.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 13:32:55,751] Trial 14 finished with value: 0.5510635075070294 and parameters: {'n_updates': 19, 'episodes_per_update': 7, 'telemetry_budget': 6, 'window_size': 128, 'w_tp': 1.7180601397258812, 'w_fn': 2.2853417887213583, 'w_fp': 0.903850326043276, 'cql_alpha': 2.368410809916974}. Best is trial 11 with value: 0.5663610089600801.
+Best value: 0.5663610089600801
+Best params: {'n_updates': 15, 'episodes_per_update': 4, 'telemetry_budget': 6, 'window_size': 128, 'w_tp': 1.9733390292479984, 'w_fn': 1.9263332361837548, 'w_fp': 0.5720766998424103, 'cql_alpha': 1.864789171899831}
+Saved -> C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 2\manifests\tuning_log_C3_OfflineSafeGraphRL_UNSW-NB15.json

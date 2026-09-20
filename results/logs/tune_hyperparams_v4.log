@@ -1,0 +1,40 @@
+[I 2026-07-28 21:31:16,226] A new study created in memory with name: no-name-2b6dd200-1633-4654-8506-72f811968ebc
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 21:33:06,605] Trial 0 finished with value: 0.0 and parameters: {'n_updates': 32, 'episodes_per_update': 13, 'telemetry_budget': 9, 'window_size': 128, 'w_tp': 1.1563808168940388, 'w_fn': 3.621205502737279, 'w_fp': 2.9091569012525733, 'cql_alpha': 1.2119804045947553, 'n_episodes_offline': 338, 'epochs': 17, 'behavior_epsilon': 0.3488155963828763}. Best is trial 0 with value: 0.0.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 21:33:59,767] Trial 1 finished with value: 0.0 and parameters: {'n_updates': 43, 'episodes_per_update': 4, 'telemetry_budget': 4, 'window_size': 64, 'w_tp': 1.8050182223702287, 'w_fn': 3.925164197814674, 'w_fp': 2.497896410541809, 'cql_alpha': 1.4382901505335024, 'n_episodes_offline': 334, 'epochs': 10, 'behavior_epsilon': 0.3739723574646333}. Best is trial 0 with value: 0.0.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[I 2026-07-28 21:35:42,134] Trial 2 finished with value: 0.0 and parameters: {'n_updates': 19, 'episodes_per_update': 16, 'telemetry_budget': 8, 'window_size': 128, 'w_tp': 1.1842254983248228, 'w_fn': 2.48951882104027, 'w_fp': 0.5469745010908879, 'cql_alpha': 1.8911429415200436, 'n_episodes_offline': 284, 'epochs': 19, 'behavior_epsilon': 0.48031182748011847}. Best is trial 0 with value: 0.0.
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(

@@ -1,0 +1,50 @@
+{
+  "ranked_by_validation_S": [
+    {
+      "candidate": "C3_OfflineSafeGraphRL",
+      "S": 0.5384689632937781
+    },
+    {
+      "candidate": "C10_ByzantineRobustFederatedRL",
+      "S": 0.49230454042562766
+    },
+    {
+      "candidate": "C2_CausalCounterfactualRL",
+      "S": 0.4921851408769837
+    },
+    {
+      "candidate": "C4_BudgetedActiveAcquisitionRL",
+      "S": 0.48965376922415743
+    },
+    {
+      "candidate": "C1_ConformalRiskGraphRL",
+      "S": 0.48836689250162607
+    },
+    {
+      "candidate": "C9_SelfSupervisedWorldModelRL",
+      "S": 0.48549464966954914
+    },
+    {
+      "candidate": "C5_HierarchicalMultiAgentRL",
+      "S": 0.48255501933325995
+    },
+    {
+      "candidate": "C7_LogicPreservingAdversarialRL",
+      "S": 0.4815854673128073
+    },
+    {
+      "candidate": "C6_ContinualMetaGraphRL",
+      "S": 0.46784563608119845
+    },
+    {
+      "candidate": "C8_NeuroSymbolicATTCKRL",
+      "S": 0.4514522467649497
+    }
+  ],
+  "close_to_top_within_margin": [
+    "C3_OfflineSafeGraphRL"
+  ],
+  "priority_tiebreak_applied": false,
+  "selected_candidate": "C3_OfflineSafeGraphRL",
+  "margin_used": 0.02
+}

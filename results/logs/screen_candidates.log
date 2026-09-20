@@ -1,0 +1,209 @@
+
+=== building envs for UNSW-NB15 ===
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  [UNSW-NB15] C1_ConformalRiskGraphRL seed=0 ...
+    -> ok macro_f1=0.3941908713692946 reward=0.028368794326240315
+  [UNSW-NB15] C1_ConformalRiskGraphRL seed=1 ...
+    -> ok macro_f1=0.3905308668225955 reward=18.577375886524802
+  [UNSW-NB15] C2_CausalCounterfactualRL seed=0 ...
+    -> ok macro_f1=None reward=-0.638297872340426
+  [UNSW-NB15] C2_CausalCounterfactualRL seed=1 ...
+    -> ok macro_f1=0.38313253012048193 reward=13.685106382978713
+  [UNSW-NB15] C3_OfflineSafeGraphRL seed=0 ...
+    -> ok macro_f1=0.38966499389664994 reward=17.72198581560282
+  [UNSW-NB15] C3_OfflineSafeGraphRL seed=1 ...
+    -> ok macro_f1=0.38966499389664994 reward=17.72198581560282
+  [UNSW-NB15] C4_BudgetedActiveAcquisitionRL seed=0 ...
+    -> ok macro_f1=0.39004702194357366 reward=18.637056449596948
+  [UNSW-NB15] C4_BudgetedActiveAcquisitionRL seed=1 ...
+    -> ok macro_f1=0.3896500271296799 reward=17.363829787234028
+  [UNSW-NB15] C5_HierarchicalMultiAgentRL seed=0 ...
+    -> ok macro_f1=0.38741470811220624 reward=0.9134751773049672
+  [UNSW-NB15] C5_HierarchicalMultiAgentRL seed=1 ...
+    -> ok macro_f1=0.3894273127753304 reward=23.19673758865245
+  [UNSW-NB15] C6_ContinualMetaGraphRL seed=0 ...
+    -> ok macro_f1=0.38966499389664994 reward=17.717730496453882
+  [UNSW-NB15] C6_ContinualMetaGraphRL seed=1 ...
+    -> ok macro_f1=0.38945219462402175 reward=14.42212765957447
+  [UNSW-NB15] C7_LogicPreservingAdversarialRL seed=0 ...
+    -> ok macro_f1=0.38966499389664994 reward=17.72198581560282
+  [UNSW-NB15] C7_LogicPreservingAdversarialRL seed=1 ...
+    -> ok macro_f1=0.3927985739750446 reward=16.791489361702112
+  [UNSW-NB15] C8_NeuroSymbolicATTCKRL seed=0 ...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+    -> ok macro_f1=0.39396215079603486 reward=9.52836879432623
+  [UNSW-NB15] C8_NeuroSymbolicATTCKRL seed=1 ...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+    -> ok macro_f1=0.39294153517798613 reward=21.541560283687936
+  [UNSW-NB15] C9_SelfSupervisedWorldModelRL seed=0 ...
+    -> ok macro_f1=0.42142525255825264 reward=14.470384392104487
+  [UNSW-NB15] C9_SelfSupervisedWorldModelRL seed=1 ...
+    -> ok macro_f1=0.4819598344959747 reward=-4.280883868766
+  [UNSW-NB15] C10_ByzantineRobustFederatedRL seed=0 ...
+    -> ok macro_f1=0.4074074074074074 reward=-0.4453900709219866
+  [UNSW-NB15] C10_ByzantineRobustFederatedRL seed=1 ...
+    -> ok macro_f1=0.38966499389664994 reward=17.72198581560282
+
+=== building envs for ToN-IoT-Network ===
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  [ToN-IoT-Network] C1_ConformalRiskGraphRL seed=0 ...
+    -> ok macro_f1=0.44321437874446473 reward=60.9529850746269
+  [ToN-IoT-Network] C1_ConformalRiskGraphRL seed=1 ...
+    -> ok macro_f1=0.3966326891288353 reward=39.29119402985074
+  [ToN-IoT-Network] C2_CausalCounterfactualRL seed=0 ...
+    -> ok macro_f1=0.44321437874446473 reward=60.89029850746273
+  [ToN-IoT-Network] C2_CausalCounterfactualRL seed=1 ...
+    -> ok macro_f1=0.24086493992158026 reward=43.19082089552238
+  [ToN-IoT-Network] C3_OfflineSafeGraphRL seed=0 ...
+    -> ok macro_f1=0.44321437874446473 reward=45.867910447761176
+  [ToN-IoT-Network] C3_OfflineSafeGraphRL seed=1 ...
+    -> ok macro_f1=0.7669217863744335 reward=-92.2676341570221
+  [ToN-IoT-Network] C4_BudgetedActiveAcquisitionRL seed=0 ...
+    -> ok macro_f1=0.44321437874446473 reward=60.72462686567169
+  [ToN-IoT-Network] C4_BudgetedActiveAcquisitionRL seed=1 ...
+    -> ok macro_f1=0.44457891364704205 reward=46.357313432835795
+  [ToN-IoT-Network] C5_HierarchicalMultiAgentRL seed=0 ...
+    -> ok macro_f1=0.4594017094017094 reward=68.15589552238804
+  [ToN-IoT-Network] C5_HierarchicalMultiAgentRL seed=1 ...
+    -> ok macro_f1=0.43306002970902635 reward=5.8051492537313445
+  [ToN-IoT-Network] C6_ContinualMetaGraphRL seed=0 ...
+    -> ok macro_f1=0.2299921512996032 reward=3.0208955223880425
+  [ToN-IoT-Network] C6_ContinualMetaGraphRL seed=1 ...
+    -> ok macro_f1=0.44467787114845936 reward=58.18917910447765
+  [ToN-IoT-Network] C7_LogicPreservingAdversarialRL seed=0 ...
+    -> ok macro_f1=0.44321437874446473 reward=60.72462686567169
+  [ToN-IoT-Network] C7_LogicPreservingAdversarialRL seed=1 ...
+    -> ok macro_f1=0.44321437874446473 reward=60.72462686567169
+  [ToN-IoT-Network] C8_NeuroSymbolicATTCKRL seed=0 ...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+    -> ok macro_f1=0.3847916801937877 reward=5.0283582089552255
+  [ToN-IoT-Network] C8_NeuroSymbolicATTCKRL seed=1 ...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+    -> ok macro_f1=0.39639933643360253 reward=24.530671641791045
+  [ToN-IoT-Network] C9_SelfSupervisedWorldModelRL seed=0 ...
+    -> ok macro_f1=0.45220858040457446 reward=52.052313432835824
+  [ToN-IoT-Network] C9_SelfSupervisedWorldModelRL seed=1 ...
+    -> ok macro_f1=0.4430264274870387 reward=45.15256208083482
+  [ToN-IoT-Network] C10_ByzantineRobustFederatedRL seed=0 ...
+    -> ok macro_f1=0.44312438464063014 reward=45.56716417910449
+  [ToN-IoT-Network] C10_ByzantineRobustFederatedRL seed=1 ...
+    -> ok macro_f1=0.44321437874446473 reward=60.72462686567169
+
+=== building envs for CICIoT2023 ===
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  [CICIoT2023] C1_ConformalRiskGraphRL seed=0 ...
+    -> ok macro_f1=0.494274004486347 reward=114.17537313432892
+  [CICIoT2023] C1_ConformalRiskGraphRL seed=1 ...
+    -> ok macro_f1=0.494274004486347 reward=78.42100213219624
+  [CICIoT2023] C2_CausalCounterfactualRL seed=0 ...
+    -> ok macro_f1=0.494274004486347 reward=114.17537313432892
+  [CICIoT2023] C2_CausalCounterfactualRL seed=1 ...
+    -> ok macro_f1=0.494274004486347 reward=114.17537313432892
+  [CICIoT2023] C3_OfflineSafeGraphRL seed=0 ...
+    -> ok macro_f1=0.7807889131526555 reward=-66.17386966352271
+  [CICIoT2023] C3_OfflineSafeGraphRL seed=1 ...
+    -> ok macro_f1=0.494274004486347 reward=78.42100213219624
+  [CICIoT2023] C4_BudgetedActiveAcquisitionRL seed=0 ...
+    -> ok macro_f1=0.494274004486347 reward=114.17537313432892
+  [CICIoT2023] C4_BudgetedActiveAcquisitionRL seed=1 ...
+    -> ok macro_f1=0.494274004486347 reward=114.17537313432892
+  [CICIoT2023] C5_HierarchicalMultiAgentRL seed=0 ...
+    -> ok macro_f1=0.494274004486347 reward=114.17537313432892
+  [CICIoT2023] C5_HierarchicalMultiAgentRL seed=1 ...
+    -> ok macro_f1=0.494274004486347 reward=78.47985074626864
+  [CICIoT2023] C6_ContinualMetaGraphRL seed=0 ...
+    -> ok macro_f1=0.494274004486347 reward=114.17537313432892
+  [CICIoT2023] C6_ContinualMetaGraphRL seed=1 ...
+    -> ok macro_f1=0.494274004486347 reward=114.17537313432892
+  [CICIoT2023] C7_LogicPreservingAdversarialRL seed=0 ...
+    -> ok macro_f1=0.494274004486347 reward=114.17537313432892
+  [CICIoT2023] C7_LogicPreservingAdversarialRL seed=1 ...
+    -> ok macro_f1=0.494274004486347 reward=113.74616204690885
+  [CICIoT2023] C8_NeuroSymbolicATTCKRL seed=0 ...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+    -> ok macro_f1=0.494274004486347 reward=87.36663113006423
+  [CICIoT2023] C8_NeuroSymbolicATTCKRL seed=1 ...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+    -> ok macro_f1=0.494274004486347 reward=78.42100213219624
+  [CICIoT2023] C9_SelfSupervisedWorldModelRL seed=0 ...
+    -> ok macro_f1=0.49536216264347926 reward=112.53705360298474
+  [CICIoT2023] C9_SelfSupervisedWorldModelRL seed=1 ...
+    -> ok macro_f1=0.494274004486347 reward=95.9789978678039
+  [CICIoT2023] C10_ByzantineRobustFederatedRL seed=0 ...
+    -> ok macro_f1=0.494274004486347 reward=113.92900269848299
+  [CICIoT2023] C10_ByzantineRobustFederatedRL seed=1 ...
+    -> ok macro_f1=0.494274004486347 reward=114.17729211087476
+
+Saved results/csv/candidate_screening.csv

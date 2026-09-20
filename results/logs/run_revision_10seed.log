@@ -1,0 +1,1720 @@
+PLAN row_cap=100000 seeds=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] datasets=['UNSW-NB15', 'ToN-IoT-Network', 'CICIoT2023'] -> *_v2_10seed.csv
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7796 minority_recall=0.6236 pr_auc=0.9157
+  LinearSVM: macro_f1=0.8784 minority_recall=0.7821 pr_auc=0.9718
+  GaussianNB: macro_f1=0.7468 minority_recall=0.8493 pr_auc=0.9042
+  kNN: macro_f1=0.9142 minority_recall=0.8892 pr_auc=0.9872
+  DecisionTree: macro_f1=0.9287 minority_recall=0.9686 pr_auc=0.9853
+  RandomForest: macro_f1=0.9373 minority_recall=0.9536 pr_auc=0.9948
+  ExtraTrees: macro_f1=0.9195 minority_recall=0.9134 pr_auc=0.9910
+  GradientBoosting: macro_f1=0.9308 minority_recall=0.9060 pr_auc=0.9935
+  HistGradientBoosting: macro_f1=0.9376 minority_recall=0.9352 pr_auc=0.9949
+  XGBoost: macro_f1=0.9403 minority_recall=0.9330 pr_auc=0.9951
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9392 minority_recall=0.9636 pr_auc=0.9950
+  CatBoost: macro_f1=0.9378 minority_recall=0.9278 pr_auc=0.9946
+PROGRESS [1/30] UNSW-NB15 seed=0 baselines ok (12 rows, 67s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [1/30] UNSW-NB15 seed=0 aegis ok (6c/22a rows, 280s)
+PROGRESS [1/30] UNSW-NB15 seed=0 complete | elapsed 6m | eta 168m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.8501 minority_recall=0.7790 pr_auc=0.9432
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.5214 minority_recall=0.1002 pr_auc=0.9312
+  GaussianNB: macro_f1=0.4505 minority_recall=0.0036 pr_auc=0.8958
+  kNN: macro_f1=0.9822 minority_recall=0.9623 pr_auc=0.9975
+  DecisionTree: macro_f1=0.9955 minority_recall=0.9925 pr_auc=0.9978
+  RandomForest: macro_f1=0.9978 minority_recall=0.9947 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9909 minority_recall=0.9851 pr_auc=0.9997
+  GradientBoosting: macro_f1=0.9924 minority_recall=0.9900 pr_auc=0.9998
+  HistGradientBoosting: macro_f1=0.9982 minority_recall=0.9950 pr_auc=0.9999
+  XGBoost: macro_f1=0.9979 minority_recall=0.9954 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9981 minority_recall=0.9964 pr_auc=0.9999
+  CatBoost: macro_f1=0.9968 minority_recall=0.9932 pr_auc=1.0000
+PROGRESS [2/30] ToN-IoT-Network seed=0 baselines ok (12 rows, 191s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [2/30] ToN-IoT-Network seed=0 aegis ok (6c/22a rows, 258s)
+PROGRESS [2/30] ToN-IoT-Network seed=0 complete | elapsed 13m | eta 186m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.5183 minority_recall=0.9670 pr_auc=0.9982
+  LinearSVM: macro_f1=0.8293 minority_recall=0.5847 pr_auc=0.9995
+  GaussianNB: macro_f1=0.7434 minority_recall=0.9962 pr_auc=0.9995
+  kNN: macro_f1=0.8674 minority_recall=0.7838 pr_auc=0.9995
+  DecisionTree: macro_f1=0.9204 minority_recall=0.9871 pr_auc=0.9995
+  RandomForest: macro_f1=0.9360 minority_recall=0.9758 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9039 minority_recall=0.9958 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9581 minority_recall=0.9320 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9514 minority_recall=0.9228 pr_auc=1.0000
+  XGBoost: macro_f1=0.9562 minority_recall=0.9253 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9564 minority_recall=0.9704 pr_auc=1.0000
+  CatBoost: macro_f1=0.9573 minority_recall=0.9357 pr_auc=1.0000
+PROGRESS [3/30] CICIoT2023 seed=0 baselines ok (12 rows, 124s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\Desktop\research work\Alienware\Innovative paper 2\code\experiments\..\aegis\..\aegis\..\baselines\deep_baselines.py:32: UserWarning: The given NumPy array is not writable, and PyTorch does not support non-writable tensors. This means writing to this tensor will result in undefined behavior. You may want to copy the array to protect its data or make it writable before converting it to a tensor. This type of warning will be suppressed for the rest of this program. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\torch\csrc\utils\tensor_numpy.cpp:219.)
+  self.X = torch.as_tensor(X, dtype=torch.float32)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [3/30] CICIoT2023 seed=0 aegis ok (6c/22a rows, 769s)
+PROGRESS [3/30] CICIoT2023 seed=0 complete | elapsed 28m | eta 254m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7829 minority_recall=0.6125 pr_auc=0.9145
+  LinearSVM: macro_f1=0.8821 minority_recall=0.7955 pr_auc=0.9746
+  GaussianNB: macro_f1=0.7293 minority_recall=0.8490 pr_auc=0.8885
+  kNN: macro_f1=0.9170 minority_recall=0.8961 pr_auc=0.9875
+  DecisionTree: macro_f1=0.9261 minority_recall=0.9671 pr_auc=0.9833
+  RandomForest: macro_f1=0.9369 minority_recall=0.9573 pr_auc=0.9950
+  ExtraTrees: macro_f1=0.9171 minority_recall=0.9207 pr_auc=0.9908
+  GradientBoosting: macro_f1=0.9311 minority_recall=0.9131 pr_auc=0.9936
+  HistGradientBoosting: macro_f1=0.9401 minority_recall=0.9344 pr_auc=0.9951
+  XGBoost: macro_f1=0.9418 minority_recall=0.9375 pr_auc=0.9952
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9386 minority_recall=0.9697 pr_auc=0.9954
+  CatBoost: macro_f1=0.9369 minority_recall=0.9288 pr_auc=0.9948
+PROGRESS [4/30] UNSW-NB15 seed=1 baselines ok (12 rows, 106s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [4/30] UNSW-NB15 seed=1 aegis ok (6c/22a rows, 284s)
+PROGRESS [4/30] UNSW-NB15 seed=1 complete | elapsed 35m | eta 225m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7802 minority_recall=0.6168 pr_auc=0.8934
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.5566 minority_recall=0.1292 pr_auc=0.9008
+  GaussianNB: macro_f1=0.5427 minority_recall=0.1362 pr_auc=0.8733
+  kNN: macro_f1=0.9883 minority_recall=0.9764 pr_auc=0.9985
+  DecisionTree: macro_f1=0.9971 minority_recall=0.9948 pr_auc=0.9978
+  RandomForest: macro_f1=0.9983 minority_recall=0.9956 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9952 minority_recall=0.9895 pr_auc=0.9997
+  GradientBoosting: macro_f1=0.9954 minority_recall=0.9918 pr_auc=0.9998
+  HistGradientBoosting: macro_f1=0.9975 minority_recall=0.9950 pr_auc=1.0000
+  XGBoost: macro_f1=0.9977 minority_recall=0.9953 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9985 minority_recall=0.9977 pr_auc=1.0000
+  CatBoost: macro_f1=0.9969 minority_recall=0.9948 pr_auc=1.0000
+PROGRESS [5/30] ToN-IoT-Network seed=1 baselines ok (12 rows, 149s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [5/30] ToN-IoT-Network seed=1 aegis ok (6c/22a rows, 316s)
+PROGRESS [5/30] ToN-IoT-Network seed=1 complete | elapsed 42m | eta 212m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.5111 minority_recall=0.9666 pr_auc=0.9983
+  LinearSVM: macro_f1=0.8259 minority_recall=0.5892 pr_auc=0.9996
+  GaussianNB: macro_f1=0.7395 minority_recall=0.9967 pr_auc=0.9994
+  kNN: macro_f1=0.8644 minority_recall=0.7885 pr_auc=0.9992
+  DecisionTree: macro_f1=0.9264 minority_recall=0.9837 pr_auc=0.9995
+  RandomForest: macro_f1=0.9350 minority_recall=0.9762 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9033 minority_recall=0.9916 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9625 minority_recall=0.9457 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9578 minority_recall=0.9202 pr_auc=1.0000
+  XGBoost: macro_f1=0.9551 minority_recall=0.9181 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9551 minority_recall=0.9716 pr_auc=1.0000
+  CatBoost: macro_f1=0.9608 minority_recall=0.9361 pr_auc=1.0000
+PROGRESS [6/30] CICIoT2023 seed=1 baselines ok (12 rows, 237s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [6/30] CICIoT2023 seed=1 aegis ok (6c/22a rows, 817s)
+PROGRESS [6/30] CICIoT2023 seed=1 complete | elapsed 60m | eta 240m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7738 minority_recall=0.7045 pr_auc=0.9191
+  LinearSVM: macro_f1=0.8786 minority_recall=0.7848 pr_auc=0.9740
+  GaussianNB: macro_f1=0.7380 minority_recall=0.8487 pr_auc=0.8992
+  kNN: macro_f1=0.9133 minority_recall=0.8936 pr_auc=0.9871
+  DecisionTree: macro_f1=0.9289 minority_recall=0.9676 pr_auc=0.9854
+  RandomForest: macro_f1=0.9332 minority_recall=0.9469 pr_auc=0.9947
+  ExtraTrees: macro_f1=0.9165 minority_recall=0.9071 pr_auc=0.9905
+  GradientBoosting: macro_f1=0.9299 minority_recall=0.9123 pr_auc=0.9933
+  HistGradientBoosting: macro_f1=0.9390 minority_recall=0.9334 pr_auc=0.9949
+  XGBoost: macro_f1=0.9389 minority_recall=0.9340 pr_auc=0.9949
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9401 minority_recall=0.9650 pr_auc=0.9951
+  CatBoost: macro_f1=0.9361 minority_recall=0.9251 pr_auc=0.9945
+PROGRESS [7/30] UNSW-NB15 seed=2 baselines ok (12 rows, 115s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [7/30] UNSW-NB15 seed=2 aegis ok (6c/22a rows, 564s)
+PROGRESS [7/30] UNSW-NB15 seed=2 complete | elapsed 71m | eta 234m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7875 minority_recall=0.5865 pr_auc=0.9397
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.5615 minority_recall=0.1339 pr_auc=0.8936
+  GaussianNB: macro_f1=0.1838 minority_recall=0.9991 pr_auc=0.8602
+  kNN: macro_f1=0.9855 minority_recall=0.9655 pr_auc=0.9975
+  DecisionTree: macro_f1=0.9976 minority_recall=0.9964 pr_auc=0.9983
+  RandomForest: macro_f1=0.9985 minority_recall=0.9967 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9949 minority_recall=0.9898 pr_auc=0.9997
+  GradientBoosting: macro_f1=0.9953 minority_recall=0.9922 pr_auc=0.9994
+  HistGradientBoosting: macro_f1=0.9978 minority_recall=0.9949 pr_auc=1.0000
+  XGBoost: macro_f1=0.9982 minority_recall=0.9961 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9984 minority_recall=0.9964 pr_auc=1.0000
+  CatBoost: macro_f1=0.9977 minority_recall=0.9955 pr_auc=0.9998
+PROGRESS [8/30] ToN-IoT-Network seed=2 baselines ok (12 rows, 189s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [8/30] ToN-IoT-Network seed=2 aegis ok (6c/22a rows, 335s)
+PROGRESS [8/30] ToN-IoT-Network seed=2 complete | elapsed 80m | eta 220m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.4783 minority_recall=0.9725 pr_auc=0.9986
+  LinearSVM: macro_f1=0.8354 minority_recall=0.6032 pr_auc=0.9996
+  GaussianNB: macro_f1=0.7444 minority_recall=0.9926 pr_auc=0.9994
+  kNN: macro_f1=0.8692 minority_recall=0.7808 pr_auc=0.9995
+  DecisionTree: macro_f1=0.9023 minority_recall=0.9897 pr_auc=0.9996
+  RandomForest: macro_f1=0.9473 minority_recall=0.9823 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9061 minority_recall=0.9955 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9590 minority_recall=0.9350 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9516 minority_recall=0.9186 pr_auc=1.0000
+  XGBoost: macro_f1=0.9577 minority_recall=0.9387 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9528 minority_recall=0.9679 pr_auc=0.9998
+  CatBoost: macro_f1=0.9536 minority_recall=0.9334 pr_auc=1.0000
+PROGRESS [9/30] CICIoT2023 seed=2 baselines ok (12 rows, 174s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [9/30] CICIoT2023 seed=2 aegis ok (6c/22a rows, 818s)
+PROGRESS [9/30] CICIoT2023 seed=2 complete | elapsed 97m | eta 225m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7771 minority_recall=0.6481 pr_auc=0.9134
+  LinearSVM: macro_f1=0.8810 minority_recall=0.7911 pr_auc=0.9741
+  GaussianNB: macro_f1=0.7064 minority_recall=0.8512 pr_auc=0.8908
+  kNN: macro_f1=0.9156 minority_recall=0.8878 pr_auc=0.9878
+  DecisionTree: macro_f1=0.9288 minority_recall=0.9622 pr_auc=0.9851
+  RandomForest: macro_f1=0.9383 minority_recall=0.9505 pr_auc=0.9948
+  ExtraTrees: macro_f1=0.9182 minority_recall=0.9137 pr_auc=0.9906
+  GradientBoosting: macro_f1=0.9301 minority_recall=0.9043 pr_auc=0.9935
+  HistGradientBoosting: macro_f1=0.9406 minority_recall=0.9282 pr_auc=0.9952
+  XGBoost: macro_f1=0.9398 minority_recall=0.9254 pr_auc=0.9951
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9434 minority_recall=0.9636 pr_auc=0.9954
+  CatBoost: macro_f1=0.9384 minority_recall=0.9221 pr_auc=0.9944
+PROGRESS [10/30] UNSW-NB15 seed=3 baselines ok (12 rows, 133s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [10/30] UNSW-NB15 seed=3 aegis ok (6c/22a rows, 390s)
+PROGRESS [10/30] UNSW-NB15 seed=3 complete | elapsed 105m | eta 211m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.8205 minority_recall=0.7486 pr_auc=0.9618
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.5938 minority_recall=0.1841 pr_auc=0.9398
+  GaussianNB: macro_f1=0.2027 minority_recall=0.9966 pr_auc=0.8654
+  kNN: macro_f1=0.9841 minority_recall=0.9669 pr_auc=0.9972
+  DecisionTree: macro_f1=0.9950 minority_recall=0.9919 pr_auc=0.9951
+  RandomForest: macro_f1=0.9977 minority_recall=0.9940 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9947 minority_recall=0.9872 pr_auc=0.9998
+  GradientBoosting: macro_f1=0.9963 minority_recall=0.9927 pr_auc=0.9999
+  HistGradientBoosting: macro_f1=0.9982 minority_recall=0.9969 pr_auc=1.0000
+  XGBoost: macro_f1=0.9981 minority_recall=0.9969 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9987 minority_recall=0.9979 pr_auc=1.0000
+  CatBoost: macro_f1=0.9976 minority_recall=0.9948 pr_auc=1.0000
+PROGRESS [11/30] ToN-IoT-Network seed=3 baselines ok (12 rows, 132s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [11/30] ToN-IoT-Network seed=3 aegis ok (6c/22a rows, 341s)
+PROGRESS [11/30] ToN-IoT-Network seed=3 complete | elapsed 113m | eta 195m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.4693 minority_recall=0.9645 pr_auc=0.9982
+  LinearSVM: macro_f1=0.8345 minority_recall=0.5927 pr_auc=0.9996
+  GaussianNB: macro_f1=0.7380 minority_recall=0.9929 pr_auc=0.9992
+  kNN: macro_f1=0.8580 minority_recall=0.7508 pr_auc=0.9994
+  DecisionTree: macro_f1=0.9049 minority_recall=0.9812 pr_auc=0.9994
+  RandomForest: macro_f1=0.9385 minority_recall=0.9808 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9051 minority_recall=0.9958 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9612 minority_recall=0.9495 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9449 minority_recall=0.9149 pr_auc=1.0000
+  XGBoost: macro_f1=0.9519 minority_recall=0.9240 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9464 minority_recall=0.9716 pr_auc=0.9999
+  CatBoost: macro_f1=0.9516 minority_recall=0.9286 pr_auc=1.0000
+PROGRESS [12/30] CICIoT2023 seed=3 baselines ok (12 rows, 148s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [12/30] CICIoT2023 seed=3 aegis ok (6c/22a rows, 639s)
+PROGRESS [12/30] CICIoT2023 seed=3 complete | elapsed 126m | eta 189m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7713 minority_recall=0.7155 pr_auc=0.9147
+  LinearSVM: macro_f1=0.8745 minority_recall=0.7827 pr_auc=0.9703
+  GaussianNB: macro_f1=0.6806 minority_recall=0.8714 pr_auc=0.8898
+  kNN: macro_f1=0.9146 minority_recall=0.8956 pr_auc=0.9867
+  DecisionTree: macro_f1=0.9277 minority_recall=0.9635 pr_auc=0.9817
+  RandomForest: macro_f1=0.9366 minority_recall=0.9498 pr_auc=0.9943
+  ExtraTrees: macro_f1=0.9135 minority_recall=0.9054 pr_auc=0.9897
+  GradientBoosting: macro_f1=0.9277 minority_recall=0.9085 pr_auc=0.9928
+  HistGradientBoosting: macro_f1=0.9366 minority_recall=0.9290 pr_auc=0.9947
+  XGBoost: macro_f1=0.9378 minority_recall=0.9323 pr_auc=0.9947
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9387 minority_recall=0.9640 pr_auc=0.9947
+  CatBoost: macro_f1=0.9351 minority_recall=0.9258 pr_auc=0.9942
+PROGRESS [13/30] UNSW-NB15 seed=4 baselines ok (12 rows, 104s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [13/30] UNSW-NB15 seed=4 aegis ok (6c/22a rows, 326s)
+PROGRESS [13/30] UNSW-NB15 seed=4 complete | elapsed 133m | eta 174m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.6574 minority_recall=0.3510 pr_auc=0.9503
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.4713 minority_recall=0.0566 pr_auc=0.9396
+  GaussianNB: macro_f1=0.4208 minority_recall=0.0023 pr_auc=0.8672
+  kNN: macro_f1=0.8469 minority_recall=0.6270 pr_auc=0.8738
+  DecisionTree: macro_f1=0.8550 minority_recall=0.6368 pr_auc=0.8911
+  RandomForest: macro_f1=0.9972 minority_recall=0.9982 pr_auc=0.9997
+  ExtraTrees: macro_f1=0.8501 minority_recall=0.6347 pr_auc=0.9869
+  GradientBoosting: macro_f1=0.8530 minority_recall=0.6368 pr_auc=0.9992
+  HistGradientBoosting: macro_f1=0.9971 minority_recall=0.9986 pr_auc=0.9997
+  XGBoost: macro_f1=0.8552 minority_recall=0.6399 pr_auc=0.9995
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9972 minority_recall=0.9989 pr_auc=0.9997
+  CatBoost: macro_f1=0.9967 minority_recall=0.9977 pr_auc=0.9996
+PROGRESS [14/30] ToN-IoT-Network seed=4 baselines ok (12 rows, 133s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [14/30] ToN-IoT-Network seed=4 aegis ok (6c/22a rows, 309s)
+PROGRESS [14/30] ToN-IoT-Network seed=4 complete | elapsed 141m | eta 161m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.5176 minority_recall=0.9733 pr_auc=0.9985
+  LinearSVM: macro_f1=0.8398 minority_recall=0.6143 pr_auc=0.9996
+  GaussianNB: macro_f1=0.7343 minority_recall=0.9898 pr_auc=0.9991
+  kNN: macro_f1=0.8688 minority_recall=0.7832 pr_auc=0.9995
+  DecisionTree: macro_f1=0.8989 minority_recall=0.9890 pr_auc=0.9996
+  RandomForest: macro_f1=0.9292 minority_recall=0.9801 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9047 minority_recall=0.9953 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9596 minority_recall=0.9368 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9492 minority_recall=0.9207 pr_auc=1.0000
+  XGBoost: macro_f1=0.9567 minority_recall=0.9368 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9464 minority_recall=0.9665 pr_auc=1.0000
+  CatBoost: macro_f1=0.9546 minority_recall=0.9355 pr_auc=1.0000
+PROGRESS [15/30] CICIoT2023 seed=4 baselines ok (12 rows, 143s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [15/30] CICIoT2023 seed=4 aegis ok (6c/22a rows, 661s)
+PROGRESS [15/30] CICIoT2023 seed=4 complete | elapsed 154m | eta 154m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7733 minority_recall=0.7637 pr_auc=0.9219
+  LinearSVM: macro_f1=0.8745 minority_recall=0.7844 pr_auc=0.9699
+  GaussianNB: macro_f1=0.7402 minority_recall=0.8601 pr_auc=0.9048
+  kNN: macro_f1=0.9127 minority_recall=0.8987 pr_auc=0.9865
+  DecisionTree: macro_f1=0.9241 minority_recall=0.9669 pr_auc=0.9849
+  RandomForest: macro_f1=0.9357 minority_recall=0.9551 pr_auc=0.9947
+  ExtraTrees: macro_f1=0.9206 minority_recall=0.9231 pr_auc=0.9912
+  GradientBoosting: macro_f1=0.9326 minority_recall=0.9137 pr_auc=0.9936
+  HistGradientBoosting: macro_f1=0.9400 minority_recall=0.9399 pr_auc=0.9949
+  XGBoost: macro_f1=0.9418 minority_recall=0.9394 pr_auc=0.9950
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9392 minority_recall=0.9677 pr_auc=0.9951
+  CatBoost: macro_f1=0.9390 minority_recall=0.9314 pr_auc=0.9946
+PROGRESS [16/30] UNSW-NB15 seed=5 baselines ok (12 rows, 107s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [16/30] UNSW-NB15 seed=5 aegis ok (6c/22a rows, 389s)
+PROGRESS [16/30] UNSW-NB15 seed=5 complete | elapsed 162m | eta 142m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7486 minority_recall=0.5624 pr_auc=0.9606
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.4984 minority_recall=0.0584 pr_auc=0.9351
+  GaussianNB: macro_f1=0.1740 minority_recall=0.9993 pr_auc=0.8752
+  kNN: macro_f1=0.9820 minority_recall=0.9639 pr_auc=0.9982
+  DecisionTree: macro_f1=0.9938 minority_recall=0.9936 pr_auc=0.9978
+  RandomForest: macro_f1=0.9961 minority_recall=0.9966 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9922 minority_recall=0.9875 pr_auc=0.9995
+  GradientBoosting: macro_f1=0.9927 minority_recall=0.9906 pr_auc=0.9996
+  HistGradientBoosting: macro_f1=0.9950 minority_recall=0.9939 pr_auc=1.0000
+  XGBoost: macro_f1=0.9955 minority_recall=0.9963 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9956 minority_recall=0.9956 pr_auc=1.0000
+  CatBoost: macro_f1=0.9944 minority_recall=0.9926 pr_auc=0.9999
+PROGRESS [17/30] ToN-IoT-Network seed=5 baselines ok (12 rows, 137s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [17/30] ToN-IoT-Network seed=5 aegis ok (6c/22a rows, 351s)
+PROGRESS [17/30] ToN-IoT-Network seed=5 complete | elapsed 171m | eta 130m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.5099 minority_recall=0.9693 pr_auc=0.9984
+  LinearSVM: macro_f1=0.8269 minority_recall=0.5765 pr_auc=0.9998
+  GaussianNB: macro_f1=0.7360 minority_recall=0.9864 pr_auc=0.9988
+  kNN: macro_f1=0.8609 minority_recall=0.7550 pr_auc=0.9994
+  DecisionTree: macro_f1=0.9210 minority_recall=0.9830 pr_auc=0.9994
+  RandomForest: macro_f1=0.9409 minority_recall=0.9753 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9075 minority_recall=0.9953 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9567 minority_recall=0.9225 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9470 minority_recall=0.9118 pr_auc=1.0000
+  XGBoost: macro_f1=0.9560 minority_recall=0.9225 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9494 minority_recall=0.9685 pr_auc=1.0000
+  CatBoost: macro_f1=0.9513 minority_recall=0.9178 pr_auc=1.0000
+PROGRESS [18/30] CICIoT2023 seed=5 baselines ok (12 rows, 162s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [18/30] CICIoT2023 seed=5 aegis ok (6c/22a rows, 709s)
+PROGRESS [18/30] CICIoT2023 seed=5 complete | elapsed 185m | eta 123m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7768 minority_recall=0.7352 pr_auc=0.9238
+  LinearSVM: macro_f1=0.8765 minority_recall=0.7832 pr_auc=0.9734
+  GaussianNB: macro_f1=0.7267 minority_recall=0.8615 pr_auc=0.9040
+  kNN: macro_f1=0.9096 minority_recall=0.8789 pr_auc=0.9861
+  DecisionTree: macro_f1=0.9229 minority_recall=0.9540 pr_auc=0.9803
+  RandomForest: macro_f1=0.9332 minority_recall=0.9399 pr_auc=0.9941
+  ExtraTrees: macro_f1=0.9134 minority_recall=0.8981 pr_auc=0.9897
+  GradientBoosting: macro_f1=0.9253 minority_recall=0.8970 pr_auc=0.9924
+  HistGradientBoosting: macro_f1=0.9343 minority_recall=0.9223 pr_auc=0.9941
+  XGBoost: macro_f1=0.9362 minority_recall=0.9230 pr_auc=0.9943
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9376 minority_recall=0.9557 pr_auc=0.9945
+  CatBoost: macro_f1=0.9341 minority_recall=0.9179 pr_auc=0.9939
+PROGRESS [19/30] UNSW-NB15 seed=6 baselines ok (12 rows, 142s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [19/30] UNSW-NB15 seed=6 aegis ok (6c/22a rows, 818s)
+PROGRESS [19/30] UNSW-NB15 seed=6 complete | elapsed 201m | eta 116m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.8751 minority_recall=0.7848 pr_auc=0.9643
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.7788 minority_recall=0.4720 pr_auc=0.9599
+  GaussianNB: macro_f1=0.1720 minority_recall=0.9982 pr_auc=0.9313
+  kNN: macro_f1=0.9820 minority_recall=0.9701 pr_auc=0.9976
+  DecisionTree: macro_f1=0.9949 minority_recall=0.9887 pr_auc=0.9952
+  RandomForest: macro_f1=0.9947 minority_recall=0.9947 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9896 minority_recall=0.9849 pr_auc=0.9995
+  GradientBoosting: macro_f1=0.9915 minority_recall=0.9901 pr_auc=0.9996
+  HistGradientBoosting: macro_f1=0.9946 minority_recall=0.9947 pr_auc=1.0000
+  XGBoost: macro_f1=0.9950 minority_recall=0.9954 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9948 minority_recall=0.9961 pr_auc=1.0000
+  CatBoost: macro_f1=0.9944 minority_recall=0.9951 pr_auc=1.0000
+PROGRESS [20/30] ToN-IoT-Network seed=6 baselines ok (12 rows, 474s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [20/30] ToN-IoT-Network seed=6 aegis ok (6c/22a rows, 999s)
+PROGRESS [20/30] ToN-IoT-Network seed=6 complete | elapsed 226m | eta 113m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.5144 minority_recall=0.9710 pr_auc=0.9985
+  LinearSVM: macro_f1=0.8381 minority_recall=0.6181 pr_auc=0.9999
+  GaussianNB: macro_f1=0.7352 minority_recall=0.9933 pr_auc=0.9992
+  kNN: macro_f1=0.8695 minority_recall=0.7717 pr_auc=0.9994
+  DecisionTree: macro_f1=0.9038 minority_recall=0.9870 pr_auc=0.9996
+  RandomForest: macro_f1=0.9393 minority_recall=0.9807 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9080 minority_recall=0.9929 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9621 minority_recall=0.9413 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9568 minority_recall=0.9358 pr_auc=1.0000
+  XGBoost: macro_f1=0.9625 minority_recall=0.9471 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9571 minority_recall=0.9761 pr_auc=1.0000
+  CatBoost: macro_f1=0.9594 minority_recall=0.9454 pr_auc=1.0000
+PROGRESS [21/30] CICIoT2023 seed=6 baselines ok (12 rows, 282s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [21/30] CICIoT2023 seed=6 aegis ok (6c/22a rows, 1304s)
+PROGRESS [21/30] CICIoT2023 seed=6 complete | elapsed 252m | eta 108m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7709 minority_recall=0.7495 pr_auc=0.9224
+  LinearSVM: macro_f1=0.8775 minority_recall=0.7918 pr_auc=0.9721
+  GaussianNB: macro_f1=0.7417 minority_recall=0.8794 pr_auc=0.9129
+  kNN: macro_f1=0.9143 minority_recall=0.8976 pr_auc=0.9866
+  DecisionTree: macro_f1=0.9244 minority_recall=0.9666 pr_auc=0.9806
+  RandomForest: macro_f1=0.9348 minority_recall=0.9524 pr_auc=0.9944
+  ExtraTrees: macro_f1=0.9180 minority_recall=0.9111 pr_auc=0.9905
+  GradientBoosting: macro_f1=0.9302 minority_recall=0.9179 pr_auc=0.9931
+  HistGradientBoosting: macro_f1=0.9399 minority_recall=0.9399 pr_auc=0.9949
+  XGBoost: macro_f1=0.9408 minority_recall=0.9391 pr_auc=0.9948
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9384 minority_recall=0.9644 pr_auc=0.9950
+  CatBoost: macro_f1=0.9383 minority_recall=0.9325 pr_auc=0.9945
+PROGRESS [22/30] UNSW-NB15 seed=7 baselines ok (12 rows, 376s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [22/30] UNSW-NB15 seed=7 aegis ok (6c/22a rows, 1195s)
+PROGRESS [22/30] UNSW-NB15 seed=7 complete | elapsed 278m | eta 101m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.8753 minority_recall=0.8297 pr_auc=0.9720
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.4481 minority_recall=0.0062 pr_auc=0.9127
+  GaussianNB: macro_f1=0.1750 minority_recall=0.9973 pr_auc=0.8895
+  kNN: macro_f1=0.9871 minority_recall=0.9774 pr_auc=0.9991
+  DecisionTree: macro_f1=0.9960 minority_recall=0.9907 pr_auc=0.9959
+  RandomForest: macro_f1=0.9980 minority_recall=0.9955 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9948 minority_recall=0.9873 pr_auc=0.9998
+  GradientBoosting: macro_f1=0.9947 minority_recall=0.9911 pr_auc=0.9995
+  HistGradientBoosting: macro_f1=0.9971 minority_recall=0.9938 pr_auc=1.0000
+  XGBoost: macro_f1=0.9975 minority_recall=0.9955 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9978 minority_recall=0.9959 pr_auc=1.0000
+  CatBoost: macro_f1=0.9969 minority_recall=0.9931 pr_auc=1.0000
+PROGRESS [23/30] ToN-IoT-Network seed=7 baselines ok (12 rows, 379s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [23/30] ToN-IoT-Network seed=7 aegis ok (6c/22a rows, 809s)
+PROGRESS [23/30] ToN-IoT-Network seed=7 complete | elapsed 298m | eta 91m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.5230 minority_recall=0.9757 pr_auc=0.9987
+  LinearSVM: macro_f1=0.8302 minority_recall=0.5897 pr_auc=0.9997
+  GaussianNB: macro_f1=0.7350 minority_recall=0.9906 pr_auc=0.9991
+  kNN: macro_f1=0.8739 minority_recall=0.7878 pr_auc=0.9993
+  DecisionTree: macro_f1=0.9193 minority_recall=0.9795 pr_auc=0.9994
+  RandomForest: macro_f1=0.9412 minority_recall=0.9855 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9055 minority_recall=0.9962 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9654 minority_recall=0.9450 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9573 minority_recall=0.9352 pr_auc=1.0000
+  XGBoost: macro_f1=0.9616 minority_recall=0.9331 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9534 minority_recall=0.9702 pr_auc=0.9999
+  CatBoost: macro_f1=0.9590 minority_recall=0.9391 pr_auc=1.0000
+PROGRESS [24/30] CICIoT2023 seed=7 baselines ok (12 rows, 241s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [24/30] CICIoT2023 seed=7 aegis ok (6c/22a rows, 1737s)
+PROGRESS [24/30] CICIoT2023 seed=7 complete | elapsed 331m | eta 83m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7752 minority_recall=0.7589 pr_auc=0.9253
+  LinearSVM: macro_f1=0.8766 minority_recall=0.7809 pr_auc=0.9718
+  GaussianNB: macro_f1=0.7224 minority_recall=0.8885 pr_auc=0.9076
+  kNN: macro_f1=0.9141 minority_recall=0.8898 pr_auc=0.9861
+  DecisionTree: macro_f1=0.9253 minority_recall=0.9567 pr_auc=0.9801
+  RandomForest: macro_f1=0.9379 minority_recall=0.9512 pr_auc=0.9945
+  ExtraTrees: macro_f1=0.9188 minority_recall=0.9123 pr_auc=0.9907
+  GradientBoosting: macro_f1=0.9301 minority_recall=0.9043 pr_auc=0.9930
+  HistGradientBoosting: macro_f1=0.9378 minority_recall=0.9279 pr_auc=0.9947
+  XGBoost: macro_f1=0.9390 minority_recall=0.9309 pr_auc=0.9947
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9411 minority_recall=0.9637 pr_auc=0.9948
+  CatBoost: macro_f1=0.9377 minority_recall=0.9248 pr_auc=0.9943
+PROGRESS [25/30] UNSW-NB15 seed=8 baselines ok (12 rows, 277s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [25/30] UNSW-NB15 seed=8 aegis ok (6c/22a rows, 1008s)
+PROGRESS [25/30] UNSW-NB15 seed=8 complete | elapsed 352m | eta 70m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7831 minority_recall=0.6191 pr_auc=0.9076
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.7833 minority_recall=0.5293 pr_auc=0.9528
+  GaussianNB: macro_f1=0.1877 minority_recall=0.9988 pr_auc=0.9024
+  kNN: macro_f1=0.9803 minority_recall=0.9522 pr_auc=0.9967
+  DecisionTree: macro_f1=0.9957 minority_recall=0.9913 pr_auc=0.9970
+  RandomForest: macro_f1=0.9977 minority_recall=0.9945 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9936 minority_recall=0.9861 pr_auc=0.9996
+  GradientBoosting: macro_f1=0.9940 minority_recall=0.9887 pr_auc=0.9998
+  HistGradientBoosting: macro_f1=0.9972 minority_recall=0.9954 pr_auc=1.0000
+  XGBoost: macro_f1=0.9967 minority_recall=0.9930 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9976 minority_recall=0.9954 pr_auc=1.0000
+  CatBoost: macro_f1=0.9961 minority_recall=0.9928 pr_auc=1.0000
+PROGRESS [26/30] ToN-IoT-Network seed=8 baselines ok (12 rows, 417s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [26/30] ToN-IoT-Network seed=8 aegis ok (6c/22a rows, 1237s)
+PROGRESS [26/30] ToN-IoT-Network seed=8 complete | elapsed 380m | eta 58m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.4597 minority_recall=0.9674 pr_auc=0.9984
+  LinearSVM: macro_f1=0.8381 minority_recall=0.6183 pr_auc=0.9996
+  GaussianNB: macro_f1=0.7332 minority_recall=0.9970 pr_auc=0.9996
+  kNN: macro_f1=0.8694 minority_recall=0.8046 pr_auc=0.9995
+  DecisionTree: macro_f1=0.9135 minority_recall=0.9887 pr_auc=0.9996
+  RandomForest: macro_f1=0.9396 minority_recall=0.9831 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9022 minority_recall=0.9948 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9642 minority_recall=0.9392 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9484 minority_recall=0.9171 pr_auc=1.0000
+  XGBoost: macro_f1=0.9539 minority_recall=0.9310 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9449 minority_recall=0.9683 pr_auc=0.9999
+  CatBoost: macro_f1=0.9520 minority_recall=0.9284 pr_auc=1.0000
+PROGRESS [27/30] CICIoT2023 seed=8 baselines ok (12 rows, 740s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [27/30] CICIoT2023 seed=8 aegis ok (6c/22a rows, 2034s)
+PROGRESS [27/30] CICIoT2023 seed=8 complete | elapsed 426m | eta 47m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[UNSW-NB15] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.7881 minority_recall=0.6726 pr_auc=0.9167
+  LinearSVM: macro_f1=0.8829 minority_recall=0.8033 pr_auc=0.9716
+  GaussianNB: macro_f1=0.6829 minority_recall=0.8626 pr_auc=0.8828
+  kNN: macro_f1=0.9112 minority_recall=0.8924 pr_auc=0.9873
+  DecisionTree: macro_f1=0.9274 minority_recall=0.9649 pr_auc=0.9805
+  RandomForest: macro_f1=0.9343 minority_recall=0.9516 pr_auc=0.9943
+  ExtraTrees: macro_f1=0.9155 minority_recall=0.9101 pr_auc=0.9903
+  GradientBoosting: macro_f1=0.9293 minority_recall=0.9120 pr_auc=0.9931
+  HistGradientBoosting: macro_f1=0.9376 minority_recall=0.9333 pr_auc=0.9947
+  XGBoost: macro_f1=0.9391 minority_recall=0.9355 pr_auc=0.9948
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9370 minority_recall=0.9641 pr_auc=0.9947
+  CatBoost: macro_f1=0.9364 minority_recall=0.9297 pr_auc=0.9944
+PROGRESS [28/30] UNSW-NB15 seed=9 baselines ok (12 rows, 645s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [28/30] UNSW-NB15 seed=9 aegis ok (6c/22a rows, 2165s)
+PROGRESS [28/30] UNSW-NB15 seed=9 complete | elapsed 473m | eta 34m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\impute\_base.py:641: UserWarning: Skipping features without any observed values: ['ssl_issuer' 'ssl_subject']. At least one non-missing value is needed for imputation with strategy='most_frequent'.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\impute\_base.py:641: UserWarning: Skipping features without any observed values: ['ssl_issuer' 'ssl_subject']. At least one non-missing value is needed for imputation with strategy='most_frequent'.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\impute\_base.py:641: UserWarning: Skipping features without any observed values: ['ssl_issuer' 'ssl_subject']. At least one non-missing value is needed for imputation with strategy='most_frequent'.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\impute\_base.py:641: UserWarning: Skipping features without any observed values: ['ssl_issuer' 'ssl_subject']. At least one non-missing value is needed for imputation with strategy='most_frequent'.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[ToN-IoT-Network] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.6935 minority_recall=0.4556 pr_auc=0.8325
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\svm\_base.py:1258: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+  warnings.warn(
+  LinearSVM: macro_f1=0.4706 minority_recall=0.0587 pr_auc=0.9302
+  GaussianNB: macro_f1=0.2336 minority_recall=0.9988 pr_auc=0.8470
+  kNN: macro_f1=0.8569 minority_recall=0.6516 pr_auc=0.8729
+  DecisionTree: macro_f1=0.8668 minority_recall=0.6699 pr_auc=0.8936
+  RandomForest: macro_f1=0.9985 minority_recall=0.9971 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.8646 minority_recall=0.6659 pr_auc=0.9972
+  GradientBoosting: macro_f1=0.8657 minority_recall=0.6683 pr_auc=0.9987
+  HistGradientBoosting: macro_f1=0.9983 minority_recall=0.9965 pr_auc=1.0000
+  XGBoost: macro_f1=0.9984 minority_recall=0.9969 pr_auc=0.9999
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9981 minority_recall=0.9971 pr_auc=1.0000
+  CatBoost: macro_f1=0.9977 minority_recall=0.9953 pr_auc=0.9999
+PROGRESS [29/30] ToN-IoT-Network seed=9 baselines ok (12 rows, 614s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\impute\_base.py:641: UserWarning: Skipping features without any observed values: ['ssl_issuer' 'ssl_subject']. At least one non-missing value is needed for imputation with strategy='most_frequent'.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\impute\_base.py:641: UserWarning: Skipping features without any observed values: ['ssl_issuer' 'ssl_subject']. At least one non-missing value is needed for imputation with strategy='most_frequent'.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\impute\_base.py:641: UserWarning: Skipping features without any observed values: ['ssl_issuer' 'ssl_subject']. At least one non-missing value is needed for imputation with strategy='most_frequent'.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\impute\_base.py:641: UserWarning: Skipping features without any observed values: ['ssl_issuer' 'ssl_subject']. At least one non-missing value is needed for imputation with strategy='most_frequent'.
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [29/30] ToN-IoT-Network seed=9 aegis ok (6c/22a rows, 1175s)
+PROGRESS [29/30] ToN-IoT-Network seed=9 complete | elapsed 503m | eta 17m | errors 0
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+[CICIoT2023] classical/tree baselines...
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 300 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=300).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+  LogisticRegression: macro_f1=0.5167 minority_recall=0.9738 pr_auc=0.9986
+  LinearSVM: macro_f1=0.8292 minority_recall=0.5931 pr_auc=0.9998
+  GaussianNB: macro_f1=0.7340 minority_recall=0.9894 pr_auc=0.9990
+  kNN: macro_f1=0.8664 minority_recall=0.7797 pr_auc=0.9994
+  DecisionTree: macro_f1=0.9234 minority_recall=0.9848 pr_auc=0.9995
+  RandomForest: macro_f1=0.9389 minority_recall=0.9709 pr_auc=1.0000
+  ExtraTrees: macro_f1=0.9036 minority_recall=0.9937 pr_auc=1.0000
+  GradientBoosting: macro_f1=0.9606 minority_recall=0.9341 pr_auc=1.0000
+  HistGradientBoosting: macro_f1=0.9534 minority_recall=0.9177 pr_auc=1.0000
+  XGBoost: macro_f1=0.9591 minority_recall=0.9291 pr_auc=1.0000
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+  LightGBM: macro_f1=0.9542 minority_recall=0.9637 pr_auc=1.0000
+  CatBoost: macro_f1=0.9597 minority_recall=0.9291 pr_auc=1.0000
+PROGRESS [30/30] CICIoT2023 seed=9 baselines ok (12 rows, 451s)
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\linear_model\_logistic.py:406: ConvergenceWarning: lbfgs failed to converge after 200 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=200).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+C:\Users\MMASSAOUDI\AppData\Roaming\Python\Python313\site-packages\sklearn\utils\validation.py:2691: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+PROGRESS [30/30] CICIoT2023 seed=9 aegis ok (6c/22a rows, 1283s)
+PROGRESS [30/30] CICIoT2023 seed=9 complete | elapsed 532m | eta 0m | errors 0
+DONE 30/30 units, 0 errors, 532m total
